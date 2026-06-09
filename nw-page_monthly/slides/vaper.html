@@ -1,91 +1,36 @@
-<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<style>
-  body {
-    margin: 0;
-    padding: 2rem;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #2d3748;
-    line-height: 1.6;
-  }
-  h1 { font-size: 2.25rem; font-weight: 800; margin: 0 0 1.5rem; color: #1a202c; letter-spacing: -0.025em; }
-  h1 .expansion { display: block; margin-top: 0.25rem; font-size: 1.25rem; font-weight: 400; color: #718096; letter-spacing: normal; }
-  h1 .expansion ins { text-decoration: none; font-weight: 700; color: #2d3748; }
-
-  .body { display: flex; gap: 2rem; align-items: flex-start; }   /* top-align the two columns */
-  .figure { flex: 0 0 58%; }
-  .figure img { width: 100%; height: auto; display: block; }
-
-  .features { flex: 1; }
-  .features h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.75rem; color: #1a202c; }
-  .features .intro { font-size: 1.05rem; margin: 0 0 1.25rem; color: #4a5568; }
-  .features ul { list-style: none; padding: 0; margin: 0; }
-  .features li { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
-  .features li:last-child { margin-bottom: 0; }
-  .features li .dna { margin-right: 0.75rem; font-size: 1.25rem; line-height: 1; }
-
-  /* Documentation section — now lives inside the features column */
-  .docs {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid #e2e8f0;
-  }
-  .docs .qr { width: 100px; height: 100px; display: block; border-radius: 8px; flex-shrink: 0; }
-  .docs .docs-text h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; color: #1a202c; }
-  .docs .docs-text a { font-size: 1rem; color: #3182ce; text-decoration: none; word-break: break-all; }
-  .docs .docs-text a:hover { text-decoration: underline; }
-</style>
-</head>
 <body>
-
-  <h1>VAPER <span class="expansion">(<ins>V</ins>iral <ins>A</ins>ssembly from <ins>P</ins>robe-based <ins>E</ins>n<ins>r</ins>ichment)</span></h1>
-
-  <div class="body">
-    <div class="figure">
-      <img src="https://nw-page.github.io/vaper-docs/docs/v2.0/media/vaper-v2.0.png" alt="VAPER Pipeline Workflow">
-    </div>
-
-    <div class="features">
-      <h2>Key Features</h2>
-      <p class="intro">VAPER is a viral (meta-)assembly pipeline designed to:</p>
-      <ul>
-        <li><span class="dna">🧬</span><span>Assemble genomes from complex samples, supporting multiple assemblies per sample (e.g., co-infections)</span></li>
-        <li><span class="dna">🧬</span><span>Automatically detect and select reference genomes</span></li>
-        <li><span class="dna">🧬</span><span>Predict the taxonomy of each assembly, with an optional viral metagenomic summary</span></li>
-        <li><span class="dna">🧬</span><span>Export reads associated with each assembly for downstream use</span></li>
-      </ul>
-
-      <!-- Documentation: link + QR, contained inside the features column -->
-      <div class="docs">
-        <img class="qr"
-             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://nw-page.github.io/vaper-docs/"
-             alt="QR code linking to VAPER documentation">
-        <div class="docs-text">
-          <h2>📖 Documentation</h2>
-          <a href="https://nw-page.github.io/vaper-docs/">nw-page.github.io/vaper-docs</a>
-        </div>
-      </div>
-
-      <div class="docs">
-        <img class="qr"
-             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/nw-page/vaper"
-             alt="QR code linking to VAPER documentation">
-        <div class="docs-text">
-          <h2>💻 Repository</h2>
-          <a href="https://github.com/nw-page/vaper">github.com/nw-page/vaper</a>
-        </div>
-      </div>
-
-      
-
-    </div>
-  </div>
-
+<div class="workflow">
+<h1 class="workflow-title">VAPER <span class="workflow-expansion">(<ins>V</ins>iral <ins>A</ins>ssembly from <ins>P</ins>robe-based <ins>E</ins>n<ins>r</ins>ichment)</span></h1>
+<div class="workflow-grid">
+<div class="workflow-card workflow-figure">
+<img src="https://nw-page.github.io/vaper-docs/docs/v2.0/media/vaper-v2.0.png" alt="VAPER Pipeline Workflow">
+</div>
+<div class="workflow-card workflow-features">
+<h2>Key Features</h2>
+<p class="workflow-intro">VAPER is a viral (meta-)assembly pipeline designed to:</p>
+<ul>
+<li><span class="workflow-dna">🧬</span><span>Assemble genomes from complex samples, supporting multiple assemblies per sample (e.g., co-infections)</span></li>
+<li><span class="workflow-dna">🧬</span><span>Automatically detect and select reference genomes</span></li>
+<li><span class="workflow-dna">🧬</span><span>Predict the taxonomy of each assembly, with an optional viral metagenomic summary</span></li>
+<li><span class="workflow-dna">🧬</span><span>Export reads associated with each assembly for downstream use</span></li>
+</ul>
+</div>
+<div class="workflow-card workflow-docs">
+<img class="workflow-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://nw-page.github.io/vaper-docs/" alt="QR code linking to VAPER documentation">
+<div class="workflow-link-text">
+<h2>📖 Documentation</h2>
+<a href="https://nw-page.github.io/vaper-docs/">nw-page.github.io/vaper-docs</a>
+</div>
+</div>
+<div class="workflow-card workflow-repo">
+<img class="workflow-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/nw-page/vaper" alt="QR code linking to VAPER repository">
+<div class="workflow-link-text">
+<h2>💻 Repository</h2>
+<a href="https://github.com/nw-page/vaper">github.com/nw-page/vaper</a>
+</div>
+</div>
+</div>
+</div>
 </body>
 </html>

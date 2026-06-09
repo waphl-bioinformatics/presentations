@@ -1,126 +1,56 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<style>
-  body {
-    margin: 0;
-    padding: 2rem;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #2d3748;
-    line-height: 1.6;
-  }
-  h1 { font-size: 2.25rem; font-weight: 800; margin: 0 0 1.5rem; color: #1a202c; letter-spacing: -0.025em; }
-  h1 .expansion { display: block; margin-top: 0.25rem; font-size: 1.25rem; font-weight: 400; color: #718096; letter-spacing: normal; }
-  h1 .expansion ins { text-decoration: none; font-weight: 700; color: #2d3748; }
-
-  .body { display: flex; gap: 2rem; align-items: flex-start; }
-  .figure { flex: 0 0 34%; }
-  .figure svg { width: 100%; height: auto; display: block; }
-
-  .features { flex: 1; }
-  .features h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.75rem; color: #1a202c; }
-  .features .intro { font-size: 1.05rem; margin: 0 0 1.25rem; color: #4a5568; }
-  .features ul { list-style: none; padding: 0; margin: 0; }
-  .features li { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
-  .features li:last-child { margin-bottom: 0; }
-  .features li .dna { margin-right: 0.75rem; font-size: 1.25rem; line-height: 1; }
-  .features li strong { color: #0c5460; }
-
-  .docs {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid #e2e8f0;
-  }
-  .docs .qr { width: 100px; height: 100px; display: block; border-radius: 8px; flex-shrink: 0; }
-  .docs .docs-text h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; color: #1a202c; }
-  .docs .docs-text a { font-size: 1rem; color: #3182ce; text-decoration: none; word-break: break-all; }
-  .docs .docs-text a:hover { text-decoration: underline; }
-</style>
-</head>
-<body>
-
-  <h1>VirGO <span class="expansion">(<ins>Vir</ins>al <ins>G</ins>enome [Submission File] <ins>O</ins>rchestration)</span></h1>
-
-  <div class="body">
-    <div class="figure">
-      <!-- Self-contained workflow diagram (NW-PaGe brand palette) -->
-      <svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
-        <defs>
-          <marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-            <path d="M0 0 L10 5 L0 10 z" fill="#0c5460"/>
-          </marker>
-        </defs>
-
-        <!-- Inputs container -->
-        <rect x="40" y="14" width="400" height="112" rx="12" fill="#f4f8f8" stroke="#cbd5e1"/>
-        <text x="60" y="38" font-size="12" font-weight="700" fill="#0c5460" letter-spacing="0.06em">REQUIRED INPUTS</text>
-        <!-- chips -->
-        <g font-size="13" fill="#0c5460" text-anchor="middle">
-          <rect x="58"  y="48" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="138" y="68">config</text>
-          <rect x="262" y="48" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="342" y="68">metadata</text>
-          <rect x="58"  y="86" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="138" y="106">fasta</text>
-          <rect x="262" y="86" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="342" y="106">vadr_models</text>
-        </g>
-
-        <line x1="240" y1="126" x2="240" y2="150" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
-
-        <!-- SeqSender -->
-        <rect x="110" y="150" width="260" height="64" rx="12" fill="#0c5460"/>
-        <text x="240" y="180" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">SeqSender</text>
-        <text x="240" y="200" font-size="11.5" fill="#d8f0f0" text-anchor="middle">Validate inputs · generate .src / .sbt</text>
-
-        <line x1="240" y1="214" x2="240" y2="238" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
-
-        <!-- VADR -->
-        <rect x="110" y="238" width="260" height="64" rx="12" fill="#0c5460"/>
-        <text x="240" y="268" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">VADR</text>
-        <text x="240" y="288" font-size="11.5" fill="#d8f0f0" text-anchor="middle">Annotate genomes · trim terminal N&#39;s</text>
-
-        <line x1="240" y1="302" x2="240" y2="326" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
-
-        <!-- table2asn -->
-        <rect x="110" y="326" width="260" height="64" rx="12" fill="#0c5460"/>
-        <text x="240" y="356" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">table2asn</text>
-        <text x="240" y="376" font-size="11.5" fill="#d8f0f0" text-anchor="middle">Build submission-ready .sqn</text>
-
-        <line x1="240" y1="390" x2="240" y2="414" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
-
-        <!-- Output -->
-        <rect x="90" y="414" width="300" height="78" rx="12" fill="#f4a259" stroke="#c96a1f" stroke-width="2"/>
-        <text x="240" y="446" font-size="18" font-weight="700" fill="#4a2708" text-anchor="middle">.sqn &#8594; NCBI</text>
-        <text x="240" y="468" font-size="12" fill="#5c3413" text-anchor="middle">GenBank · BioSample</text>
-        <text x="240" y="484" font-size="11" fill="#5c3413" text-anchor="middle">(SRA in development)</text>
-      </svg>
-    </div>
-
-    <div class="features">
-      <h2>Key Features</h2>
-      <p class="intro">VirGO is a Nextflow pipeline that orchestrates viral genome submission to NCBI for organisms not supported by fully automated submission:</p>
-      <ul>
-        <li><span class="dna">🧬</span><span><strong>SeqSender</strong> — validates FASTA + metadata and generates submission files (.src, .sbt), with optional automated BioSample submission over FTP</span></li>
-        <li><span class="dna">🧬</span><span><strong>VADR</strong> — annotates genomes and trims terminal N's</span></li>
-        <li><span class="dna">🧬</span><span><strong>table2asn</strong> — produces submission-ready .sqn files for GenBank</span></li>
-        <li><span class="dna">🧬</span><span>Works with any viral pathogen that has a VADR model — tested on Measles and West Nile virus (not for flu A/B or SARS-CoV-2, which submit automatically)</span></li>
-      </ul>
-
-      <!-- Repository + QR -->
-      <div class="docs">
-        <img class="qr"
-             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/DOH-KEW4303/VirGO"
-             alt="QR code linking to the VirGO repository">
-        <div class="docs-text">
-          <h2>💻 Repository</h2>
-          <a href="https://github.com/DOH-KEW4303/VirGO">github.com/DOH-KEW4303/VirGO</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</body>
-</html>
+<div class="workflow">
+<h1 class="workflow-title">VirGO <span class="workflow-expansion">(<ins>Vir</ins>al <ins>G</ins>enome [Submission File] <ins>O</ins>rchestration)</span></h1>
+<div class="workflow-grid">
+<div class="workflow-card workflow-figure">
+<svg viewBox="0 0 480 520" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0 0 L10 5 L0 10 z" fill="#0c5460"/>
+</marker>
+</defs>
+<rect x="40" y="14" width="400" height="112" rx="12" fill="#f4f8f8" stroke="#cbd5e1"/>
+<text x="60" y="38" font-size="12" font-weight="700" fill="#0c5460" letter-spacing="0.06em">REQUIRED INPUTS</text>
+<g font-size="13" fill="#0c5460" text-anchor="middle">
+<rect x="58" y="48" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="138" y="68">config</text>
+<rect x="262" y="48" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="342" y="68">metadata</text>
+<rect x="58" y="86" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="138" y="106">fasta</text>
+<rect x="262" y="86" width="160" height="30" rx="6" fill="#d8f0f0" stroke="#0c5460"/><text x="342" y="106">vadr_models</text>
+</g>
+<line x1="240" y1="126" x2="240" y2="150" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="110" y="150" width="260" height="64" rx="12" fill="#0c5460"/>
+<text x="240" y="180" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">SeqSender</text>
+<text x="240" y="200" font-size="11.5" fill="#d8f0f0" text-anchor="middle">Validate inputs · generate .src / .sbt</text>
+<line x1="240" y1="214" x2="240" y2="238" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="110" y="238" width="260" height="64" rx="12" fill="#0c5460"/>
+<text x="240" y="268" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">VADR</text>
+<text x="240" y="288" font-size="11.5" fill="#d8f0f0" text-anchor="middle">Annotate genomes · trim terminal N&#39;s</text>
+<line x1="240" y1="302" x2="240" y2="326" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="110" y="326" width="260" height="64" rx="12" fill="#0c5460"/>
+<text x="240" y="356" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">table2asn</text>
+<text x="240" y="376" font-size="11.5" fill="#d8f0f0" text-anchor="middle">Build submission-ready .sqn</text>
+<line x1="240" y1="390" x2="240" y2="414" stroke="#0c5460" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="90" y="414" width="300" height="78" rx="12" fill="#f4a259" stroke="#c96a1f" stroke-width="2"/>
+<text x="240" y="446" font-size="18" font-weight="700" fill="#4a2708" text-anchor="middle">.sqn &#8594; NCBI</text>
+<text x="240" y="468" font-size="12" fill="#5c3413" text-anchor="middle">GenBank · BioSample</text>
+<text x="240" y="484" font-size="11" fill="#5c3413" text-anchor="middle">(SRA in development)</text>
+</svg>
+</div>
+<div class="workflow-card workflow-features">
+<h2>Key Features</h2>
+<p class="workflow-intro">VirGO is a Nextflow pipeline that orchestrates viral genome submission to NCBI for organisms not supported by fully automated submission:</p>
+<ul>
+<li><span class="workflow-dna">🧬</span><span><strong>SeqSender</strong> — validates FASTA + metadata and generates submission files (.src, .sbt), with optional automated BioSample submission over FTP</span></li>
+<li><span class="workflow-dna">🧬</span><span><strong>VADR</strong> — annotates genomes and trims terminal N's</span></li>
+<li><span class="workflow-dna">🧬</span><span><strong>table2asn</strong> — produces submission-ready .sqn files for GenBank</span></li>
+<li><span class="workflow-dna">🧬</span><span>Works with any viral pathogen that has a VADR model — tested on Measles and West Nile virus (not for flu A/B or SARS-CoV-2, which submit automatically)</span></li>
+</ul>
+</div>
+<div class="workflow-card workflow-repo">
+<img class="workflow-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/DOH-KEW4303/VirGO" alt="QR code linking to the VirGO repository">
+<div class="workflow-link-text">
+<h2>💻 Repository</h2>
+<a href="https://github.com/DOH-KEW4303/VirGO">github.com/DOH-KEW4303/VirGO</a>
+</div>
+</div>
+</div>
+</div>

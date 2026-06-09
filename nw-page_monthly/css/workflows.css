@@ -1,38 +1,73 @@
+html, body { height: 100%; margin: 0; }
+.workflow, .workflow *, .workflow *::before, .workflow *::after { box-sizing: border-box; }
 
 .workflow {
-    margin: 0;
-    padding: 2rem;
-    box-sizing: border-box;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #2d3748;
-    line-height: 1.6;
-  }
-.workflow-title { font-size: 2.25rem; font-weight: 800; margin: 0 0 1.5rem; color: #1a202c; letter-spacing: -0.025em; }
-.workflow-title .workflow-expansion { display: block; margin-top: 0.25rem; font-size: 1.25rem; font-weight: 400; color: #718096; letter-spacing: normal; }
+  height: 100%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #2d3748;
+  line-height: 1.5;
+}
+
+/* Title pinned at top */
+.workflow-title { flex: 0 0 auto; font-size: 2rem; font-weight: 800; margin: 0; color: #1a202c; letter-spacing: -0.025em; }
+.workflow-title .workflow-expansion { display: block; margin-top: 0.25rem; font-size: 1.05rem; font-weight: 400; color: #718096; letter-spacing: normal; }
 .workflow-title .workflow-expansion ins { text-decoration: none; font-weight: 700; color: #2d3748; }
 
-.workflow-body { display: flex; gap: 2rem; align-items: flex-start; }   /* top-align the two columns */
-.workflow-figure { flex: 0 0 58%; }
-.workflow-figure img { width: 100%; height: auto; display: block; }
+/* Grid fills the rest of the slide */
+.workflow-grid {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  grid-template-rows: minmax(0, 1fr) auto auto;
+  grid-template-areas:
+    "figure features"
+    "figure docs"
+    "figure repo";
+  gap: 1rem;
+}
 
-.workflow-features { flex: 1; }
-.workflow-features h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.75rem; color: #1a202c; }
-.workflow-features .workflow-intro { font-size: 1.05rem; margin: 0 0 1.25rem; color: #4a5568; }
+/* Shared card boundary */
+.workflow-card { border: 1px solid #e2e8f0; border-radius: 12px; background: #fff; padding: 1rem; min-height: 0; overflow: hidden; }
+
+/* Figure spans the full left column; image scales to fit */
+.workflow-figure { grid-area: figure; display: flex; align-items: center; justify-content: center; }
+.workflow-figure img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* Key features card */
+.workflow-features { grid-area: features; }
+.workflow-features h2 { font-size: 1.25rem; font-weight: 700; margin: 0 0 0.5rem; color: #1a202c; }
+.workflow-features .workflow-intro { font-size: 0.95rem; margin: 0 0 0.75rem; color: #4a5568; }
 .workflow-features ul { list-style: none; padding: 0; margin: 0; }
-.workflow-features li { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
+.workflow-features li { font-size: 0.9rem; margin-bottom: 0.5rem; display: flex; align-items: flex-start; }
 .workflow-features li:last-child { margin-bottom: 0; }
-.workflow-features li .workflow-dna { margin-right: 0.75rem; font-size: 1.25rem; line-height: 1; }
+.workflow-features li .workflow-dna { margin-right: 0.6rem; font-size: 1.1rem; line-height: 1.2; flex-shrink: 0; }
 
-/* Documentation section — now lives inside the features column */
-.workflow-docs {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-    padding-top: 1.25rem;
-    border-top: 1px solid #e2e8f0;
-  }
-.workflow-docs .workflow-qr { width: 100px; height: 100px; display: block; border-radius: 8px; flex-shrink: 0; }
-.workflow-docs .workflow-docs-text h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; color: #1a202c; }
-.workflow-docs .workflow-docs-text a { font-size: 1rem; color: #3182ce; text-decoration: none; word-break: break-all; }
-.workflow-docs .workflow-docs-text a:hover { text-decoration: underline; }
+/* Link cards (documentation + repository) */
+.workflow-docs { grid-area: docs; }
+.workflow-repo { grid-area: repo; }
+.workflow-docs, .workflow-repo { display: flex; align-items: center; gap: 0.85rem; }
+.workflow-qr { width: 72px; height: 72px; display: block; border-radius: 6px; flex-shrink: 0; }
+.workflow-link-text h2 { font-size: 1rem; font-weight: 700; margin: 0 0 0.2rem; color: #1a202c; }
+.workflow-link-text a { font-size: 0.9rem; color: #3182ce; text-decoration: none; word-break: break-all; }
+.workflow-link-text a:hover { text-decoration: underline; }
+
+/* Nested sub-features */
+.workflow-features li.workflow-group { flex-direction: column; align-items: stretch; }
+.workflow-features .workflow-line { display: flex; align-items: flex-start; }
+.workflow-features .workflow-sub { list-style: none; margin: 0.4rem 0 0; padding: 0; }
+.workflow-features .workflow-sub li { margin: 0 0 0.3rem 1.6rem; font-size: 0.82rem; color: #4a5568; }
+.workflow-features .workflow-sub li:last-child { margin-bottom: 0; }
+.workflow-features .workflow-sub .workflow-dna { font-size: 0.9rem; margin-right: 0.45rem; }
+
+/* "Coming soon" documentation placeholder (no QR yet) */
+.workflow-qr-placeholder {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  background: #f7fafc; border: 1px dashed #cbd5e0; color: #a0aec0;
+  font-size: 0.7rem; font-style: italic;
+}
+.workflow-link-text .workflow-soon { font-size: 0.9rem; color: #718096; font-style: italic; }
