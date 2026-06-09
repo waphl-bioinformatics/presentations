@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+  }
+  h1 { font-size: 2.25rem; font-weight: 800; margin: 0 0 1.5rem; color: #1a202c; letter-spacing: -0.025em; }
+  h1 .expansion { display: block; margin-top: 0.25rem; font-size: 1.25rem; font-weight: 400; color: #718096; letter-spacing: normal; }
+  h1 .expansion ins { text-decoration: none; font-weight: 700; color: #2d3748; }
+
+  .body { display: flex; gap: 2rem; align-items: flex-start; }   /* top-align the two columns */
+  .figure { flex: 0 0 58%; }
+  .figure img { width: 100%; height: auto; display: block; }
+
+  .features { flex: 1; }
+  .features h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.75rem; color: #1a202c; }
+  .features .intro { font-size: 1.05rem; margin: 0 0 1.25rem; color: #4a5568; }
+  .features ul { list-style: none; padding: 0; margin: 0; }
+  .features li { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
+  .features li:last-child { margin-bottom: 0; }
+  .features li .dna { margin-right: 0.75rem; font-size: 1.25rem; line-height: 1; }
+
+  /* Documentation section — now lives inside the features column */
+  .docs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  .docs .qr { width: 100px; height: 100px; display: block; border-radius: 8px; flex-shrink: 0; }
+  .docs .docs-text h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; color: #1a202c; }
+  .docs .docs-text a { font-size: 1rem; color: #3182ce; text-decoration: none; word-break: break-all; }
+  .docs .docs-text a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+  <h1>EPITOME <span class="expansion">(<ins>E</ins>nhanced <ins>P</ins>hylogenetic <ins>I</ins>nference <ins>T</ins>hrough <ins>O</ins>ptimized <ins>M</ins>apping <ins>E</ins>fficiency)</span></h1>
+
+  <div class="body">
+    <div class="figure">
+      <img src="https://nw-page.github.io/epitome-docs/assets/media/epitome-v2.0.png" alt="EPITOME Pipeline Workflow">
+    </div>
+
+    <div class="features">
+      <h2>Key Features</h2>
+      <p class="intro">EPITOME is a Nextflow pipeline that condenses a diverse set of viral sequences into composite references capturing a dataset's overarching diversity:</p>
+      <ul>
+        <li><span class="dna">🧬</span><span>Clusters sequences by pairwise genetic distance, then builds composite references (most common nucleotide per position) and/or selects each cluster's centroid</span></li>
+        <li><span class="dna">🧬</span><span>Creates reference sets for consensus-based assembly pipelines like VAPER when distance is based on read-mapping efficiency</span></li>
+        <li><span class="dna">🧬</span><span>Automatically downloads sequence data from NCBI by taxon — or supply your own data</span></li>
+        <li><span class="dna">🧬</span><span>Supports both segmented and non-segmented viral taxa</span></li>
+      </ul>
+
+      <!-- Documentation: link + QR -->
+      <div class="docs">
+        <img class="qr"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://nw-page.github.io/epitome-docs/"
+             alt="QR code linking to EPITOME documentation">
+        <div class="docs-text">
+          <h2>📖 Documentation</h2>
+          <a href="https://nw-page.github.io/epitome-docs/">nw-page.github.io/epitome-docs</a>
+        </div>
+      </div>
+
+      <!-- Repository: link + QR -->
+      <div class="docs">
+        <img class="qr"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/NW-PaGe/epitome"
+             alt="QR code linking to the EPITOME repository">
+        <div class="docs-text">
+          <h2>💻 Repository</h2>
+          <a href="https://github.com/NW-PaGe/epitome">github.com/NW-PaGe/epitome</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

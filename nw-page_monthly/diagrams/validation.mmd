@@ -1,0 +1,22 @@
+flowchart TD
+    Plan[Develop validation plan] --> Submit[Submit plan to QA for review]
+    Submit --> Review1{QA review of plan}
+    Review1 -->|Reject| Revise[Revise plan]
+    Revise --> Submit
+    Review1 -->|Accept| Execute[Execute validation plan]
+    Execute --> Report[Create validation report]
+    Report --> Review2{QA review of report}
+    Review2 -->|Acceptable| Validated([Workflow validated])
+    Review2 -->|Not acceptable| Plan
+
+    classDef source   fill:#0c5460,color:#ffffff,stroke:#083e47,stroke-width:1px;
+    classDef category fill:#d8f0f0,color:#0c5460,stroke:#0c5460,stroke-width:1px;
+    classDef binfx    fill:#fbe7d1,color:#8a4a12,stroke:#e48430,stroke-width:1px;
+    classDef mep      fill:#f4a259,color:#4a2708,stroke:#c96a1f,stroke-width:2px;
+    classDef disabled fill:#fee2e2,color:#991b1b,stroke:#dc2626,stroke-width:1.5px,stroke-dasharray:5 5;
+
+    class Plan source;
+    class Review1,Review2 category;
+    class Submit,Execute,Report binfx;
+    class Validated mep;
+    class Revise disabled;

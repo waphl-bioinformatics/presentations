@@ -1,0 +1,112 @@
+<style>
+.pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.pipeline-card {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  backdrop-filter: blur(10px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pipeline-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+}
+
+.pipeline-card .logo {
+  width: 100%;
+  max-width: 120px;
+  aspect-ratio: 1;
+  margin: 0 auto 1rem;
+  border-radius: 16px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* the clickable area inside the tile */
+.pipeline-card .logo a {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.pipeline-card .logo a img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.pipeline-card .name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.pipeline-card .role {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+</style>
+
+<div class="pipeline-grid">
+
+<div class="pipeline-card">
+  <a href="#/vaper">
+  <div class="logo"><img src="https://nw-page.github.io/vaper-docs/assets/media/vaper-logo.png" alt="VAPER"></div>
+  <p class="name">VAPER</p>
+  <p class="role">Viral genome assembly</p>
+  </a>
+</div>
+
+<div class="pipeline-card">
+  <a href="#/epitome">
+  <div class="logo"><img src="media/epitome-logo.png" alt="EPITOME"></div>
+  <p class="name">EPITOME</p>
+  <p class="role">Viral reference creation</p>
+  </a>
+</div>
+
+<div class="pipeline-card">
+  <a href="#/bigbacter">
+  <div class="logo"><img src="https://waphl-bioinformatics.github.io/bigbacter-docs/assets/media/bigbacter_logo.png" alt="BigBacter"></div>
+  <p class="name">BigBacter</p>
+  <p class="role">Bacterial genomic surveillance</p>
+  </a>
+</div>
+
+<div class="pipeline-card">
+  <a href="#/corgisnps">
+  <div class="logo"><img src="media/corgisnps-logo.png" alt="CorgiSNPs"></div>
+  <p class="name">CorgiSNPs</p>
+  <p class="role">Fungal genomic surveillance</p>
+  </a>
+</div>
+
+<div class="pipeline-card">
+  <a href="#/virgo">
+  <div class="logo"><img src="media/virgo-logo.png" alt="VirGo"></div>
+  <p class="name">VirGo</p>
+  <p class="role">Sequence data submission</p>
+  </a>
+</div>
+
+</div>

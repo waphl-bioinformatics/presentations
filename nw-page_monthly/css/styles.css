@@ -1,0 +1,49 @@
+.reveal .return-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 0.3em 0.7em;
+  background: #3182ce;
+  color: #fff !important;
+  border-radius: 6px;
+  font-size: 0.45em;            /* small */
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: background 0.15s ease;
+}
+.reveal .return-btn:hover { background: #2b6cb0; }
+
+.reveal .text-box {
+  font-size: 0.65em;
+  line-height: 1.4;
+  padding: 0.6em 0.9em;
+  max-width: 35ch;                 /* keeps it compact */
+}
+
+/* tighten list spacing inside the box */
+.reveal .text-box ul {
+  margin: 0.3em 0;
+  padding-left: 1.1em;
+}
+
+.reveal .text-box-wide {
+  font-size: 0.7em;
+  line-height: 1.4;
+  padding: 0.6em 0.9em;
+  max-width: 100ch;                 /* keeps it compact */
+}
+
+/* tighten list spacing inside the box */
+.reveal .text-box-wide ul {
+  margin: 0.3em 0;
+  padding-left: 1.1em;
+}
+
+.reveal .bordered {
+  border: 1px solid #bbbbbb;
+  border-radius: 4px;
+  padding: 0.25em;
+  width: fit-content;
+  margin: 0 auto;
+}

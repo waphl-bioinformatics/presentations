@@ -1,0 +1,139 @@
+/*-- scss:defaults --*/
+
+// =====================================================================
+//  NW-PaGe reveal.js theme
+//  Palette sampled from the Northwest Pathogen Genomics CoE logo:
+//    deep teal (pine) · orange (branches) · pale teal (circle)
+// =====================================================================
+
+// Brand colors -------------------------------------------------------
+$nw-teal:        #0c5460;   // primary — deep teal
+$nw-teal-dark:   #083e47;
+$nw-teal-light:  #d8f0f0;   // pale teal (circle)
+$nw-orange:      #e48430;   // accent — orange
+$nw-orange-dark: #c96a1f;
+$nw-ink:         #1c2b2b;   // body text
+$nw-paper:       #ffffff;
+
+// Fonts --------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+$font-family-sans-serif:   "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !default;
+$presentation-font-family:  $font-family-sans-serif;
+$presentation-heading-font: $font-family-sans-serif;
+
+// Base ---------------------------------------------------------------
+$body-bg:                      $nw-paper;
+$body-color:                   $nw-ink;
+$presentation-font-size-root:  32px;
+$presentation-line-height:     1.4;
+
+// Headings -----------------------------------------------------------
+$presentation-heading-color:        $nw-teal;
+$presentation-heading-font-weight:  700;
+$presentation-h1-font-size:         2.0em;
+$presentation-h2-font-size:         1.4em;
+$presentation-h3-font-size:         1.15em;
+
+// Links --------------------------------------------------------------
+$link-color:        $nw-teal;
+$link-color-hover:  $nw-orange;
+
+// Selection / code ---------------------------------------------------
+$selection-bg:    rgba($nw-orange, 0.25);
+$selection-color: $nw-ink;
+$code-block-bg:   #f4f8f8;
+$code-color:      $nw-teal-dark;
+
+
+/*-- scss:rules --*/
+
+// Orange accent bar under section titles
+.reveal .slides section h2 {
+  border-bottom: 3px solid $nw-orange;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.6em;
+  letter-spacing: -0.01em;
+}
+.reveal .slides section h1 { letter-spacing: -0.02em; }
+
+// Strong text picks up the orange accent
+.reveal strong,
+.reveal b { color: $nw-orange-dark; }
+
+// Custom bullets: filled orange dot, hollow teal for nested
+.reveal ul { list-style: none; margin-left: 0; }
+.reveal ul li { position: relative; padding-left: 1.1em; }
+.reveal ul li::before {
+  content: "";
+  position: absolute; left: 0; top: 0.5em;
+  width: 0.45em; height: 0.45em;
+  background: $nw-orange;
+  border-radius: 50%;
+}
+.reveal ul ul li::before {
+  background: transparent;
+  border: 2px solid $nw-teal;
+}
+
+// Links: subtle underline, orange on hover
+.reveal a {
+  text-decoration: none;
+  border-bottom: 1px solid rgba($nw-teal, 0.3);
+  transition: color .15s ease, border-color .15s ease;
+}
+.reveal a:hover { border-bottom-color: $nw-orange; }
+
+// Inline + block code
+.reveal code:not(.sourceCode) {
+  background: $nw-teal-light;
+  color: $nw-teal-dark;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+}
+.reveal pre { box-shadow: none; }
+.reveal pre code { background: $code-block-bg; border-radius: 6px; }
+
+// Blockquote / callout-ish
+.reveal blockquote {
+  border-left: 4px solid $nw-orange;
+  background: $nw-teal-light;
+  padding: 0.5em 1em;
+  box-shadow: none;
+  font-style: normal;
+}
+
+// Title slide
+#title-slide {
+  .title    { color: $nw-teal; font-weight: 700; }
+  .subtitle { color: $nw-orange-dark; }
+  .author, .date, .institute { color: $nw-ink; }
+}
+
+// Tables
+.reveal table th {
+  background: $nw-teal;
+  color: #fff;
+  border-color: $nw-teal-dark;
+}
+.reveal table tr:nth-child(even) td { background: $nw-teal-light; }
+
+// Progress bar + slide number
+.reveal .progress { color: $nw-orange; }
+.reveal .slide-number { background: rgba($nw-teal, 0.85); }
+
+// Optional: a centered section-divider slide
+//   use with `## Section title {.section-divider}`
+.reveal .slides section.section-divider {
+  background: $nw-teal;
+  h1, h2, h3 { color: #fff; border-bottom: none; }
+  &::after {
+    content: "";
+    display: block;
+    width: 80px; height: 4px;
+    margin: 0.6em auto 0;
+    background: $nw-orange;
+  }
+}
+
+.reveal .footnote { color: $nw-teal; }

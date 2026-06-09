@@ -1,0 +1,86 @@
+---
+title: Bioinformatic Workflow Validation
+date: today
+author; Jordan Doe
+format:
+  html:
+    theme: minty
+---
+
+## Summary of Results
+
+...
+
+## Purpose
+
+Describe the reason for implementing this test and its intended use.
+
+## Technique
+
+Describe the scientific basis of how this test works.
+
+## Computing Environment / Software Packages
+
+Describe the computing environment, software package(s), script(s), and/or database(s) that will be used in the validation.
+
+## Samples
+
+Describe the breadth of samples for the validation, including the following criteria:
+
+## Sequence Database Description
+
+Describe the sequence database(s) containing the sequences and identifiers of the target organisms, resistance and pathogenicity markers, and host-responsive markers.
+
+## Quality Metrics
+
+### Wet-Bench Method Metrics — Acceptance and Rejection Criteria
+
+These should include criteria for determining when the sequencing process has failed and whether the data should be re-processed or not further processed.
+
+### Dry-Bench / Post-Assembly Metrics — Acceptance and Rejection Criteria
+
+Criteria must determine when the post-assembly data is sufficiently inadequate and requires the sample to be either re-processed or not further processed.
+
+## Analysis Process
+
+Describe the sequential process that will be used in the analysis of the sequence reads.
+
+## Analytical Specificity / Interference
+
+Analytical specificity refers to the ability of a test or procedure to correctly identify or quantify an entity in the presence of interfering or cross-reactive substances that might be expected to be present.
+
+## Required Analysis Metrics
+
+Clearly define the measurements to determine accuracy and reproducibility.
+
+### Accuracy
+
+Are your test results correct? This can be determined by testing previously annotated genomes, side-by-side testing with a reference laboratory, proficiency testing materials that have established values, and previously tested patient specimens with established values. Total accuracy should be at least 90% relative to the reference method.
+
+Accuracy (Agreement) = 100 × (No. of correct results / Total no. of results)
+
+### Reproducibility
+
+Can you obtain the same result time after time? Confirm this parameter by repeatedly testing the same samples on different days, using different computers to interface with the bioinformatic pipeline, and obtaining the same or comparable results (reproducible) regardless of which member of the laboratory's testing personnel performs the test (operator variance).
+
+For fully automated test systems that are not operator dependent, operator variance should not affect the test's precision and may not need to be evaluated by more than one person. Acceptable precision is considered calculated reproducibility ≥ 95%.
+
+Reproducibility = 100 × (No. of repeated results in agreement / Total no. of results)
+
+### Analytical Sensitivity
+
+Analytical sensitivity measures the number of quantifiable samples at specified concentration levels near the expected detection limit. This only applies to qualitative tests.
+
+Sensitivity = [TP / (TP + FN)] × 100
+
+Specificity = [TN / (TN + FP)] × 100
+
+### Lower Limit of Detection (LOD)
+
+LOD may be influenced by genome size and is required for each variant and microbial target type. For antiviral drug resistance, LOD establishment must consider the viral load and variant allele fraction.
+
+## References
+
+List below any technical and/or literature references used in the verification planning process.
+
+## Appendix

@@ -1,0 +1,38 @@
+
+.workflow {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+  }
+.workflow-title { font-size: 2.25rem; font-weight: 800; margin: 0 0 1.5rem; color: #1a202c; letter-spacing: -0.025em; }
+.workflow-title .workflow-expansion { display: block; margin-top: 0.25rem; font-size: 1.25rem; font-weight: 400; color: #718096; letter-spacing: normal; }
+.workflow-title .workflow-expansion ins { text-decoration: none; font-weight: 700; color: #2d3748; }
+
+.workflow-body { display: flex; gap: 2rem; align-items: flex-start; }   /* top-align the two columns */
+.workflow-figure { flex: 0 0 58%; }
+.workflow-figure img { width: 100%; height: auto; display: block; }
+
+.workflow-features { flex: 1; }
+.workflow-features h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.75rem; color: #1a202c; }
+.workflow-features .workflow-intro { font-size: 1.05rem; margin: 0 0 1.25rem; color: #4a5568; }
+.workflow-features ul { list-style: none; padding: 0; margin: 0; }
+.workflow-features li { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
+.workflow-features li:last-child { margin-bottom: 0; }
+.workflow-features li .workflow-dna { margin-right: 0.75rem; font-size: 1.25rem; line-height: 1; }
+
+/* Documentation section — now lives inside the features column */
+.workflow-docs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e2e8f0;
+  }
+.workflow-docs .workflow-qr { width: 100px; height: 100px; display: block; border-radius: 8px; flex-shrink: 0; }
+.workflow-docs .workflow-docs-text h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; color: #1a202c; }
+.workflow-docs .workflow-docs-text a { font-size: 1rem; color: #3182ce; text-decoration: none; word-break: break-all; }
+.workflow-docs .workflow-docs-text a:hover { text-decoration: underline; }

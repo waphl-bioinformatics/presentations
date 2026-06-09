@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {
+    margin: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+  }
+  h1 { font-size: 2.25rem; font-weight: 800; margin: 0 0 1.5rem; color: #1a202c; letter-spacing: -0.025em; }
+  h1 .expansion { display: block; margin-top: 0.25rem; font-size: 1.25rem; font-weight: 400; color: #718096; letter-spacing: normal; }
+
+  .body { display: flex; gap: 2rem; align-items: flex-start; }
+  .figure { flex: 0 0 58%; }
+  .figure img { width: 100%; height: auto; display: block; }
+
+  .features { flex: 1; }
+  .features h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 0.75rem; color: #1a202c; }
+  .features .intro { font-size: 1.05rem; margin: 0 0 1.25rem; color: #4a5568; }
+
+  .features-list { list-style: none; padding: 0; margin: 0; }
+  .features-list > li { font-size: 1rem; margin-bottom: 1rem; display: flex; align-items: flex-start; }
+  .features-list > li:last-child { margin-bottom: 0; }
+  .icon { margin-right: 0.75rem; font-size: 1.25rem; line-height: 1; flex-shrink: 0; }
+
+  /* item with sub-bullets stacks vertically */
+  .features-list > li.group { flex-direction: column; }
+  .features-list > li.group .line { display: flex; align-items: flex-start; }
+  .sub { list-style: none; margin: 0.5rem 0 0; padding: 0; }
+  .sub li { display: flex; align-items: flex-start; margin: 0 0 0.4rem 1.75rem; font-size: 0.95rem; color: #4a5568; }
+  .sub li:last-child { margin-bottom: 0; }
+
+  .docs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e2e8f0;
+  }
+  .docs .docs-text h2 { font-size: 1.15rem; font-weight: 700; margin: 0 0 0.25rem; color: #1a202c; }
+  .docs .docs-text .soon { font-size: 1rem; color: #718096; font-style: italic; }
+  .docs .qr { width: 100px; height: 100px; display: block; border-radius: 8px; flex-shrink: 0; }
+
+</style>
+</head>
+<body>
+
+  <h1>CorgiSNPs <span class="expansion">Fungal genomic surveillance</span></h1>
+
+  <div class="body">
+    <div class="figure">
+      <!-- local image, relative to THIS html file -->
+      <img src="../media/corgisnps-workflow.png" alt="CorgiSNPs Workflow">
+    </div>
+
+    <div class="features">
+      <h2>Key Features</h2>
+      <p class="intro">CorgiSNPs is a fungal genomic surveillance pipeline.</p>
+
+      <ul class="features-list">
+        <li><span class="icon">🍄</span><span>Single, streamlined workflow that integrates common analyses</span></li>
+        <li><span class="icon">🍄</span><span>Automatically maintains a database of historical isolates used as contextual isolates in phylogenies</span></li>
+        <li><span class="icon">🍄</span><span>Supports diploid fungi</span></li>
+        <li class="group">
+          <div class="line"><span class="icon">🍄</span><span>Genomics-first approach:</span></div>
+          <ul class="sub">
+            <li><span class="icon">•</span><span>No need to pre-select contextual isolates manually</span></li>
+            <li><span class="icon">•</span><span>Selects contextual isolates dynamically based on genetic relatedness</span></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="docs">
+        <img class="qr"
+             src=""
+             alt="Coming Soon!">
+        <div class="docs-text">
+          <h2>📖 Documentation</h2>
+          <span class="soon">Coming soon</span>
+        </div>
+      </div>
+    
+      <div class="docs">
+        <img class="qr"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://github.com/nw-page/corgisnps"
+             alt="QR code linking to CorgiSNPs repo">
+        <div class="docs-text">
+          <h2>💻 Repository</h2>
+          <a href="https://github.com/nw-page/corgisnps">github.com/nw-page/corgisnps</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>
