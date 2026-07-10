@@ -156,23 +156,10 @@ whole project at once.
 
 ## View the slides
 
-Open the rendered `slides.html` in any web browser. Double-click it in your file manager, or from
-the terminal:
-
-- **macOS:** `open slides.html`
-- **Linux:** `xdg-open slides.html`
-- **Windows:** `start slides.html`
+Open the rendered `slides.html` in any web browser. Double-click it in your file manager.
 
 Use the arrow keys to navigate; press `S` for speaker notes, `F` for fullscreen, and `?` to see all
 reveal.js keyboard shortcuts.
-
-## Collaboration tips
-
-- Pull before you edit, and commit in small, focused changes so others can follow along.
-- Keeping one topic per slide (and one edit per person at a time) makes merges much easier.
-- Render locally and glance at the HTML before you push, to confirm your changes look right.
-- Agree with your team on whether the rendered `slides.html` should be committed or left out via
-  `.gitignore` — pick one approach so it doesn't churn on every render.
 
 ## Documentation
 
