@@ -1,0 +1,141 @@
+<svg viewBox="0 0 1530 560" xmlns="http://www.w3.org/2000/svg" font-family="'Public Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+  <rect x="10" y="14" width="1510" height="532" rx="18" fill="#f7fbfb" stroke="#cfeaea" stroke-width="1"/>
+  <text x="40" y="50" font-size="20" font-weight="600" fill="#0c5460">What a de novo assembly gives you</text>
+
+  <!-- ===== 01 unordered reads ===== -->
+  <text x="52" y="92" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">01</text>
+  <text x="52" y="116" font-size="16" font-weight="600" fill="#0c5460">Unordered reads</text>
+  <text x="52" y="136" font-size="12" fill="#15737f">short fragments, position unknown</text>
+  <rect x="44" y="164" width="264" height="306" rx="14" fill="#ffffff" stroke="#cfeaea" stroke-width="1"/>
+  <g>
+    <g transform="rotate(9.7 113 208)"><rect x="84" y="202" width="58" height="12" rx="6" fill="#0c5460"/><rect x="89" y="204" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M142 202 L142 214 L149 208 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-4.3 213 201)"><rect x="184" y="195" width="58" height="12" rx="6" fill="#15737f"/><rect x="189" y="198" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M184 195 L184 207 L177 201 Z" fill="#15737f"/></g>
+    <g transform="rotate(0.9 146 242)"><rect x="112" y="236" width="68" height="12" rx="6" fill="#0c5460"/><rect x="117" y="238" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M180 236 L180 248 L187 242 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-12.6 219 244)"><rect x="180" y="238" width="78" height="12" rx="6" fill="#15737f"/><rect x="185" y="240" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M180 238 L180 250 L173 244 Z" fill="#15737f"/></g>
+    <g transform="rotate(-13.5 139 291)"><rect x="100" y="285" width="78" height="12" rx="6" fill="#0c5460"/><rect x="105" y="288" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M178 285 L178 297 L185 291 Z" fill="#0c5460"/></g>
+    <g transform="rotate(15.2 248 294)"><rect x="219" y="288" width="58" height="12" rx="6" fill="#15737f"/><rect x="224" y="290" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M277 288 L277 300 L284 294 Z" fill="#15737f"/></g>
+    <g transform="rotate(-14.2 122 341)"><rect x="88" y="335" width="68" height="12" rx="6" fill="#0c5460"/><rect x="93" y="338" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M156 335 L156 347 L163 341 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-21.7 213 342)"><rect x="174" y="336" width="78" height="12" rx="6" fill="#15737f"/><rect x="179" y="338" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M252 336 L252 348 L259 342 Z" fill="#15737f"/></g>
+    <g transform="rotate(-3.8 143 376)"><rect x="109" y="370" width="68" height="12" rx="6" fill="#0c5460"/><rect x="114" y="372" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M109 370 L109 382 L102 376 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-11.7 235 381)"><rect x="201" y="375" width="68" height="12" rx="6" fill="#15737f"/><rect x="206" y="378" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M269 375 L269 387 L276 381 Z" fill="#15737f"/></g>
+    <g transform="rotate(-1.6 100 411)"><rect x="71" y="405" width="58" height="12" rx="6" fill="#0c5460"/><rect x="76" y="408" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M71 405 L71 417 L64 411 Z" fill="#0c5460"/></g>
+    <g transform="rotate(8.8 241 426)"><rect x="198" y="420" width="86" height="12" rx="6" fill="#15737f"/><rect x="203" y="422" width="76" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M284 420 L284 432 L291 426 Z" fill="#15737f"/></g>
+  </g>
+
+  <line x1="320" y1="300" x2="396" y2="300" stroke="#083e47" stroke-width="3"/>
+  <path d="M394 291 L394 309 L408 300 Z" fill="#083e47"/>
+  <text x="364" y="284" text-anchor="middle" font-size="13" font-style="italic" fill="#083e47">assemble</text>
+  <text x="364" y="322" text-anchor="middle" font-size="11" fill="#15737f">by overlap</text>
+
+  <!-- ===== 02 de novo assembly ===== -->
+  <text x="428" y="92" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">02</text>
+  <text x="428" y="116" font-size="16" font-weight="600" fill="#0c5460">De novo assembly</text>
+  <text x="428" y="136" font-size="12" fill="#15737f">overlapping reads are stitched into contigs</text>
+  <rect x="414" y="164" width="386" height="306" rx="14" fill="#ffffff" stroke="#cfeaea" stroke-width="1"/>
+
+  <text x="428" y="192" font-size="11" font-weight="700" letter-spacing="1" fill="#15737f">READS OVERLAP AND EXTEND</text>
+  <rect x="428" y="208" width="110" height="11" rx="5.5" fill="#0c5460"/>
+    <rect x="433" y="210" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="474" y="222" width="110" height="11" rx="5.5" fill="#15737f"/>
+    <rect x="479" y="224" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="520" y="236" width="110" height="11" rx="5.5" fill="#0c5460"/>
+    <rect x="525" y="238" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="566" y="250" width="110" height="11" rx="5.5" fill="#15737f"/>
+    <rect x="571" y="252" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="612" y="264" width="110" height="11" rx="5.5" fill="#0c5460"/>
+    <rect x="617" y="266" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+  <!-- wrap indicator -->
+  <path d="M726 274 C 756 286, 748 292, 700 292 H 480 C 452 292, 448 292, 446 300" fill="none" stroke="#9fcfcf" stroke-width="1.6" stroke-dasharray="5 4"/>
+  <rect x="452" y="292" width="110" height="11" rx="5.5" fill="#0c5460"/>
+    <rect x="457" y="294" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="498" y="306" width="110" height="11" rx="5.5" fill="#15737f"/>
+    <rect x="503" y="308" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="544" y="318" width="110" height="11" rx="5.5" fill="#0c5460"/>
+    <rect x="549" y="320" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="590" y="332" width="110" height="11" rx="5.5" fill="#15737f"/>
+    <rect x="595" y="334" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <rect x="636" y="346" width="110" height="11" rx="5.5" fill="#0c5460"/>
+    <rect x="641" y="348" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+
+  <text x="428" y="378" font-size="11" font-weight="700" letter-spacing="1" fill="#c96a1f">DRAFT ASSEMBLY &#8212; 3 contigs &#183; 4.7 Mb</text>
+  <rect x="428" y="390" width="300" height="20" rx="10" fill="#e48430" stroke="#c96a1f" stroke-width="1.4"/>
+  <rect x="434" y="393" width="288" height="2" rx="1" fill="#ffffff" opacity="0.25"/>
+  <rect x="428" y="414" width="240" height="20" rx="10" fill="#e48430" stroke="#c96a1f" stroke-width="1.4"/>
+  <rect x="434" y="417" width="228" height="2" rx="1" fill="#ffffff" opacity="0.25"/>
+  <rect x="428" y="438" width="180" height="20" rx="10" fill="#e48430" stroke="#c96a1f" stroke-width="1.4"/>
+  <rect x="434" y="441" width="168" height="2" rx="1" fill="#ffffff" opacity="0.25"/>
+  
+
+  <line x1="812" y1="300" x2="852" y2="300" stroke="#083e47" stroke-width="3"/>
+  <path d="M850 291 L850 309 L864 300 Z" fill="#083e47"/>
+
+  <!-- ===== 03 QC gate ===== -->
+  <text x="878" y="92" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">03</text>
+  <text x="878" y="116" font-size="16" font-weight="600" fill="#0c5460">Assembly QC</text>
+  <text x="878" y="136" font-size="12" fill="#15737f">are we confident in these results?</text>
+  <path d="M965 190 L1065 246 L1065 354 L965 410 L865 354 L865 246 Z" fill="#d8f0f0" stroke="#0c5460" stroke-width="2"/>
+  <circle cx="965" cy="238" r="17" fill="#ffffff" stroke="#0c5460" stroke-width="2"/>
+  <path d="M957 238 l6 7 l11 -14" fill="none" stroke="#e48430" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="965" y="282" text-anchor="middle" font-size="11.5" font-family="'Courier New', monospace" fill="#083e47">Assembly length</text>
+  <text x="965" y="302" text-anchor="middle" font-size="11.5" font-family="'Courier New', monospace" fill="#083e47">Contig count</text>
+  <text x="965" y="322" text-anchor="middle" font-size="11.5" font-family="'Courier New', monospace" fill="#083e47">Read depth</text>
+  <text x="965" y="342" text-anchor="middle" font-size="11.5" font-family="'Courier New', monospace" fill="#083e47">Contamination</text>
+
+  <path d="M965 412 V 496 H 566" fill="none" stroke="#c96a1f" stroke-width="2" stroke-dasharray="6 5"/>
+  <path d="M572 490 L572 502 L560 496 Z" fill="#c96a1f"/>
+  <text x="586" y="492" font-size="11.5" font-style="italic" fill="#c96a1f">fails QC &#8212; resequence</text>
+
+  <!-- ===== 04 results ===== -->
+  <text x="1150" y="92" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">04</text>
+  <text x="1150" y="116" font-size="16" font-weight="600" fill="#0c5460">Results from one assembly</text>
+  <path d="M1069 300 C 1110 300, 1108 176, 1140 176" fill="none" stroke="#083e47" stroke-width="2.2"/><path d="M1136 170 L1136 182 L1148 176 Z" fill="#083e47"/>
+  <path d="M1069 300 C 1110 300, 1108 272, 1140 272" fill="none" stroke="#083e47" stroke-width="2.2"/><path d="M1136 266 L1136 278 L1148 272 Z" fill="#083e47"/>
+  <path d="M1069 300 C 1110 300, 1108 368, 1140 368" fill="none" stroke="#083e47" stroke-width="2.2"/><path d="M1136 362 L1136 374 L1148 368 Z" fill="#083e47"/>
+  <g>
+    <rect x="1150" y="136" width="350" height="80" rx="14" fill="#ffffff" stroke="#0c5460" stroke-width="1.6"/>
+    <rect x="1150" y="136" width="5" height="80" rx="2.5" fill="#0c5460"/>
+    <circle cx="1194" cy="176" r="22" fill="#d8f0f0"/>
+    <circle cx="1194" cy="165" r="4" fill="#0c5460"/><circle cx="1183" cy="187" r="4" fill="#15737f"/><circle cx="1205" cy="187" r="4" fill="#15737f"/><path d="M1194 169 V 178 M1183 183 V 178 H 1205 V 183" fill="none" stroke="#0c5460" stroke-width="1.8" stroke-linecap="round"/>
+    <text x="1230" y="166" font-size="15.5" font-weight="600" fill="#0c5460">Taxonomic classification</text>
+    <text x="1230" y="184" font-size="11.5" fill="#15737f">which organism is this?</text>
+    <rect x="1230" y="192" width="143" height="17" rx="8.5" fill="#eef8f8" stroke="#0c5460" stroke-width="0.9"/>
+    <text x="1238" y="204" font-size="10.5" font-family="'Courier New', monospace" fill="#0c5460">Salmonella enterica</text>
+  </g>
+  <g>
+    <rect x="1150" y="232" width="350" height="80" rx="14" fill="#ffffff" stroke="#0c5460" stroke-width="1.6"/>
+    <rect x="1150" y="232" width="5" height="80" rx="2.5" fill="#0c5460"/>
+    <circle cx="1194" cy="272" r="22" fill="#d8f0f0"/>
+    <circle cx="1184" cy="264" r="3.4" fill="#0c5460"/><circle cx="1204" cy="264" r="3.4" fill="#15737f"/><circle cx="1184" cy="281" r="3.4" fill="#15737f"/><circle cx="1204" cy="281" r="3.4" fill="#0c5460"/><circle cx="1194" cy="272" r="3.4" fill="#e48430"/><path d="M1184 264 L1194 272 L1204 264 M1184 281 L1194 272 L1204 281" fill="none" stroke="#9fcfcf" stroke-width="1.5"/>
+    <text x="1230" y="262" font-size="15.5" font-weight="600" fill="#0c5460">Subtyping</text>
+    <text x="1230" y="280" font-size="11.5" fill="#15737f">MLST sequence type &#183; clade</text>
+    <rect x="1230" y="288" width="110" height="17" rx="8.5" fill="#eef8f8" stroke="#0c5460" stroke-width="0.9"/>
+    <text x="1238" y="300" font-size="10.5" font-family="'Courier New', monospace" fill="#0c5460">ST34 &#183; Clade 2</text>
+  </g>
+  <g>
+    <rect x="1150" y="328" width="350" height="80" rx="14" fill="#ffffff" stroke="#0c5460" stroke-width="1.6"/>
+    <rect x="1150" y="328" width="5" height="80" rx="2.5" fill="#0c5460"/>
+    <circle cx="1194" cy="368" r="22" fill="#d8f0f0"/>
+    <line x1="1178" y1="368" x2="1210" y2="368" stroke="#9fcfcf" stroke-width="2"/><path d="M1178 362 h12 l5 6 l-5 6 h-12 Z" fill="#0c5460"/><path d="M1210 362 h-11 l-5 6 l5 6 h11 Z" fill="#15737f"/>
+    <text x="1230" y="358" font-size="15.5" font-weight="600" fill="#0c5460">Gene annotation</text>
+    <text x="1230" y="376" font-size="11.5" fill="#15737f">coding sequences, rRNA, tRNA</text>
+    <rect x="1230" y="384" width="77" height="17" rx="8.5" fill="#eef8f8" stroke="#0c5460" stroke-width="0.9"/>
+    <text x="1238" y="396" font-size="10.5" font-family="'Courier New', monospace" fill="#0c5460">4,812 CDS</text>
+  </g>
+  <g>
+    <rect x="1190" y="442" width="310" height="80" rx="14" fill="#ffffff" stroke="#e48430" stroke-width="1.6"/>
+    <rect x="1190" y="442" width="5" height="80" rx="2.5" fill="#e48430"/>
+    <circle cx="1234" cy="482" r="22" fill="#fdeede"/>
+    <rect x="1218" y="474" width="32" height="16" rx="8" fill="#e48430" stroke="#c96a1f" stroke-width="1.4"/><line x1="1234" y1="474" x2="1234" y2="490" stroke="#ffffff" stroke-width="1.6"/><line x1="1214" y1="494" x2="1254" y2="470" stroke="#c96a1f" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="1270" y="472" font-size="15.5" font-weight="600" fill="#0c5460">AMR gene detection</text>
+    <text x="1270" y="490" font-size="11.5" fill="#15737f">resistance genes found in the annotation</text>
+    <rect x="1270" y="498" width="130" height="17" rx="8.5" fill="#fdeede" stroke="#c96a1f" stroke-width="0.9"/>
+    <text x="1278" y="510" font-size="10.5" font-family="'Courier New', monospace" fill="#c96a1f">blaCTX-M-15, tetA</text>
+  </g>
+
+  <!-- annotation -> AMR dependency -->
+  <line x1="1216" y1="408" x2="1216" y2="432" stroke="#c96a1f" stroke-width="2.2"/>
+  <path d="M1207 430 L1225 430 L1216 442 Z" fill="#c96a1f"/>
+  <text x="1234" y="428" font-size="11.5" font-style="italic" fill="#c96a1f">screened against AMR databases</text>
+
+</svg>

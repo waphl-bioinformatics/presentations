@@ -1,0 +1,243 @@
+---
+title: "Genomic analysis of fungal and bacterial infections from hospital settings at the Washington State Public Health Laboratory"
+author:
+  - name: Jared Johnson
+  - name: Holly Halstead
+  - name: Zack Mudge
+format:
+  revealjs:
+    embed-resources: true
+    theme: [default, css/nwpage.scss]
+---
+
+## Background
+The Washington State Public Health Lab (**WAPHL**) serves as the Antimicrobial Resistance Laboratory Nextwork site for the Western Region
+![](media/AR-Lab-Network-Regional-Labs-Map.jpg)
+[image source](https://www.cdc.gov/antimicrobial-resistance-laboratory-networks/media/images/AR-Lab-Network-Regional-Labs-Map.jpg)
+
+
+## ARLN Sequencing at WA PHL
+```{python}
+import pandas as pd
+import plotly.graph_objects as go
+
+FUNGAL_GENERA = {"Candidozyma"}
+GROUP_COLOR = {"Bacteria": (12, 84, 96),    # NW teal
+               "Fungi":    (228, 132, 48)}  # NW orange
+
+def tint(rgb, f, alpha=1.0):
+    """Lighten an RGB triple toward white by fraction f."""
+    r, g, b = (int(c + (255 - c) * f) for c in rgb)
+    return f"rgba({r},{g},{b},{alpha})"
+
+df = pd.read_csv("data/hai_data.csv")
+df = df.rename(columns={df.columns[0]: "year", df.columns[1]: "species"})
+if "genus" not in df.columns:
+    df["genus"] = df["species"].astype(str).str.split(n=1).str[0]
+
+df["group"] = df["genus"].apply(lambda g: "Fungi" if g in FUNGAL_GENERA else "Bacteria")
+
+# zero-filled cumulative counts at both levels
+genus_cum = df.groupby(["year", "genus"]).size().unstack(fill_value=0).sort_index().cumsum()
+group_cum = df.groupby(["year", "group"]).size().unstack(fill_value=0).sort_index().cumsum()
+
+years = genus_cum.index.tolist()
+members = {grp: sorted(sub["genus"].unique()) for grp, sub in df.groupby("group")}
+
+fig = go.Figure()
+
+# muted genus lines first, so the totals draw on top of them
+for grp, gens in members.items():
+    base = GROUP_COLOR[grp]
+    for i, g in enumerate(gens):
+        shade = 0.35 + 0.45 * (i / max(len(gens) - 1, 1))   # 35%-80% toward white
+        col = tint(base, shade, 0.85)
+        fig.add_trace(go.Scatter(
+            x=years, y=genus_cum[g], name=g,
+            legendgroup=grp, legendgrouptitle=dict(text=grp),
+            mode="lines+markers",
+            line=dict(color=col, width=1.2),
+            marker=dict(size=4, color=col),
+            hovertemplate=f"{g}<br>Year: %{{x}}<br>Cumulative: %{{y}}<extra></extra>"))
+
+# dominant group totals
+for grp in members:
+    col = tint(GROUP_COLOR[grp], 0)
+    fig.add_trace(go.Scatter(
+        x=years, y=group_cum[grp], name=f"<b>{grp} (total)</b>",
+        legendgroup=grp, legendgrouptitle=dict(text=grp),
+        mode="lines+markers",
+        line=dict(color=col, width=3.5),
+        marker=dict(size=8, color=col, line=dict(width=1.2, color="white")),
+        hovertemplate=f"<b>{grp} total</b><br>Year: %{{x}}<br>Cumulative: %{{y}}<extra></extra>"))
+
+fig.update_layout(
+    title=dict(text="Cumulative isolates — bacterial & fungal", x=0.02),
+    xaxis=dict(title="Year", dtick=1, showgrid=False),
+    yaxis=dict(title="Cumulative count", gridcolor="#eee", rangemode="tozero"),
+    legend=dict(groupclick="toggleitem"),
+    hovermode="closest",
+    plot_bgcolor="white", paper_bgcolor="white")
+
+fig.write_html("data/cumulative_by_group.html", include_plotlyjs="cdn")
+fig
+```
+
+## Overview
+
+<img src="media/overview.svg" alt="Sample to sequences">
+
+- Bacterial and fungal genomic analysis follow a similar workflow
+- Bioinformatics and genomic epidemiology sometimes overlap - driven by policy and funding differences
+
+## Sample to Whole Genome Sequences
+
+<img src="media/sample-to-seqs.svg" alt="Sample to sequences">
+
+- Genomes are broken into small pieces before sequencing
+- Bioinformaticians put these pieces back together
+
+## Sample-level Analysis
+
+<img src="media/seqs-to-assembly.svg" alt="Sequences to assembly">
+
+### Analyses performed on each sample individually - **often performed once!**
+
+- **De novo assembly** is a common starting point
+- Multiple results from a single analysis - taxonomy, subtype, genes of interest
+
+## Population-level Analysis
+
+<img src="media/seqs-to-phylo.svg" alt="Sequences to phylogeny">
+
+### Analyses performed on a population of samples - **often performed many times!**
+
+- Populations defined based on genetic relatedness (e.g., sequence type, MinHash cluster)
+- **Reference-based assembly** is a common starting point (e.g., core SNP analysis)
+- Multiple results generated from a single analysis - SNP distances, phylogenetic tree, etc.,
+
+## Quality Assurance
+
+### Must ensure results are high quality — **reproducible** and **accurate**.
+
+<br>
+
+### How we measure quality depends on the metric being reported:
+
+| Metric | De novo analysis | Phylogenetic analysis |
+|:-------|:-----------------|:----------------------|
+| **Read depth** | ≥ 30× average across the genome | ≥ 10× at every genome site |
+| **Genome coverage** | Assembly size within the expected range for the species | ≥ 90% of the reference covered at ≥ 10× |
+| **Contamination signal** | Inflated assembly size; species not resolved | Reads supporting multiple alleles at a site |
+
+## Interpretation & Reporting
+
+:::: {.columns}
+::: {.column width=49%}
+Genomic data is large, complex, and produces **many** results!
+
+#### Data Formats:
+
+- Tabular (CSV, TSV, Excel, etc.)
+- Trees (Newick)
+- Genome assembly (FASTA)
+
+Communicating these results can be challenging!
+:::
+
+::: {.column width=49%}
+**Example Phylogenetic Tree**
+
+<img src="data/phylo_tree/phylo_tree_100tips.png"
+     alt="Phylogenetic tree with 100 tips"
+     height="500"
+     style="border: 1.5px solid #333;">
+
+![](media/can-you-make-that-out.png){.absolute top="60%" left="80%" width="250" style="z-index: 10;"}
+
+:::
+::::
+
+
+## Interactive Datasets
+
+<iframe src="data/phylo_tree/phylo_tree_100tips.html"
+        width="100%"
+        height="600"
+        style="border:none;"
+        title="Interactive phylogenetic tree">
+</iframe>
+
+## Microreact Reports
+
+<iframe src="https://microreact.org/project/zika-virus?tt=rc"
+        width="100%"
+        height="600"
+        style="border:none;"
+        title="Microreact Example">
+</iframe>
+
+## Quality Management System
+
+::: {.box .note}
+Every public health lab follows a quality management system (**QMS**).
+:::
+
+::: {.box .accent .indent .fragment}
+→ Every **QMS** is *different*.
+:::
+
+::: {.box .note .fragment}
+The Washington PHL **QMS** follows **CLIA** standards — the Clinical Laboratory Improvement Amendments.
+:::
+
+::: {.box .accent .indent .fragment}
+→ Results must be **validated** and **approved** by the Lab Director
+:::
+
+::: {.box .note .fragment}
+**CLIA** standards apply to results intended for **patient care**.
+:::
+
+::: {.box .accent .indent .fragment}
+→ Outbreak monitoring and AMR screening are **surveillance** — [not]{.underline} patient care.
+:::
+
+## Data Sharing
+
+::: {.box .note}
+Only **validated** results can be shared outside the PHL
+:::
+
+::: {.box .accent .indent .fragment}
+→ *Unless* there is a data sharing agreement (**DSA**)
+:::
+
+::: {.box .note .fragment}
+WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
+:::
+
+::: {.box .accent .indent .fragment}
+→ **Any** result can be shared, if at least [one]{.underline} result is validated
+:::
+
+<br>
+
+:::{.fragment}
+::: {.box .key .filled }
+...but how we measure quality depends on the result being reported!
+:::
+
+![](media/into-knots.png){.absolute top="47%" left="85%" width="300" style="z-index: 10;"}
+:::
+
+## (Bacterial | Fungal) Analysis - Overview
+- Include flowchart emphasizing sample-level and population-level analyses, who performs these analyses (bioinfo or mol epi), and connection to policy / funding reason why.
+- Discuss the number of samples per week / month and the time spent (or anticipated time spent for CorgiSNPs)
+- Briefly discuss the workflows and where they are performed (AWS + Seqera) - keep very high level but include links to GitHub
+
+## (Bacterial | Fungal) Analysis - Sharing Results
+- Show examples of results (de-identified or contrived)
+
+## Summary
+- Jared will complete after all content is available

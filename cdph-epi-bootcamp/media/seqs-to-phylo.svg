@@ -1,0 +1,224 @@
+<svg viewBox="0 0 1530 640" xmlns="http://www.w3.org/2000/svg" font-family="'Public Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+  <rect x="10" y="14" width="1510" height="612" rx="18" fill="#f7fbfb" stroke="#cfeaea" stroke-width="1"/>
+  <text x="40" y="50" font-size="20" font-weight="600" fill="#0c5460">Reference-based mapping: variants, and what you do with them</text>
+
+  <!-- 01 -->
+  <text x="52" y="92" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">01</text>
+  <text x="52" y="116" font-size="16" font-weight="600" fill="#0c5460">Unordered reads</text>
+  <text x="52" y="136" font-size="12" fill="#15737f">short fragments, position unknown</text>
+  <rect x="44" y="164" width="264" height="360" rx="14" fill="#ffffff" stroke="#cfeaea" stroke-width="1"/>
+  <g>
+    <g transform="rotate(9.7 113 207)"><rect x="84" y="201" width="58" height="12" rx="6" fill="#0c5460"/><rect x="89" y="204" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M142 201 L142 213 L149 207 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-4.3 213 200)"><rect x="184" y="194" width="58" height="12" rx="6" fill="#15737f"/><rect x="189" y="196" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M184 194 L184 206 L177 200 Z" fill="#15737f"/></g>
+    <g transform="rotate(0.9 146 241)"><rect x="112" y="235" width="68" height="12" rx="6" fill="#0c5460"/><rect x="117" y="238" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M180 235 L180 247 L187 241 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-12.6 219 243)"><rect x="180" y="237" width="78" height="12" rx="6" fill="#15737f"/><rect x="185" y="240" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M180 237 L180 249 L173 243 Z" fill="#15737f"/></g>
+    <g transform="rotate(-13.5 139 290)"><rect x="100" y="284" width="78" height="12" rx="6" fill="#0c5460"/><rect x="105" y="286" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M178 284 L178 296 L185 290 Z" fill="#0c5460"/></g>
+    <g transform="rotate(15.2 248 293)"><rect x="219" y="287" width="58" height="12" rx="6" fill="#15737f"/><rect x="224" y="290" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M277 287 L277 299 L284 293 Z" fill="#15737f"/></g>
+    <g transform="rotate(-14.2 122 340)"><rect x="88" y="334" width="68" height="12" rx="6" fill="#0c5460"/><rect x="93" y="336" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M156 334 L156 346 L163 340 Z" fill="#0c5460"/></g>
+    <g transform="rotate(18.0 213 333)"><rect x="184" y="327" width="58" height="12" rx="6" fill="#15737f"/><rect x="189" y="330" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M184 327 L184 339 L177 333 Z" fill="#15737f"/></g>
+    <g transform="rotate(-3.8 117 382)"><rect x="83" y="376" width="68" height="12" rx="6" fill="#0c5460"/><rect x="88" y="378" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M83 376 L83 388 L76 382 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-11.7 235 380)"><rect x="201" y="374" width="68" height="12" rx="6" fill="#15737f"/><rect x="206" y="376" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M269 374 L269 386 L276 380 Z" fill="#15737f"/></g>
+    <g transform="rotate(-1.6 100 410)"><rect x="71" y="404" width="58" height="12" rx="6" fill="#0c5460"/><rect x="76" y="406" width="48" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M71 404 L71 416 L64 410 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-15.6 241 423)"><rect x="202" y="417" width="78" height="12" rx="6" fill="#15737f"/><rect x="207" y="420" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M202 417 L202 429 L195 423 Z" fill="#15737f"/></g>
+    <g transform="rotate(5.9 102 463)"><rect x="68" y="457" width="68" height="12" rx="6" fill="#0c5460"/><rect x="73" y="460" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M136 457 L136 469 L143 463 Z" fill="#0c5460"/></g>
+    <g transform="rotate(10.9 219 461)"><rect x="176" y="455" width="86" height="12" rx="6" fill="#15737f"/><rect x="181" y="458" width="76" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M262 455 L262 467 L269 461 Z" fill="#15737f"/></g>
+    <g transform="rotate(-17.6 133 492)"><rect x="94" y="486" width="78" height="12" rx="6" fill="#0c5460"/><rect x="99" y="488" width="68" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M172 486 L172 498 L179 492 Z" fill="#0c5460"/></g>
+    <g transform="rotate(-16.6 222 494)"><rect x="188" y="488" width="68" height="12" rx="6" fill="#15737f"/><rect x="193" y="490" width="58" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/><path d="M188 488 L188 500 L181 494 Z" fill="#15737f"/></g>
+  </g>
+
+  <line x1="320" y1="344" x2="394" y2="344" stroke="#083e47" stroke-width="3"/>
+  <path d="M392 335 L392 353 L406 344 Z" fill="#083e47"/>
+  <text x="363" y="328" text-anchor="middle" font-size="13" font-style="italic" fill="#083e47">map</text>
+  <text x="363" y="366" text-anchor="middle" font-size="11" fill="#15737f">to reference</text>
+
+  <!-- 02 -->
+  <text x="428" y="92" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">02</text>
+  <text x="428" y="116" font-size="16" font-weight="600" fill="#0c5460">Mapping &#38; variant calling</text>
+  <text x="428" y="136" font-size="12" fill="#15737f">reads get coordinates; differences become SNPs</text>
+  <rect x="414" y="164" width="386" height="360" rx="14" fill="#ffffff" stroke="#cfeaea" stroke-width="1"/>
+  <rect x="552" y="194" width="8" height="190" fill="#e48430" opacity="0.15"/>
+    <rect x="686" y="194" width="8" height="190" fill="#e48430" opacity="0.15"/>
+  <text x="556" y="186" text-anchor="middle" font-size="10" font-weight="700" fill="#c96a1f">SNP</text>
+    <text x="690" y="186" text-anchor="middle" font-size="10" font-weight="700" fill="#c96a1f">SNP</text>
+  <rect x="428" y="194" width="358" height="20" rx="10" fill="#083e47"/>
+  <rect x="434" y="197" width="346" height="2" rx="1" fill="#ffffff" opacity="0.18"/>
+  <text x="607" y="208" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="2" fill="#ffffff">REFERENCE</text>
+  <rect x="428" y="226" width="110" height="12" rx="6" fill="#0c5460"/>
+    <rect x="433" y="228.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M538 226 L538 238 L545 232 Z" fill="#0c5460"/>
+    <rect x="474" y="246" width="110" height="12" rx="6" fill="#15737f"/>
+    <rect x="479" y="248.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M584 246 L584 258 L591 252 Z" fill="#15737f"/>
+    <rect x="553" y="247.5" width="6" height="9" rx="2" fill="#e48430" stroke="#c96a1f" stroke-width="0.8"/>
+    <rect x="520" y="266" width="110" height="12" rx="6" fill="#0c5460"/>
+    <rect x="525" y="268.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M630 266 L630 278 L637 272 Z" fill="#0c5460"/>
+    <rect x="553" y="267.5" width="6" height="9" rx="2" fill="#e48430" stroke="#c96a1f" stroke-width="0.8"/>
+    <rect x="566" y="286" width="110" height="12" rx="6" fill="#15737f"/>
+    <rect x="571" y="288.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M676 286 L676 298 L683 292 Z" fill="#15737f"/>
+    <rect x="612" y="306" width="110" height="12" rx="6" fill="#0c5460"/>
+    <rect x="617" y="308.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M722 306 L722 318 L729 312 Z" fill="#0c5460"/>
+    <rect x="687" y="307.5" width="6" height="9" rx="2" fill="#e48430" stroke="#c96a1f" stroke-width="0.8"/>
+    <rect x="658" y="326" width="110" height="12" rx="6" fill="#15737f"/>
+    <rect x="663" y="328.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M768 326 L768 338 L775 332 Z" fill="#15737f"/>
+    <rect x="687" y="327.5" width="6" height="9" rx="2" fill="#e48430" stroke="#c96a1f" stroke-width="0.8"/>
+    <rect x="504" y="346" width="110" height="12" rx="6" fill="#0c5460"/>
+    <rect x="509" y="348.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M614 346 L614 358 L621 352 Z" fill="#0c5460"/>
+    <rect x="553" y="347.5" width="6" height="9" rx="2" fill="#e48430" stroke="#c96a1f" stroke-width="0.8"/>
+    <rect x="596" y="366" width="110" height="12" rx="6" fill="#15737f"/>
+    <rect x="601" y="368.5" width="100" height="1.6" rx="0.8" fill="#ffffff" opacity="0.25"/>
+    <path d="M706 366 L706 378 L713 372 Z" fill="#15737f"/>
+    <rect x="687" y="367.5" width="6" height="9" rx="2" fill="#e48430" stroke="#c96a1f" stroke-width="0.8"/>
+  <line x1="428" y1="404" x2="786" y2="404" stroke="#e6f2f2" stroke-width="1.5"/>
+  <text x="428" y="428" font-size="11" font-weight="700" letter-spacing="1" fill="#c96a1f">VARIANTS CALLED</text>
+  <text x="600" y="428" font-size="10" font-family="'Courier New', monospace" fill="#9fcfcf">POS  REF  ALT</text>
+  <text x="428" y="440" font-size="11" font-family="'Courier New', monospace" fill="#083e47">  1042  A &#8594; <tspan fill="#c96a1f" font-weight="700">G</tspan></text>
+    <text x="428" y="460" font-size="11" font-family="'Courier New', monospace" fill="#083e47">  2871  C &#8594; <tspan fill="#c96a1f" font-weight="700">T</tspan></text>
+    <text x="428" y="480" font-size="11" font-family="'Courier New', monospace" fill="#083e47">  9330  G &#8594; <tspan fill="#c96a1f" font-weight="700">A</tspan></text>
+  <text x="600" y="500" text-anchor="start" font-size="10.5" font-style="italic" fill="#15737f">depth &#8805; 10&#215;</text>
+  <text x="600" y="484" text-anchor="start" font-size="10.5" font-style="italic" fill="#15737f">filters:</text>
+  <text x="600" y="516" text-anchor="start" font-size="10.5" font-style="italic" fill="#15737f">allele freq &#8805; 0.9</text>
+
+  <!-- fork to two results -->
+  <path d="M812 380 H 836 Q 856 380 856 360 V 232 Q 856 212 876 212 H 884" fill="none" stroke="#083e47" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M880 203 L880 221 L894 212 Z" fill="#083e47"/>
+  <path d="M812 380 H 836 Q 856 380 856 400 V 458 Q 856 478 876 478 H 884" fill="none" stroke="#083e47" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M880 469 L880 487 L894 478 Z" fill="#083e47"/>
+
+<rect x="884" y="78" width="496" height="268" fill="#f4efe6"/>
+  <!-- RESULT A: pairwise SNP distance matrix -->
+  <rect x="900" y="92" width="464" height="240" rx="16" fill="#ffffff" stroke="#0c5460" stroke-width="1.6"/>
+  <rect x="900" y="92" width="5" height="240" rx="2.5" fill="#0c5460"/>
+  <text x="928" y="122" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">03a</text>
+  <text x="928" y="146" font-size="16" font-weight="600" fill="#0c5460">SNP distance matrix</text>
+  <text x="928" y="166" font-size="12" fill="#15737f">pairwise SNP differences between isolates</text>
+  <!-- column headers -->
+  <text x="1019" y="206" transform="rotate(-40 1019 206)" text-anchor="end" font-size="9.5" font-family="'Courier New', monospace" fill="#083e47">ISO-1</text>
+  <text x="1049" y="206" transform="rotate(-40 1049 206)" text-anchor="end" font-size="9.5" font-family="'Courier New', monospace" fill="#083e47">ISO-2</text>
+  <text x="1079" y="206" transform="rotate(-40 1079 206)" text-anchor="end" font-size="9.5" font-family="'Courier New', monospace" fill="#083e47">ISO-3</text>
+  <text x="1109" y="206" transform="rotate(-40 1109 206)" text-anchor="end" font-size="9.5" font-family="'Courier New', monospace" fill="#083e47">ISO-4</text>
+  <text x="1139" y="206" transform="rotate(-40 1139 206)" text-anchor="end" font-size="9.5" font-family="'Courier New', monospace" fill="#083e47">ISO-5</text>
+  <!-- row headers -->
+  <text x="998" y="227" text-anchor="end" font-size="10" font-family="'Courier New', monospace" fill="#083e47">ISO-1</text>
+  <text x="998" y="249" text-anchor="end" font-size="10" font-family="'Courier New', monospace" fill="#083e47">ISO-2</text>
+  <text x="998" y="271" text-anchor="end" font-size="10" font-family="'Courier New', monospace" fill="#083e47">ISO-3</text>
+  <text x="998" y="293" text-anchor="end" font-size="10" font-family="'Courier New', monospace" fill="#083e47">ISO-4</text>
+  <text x="998" y="315" text-anchor="end" font-size="10" font-family="'Courier New', monospace" fill="#083e47">ISO-5</text>
+  <!-- distance cells -->
+  <rect x="1004" y="212" width="30" height="22" rx="3" fill="#0c5460" stroke="#083e47" stroke-width="1"/>
+  <text x="1019" y="227" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">0</text>
+  <rect x="1034" y="212" width="30" height="22" rx="3" fill="#e0f0f0" stroke="#b4d8d8" stroke-width="1"/>
+  <text x="1049" y="227" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">1</text>
+  <rect x="1064" y="212" width="30" height="22" rx="3" fill="#f4cba6" stroke="#e0a874" stroke-width="1"/>
+  <text x="1079" y="227" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">5</text>
+  <rect x="1094" y="212" width="30" height="22" rx="3" fill="#e89a58" stroke="#cf7d34" stroke-width="1"/>
+  <text x="1109" y="227" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">7</text>
+  <rect x="1124" y="212" width="30" height="22" rx="3" fill="#e08636" stroke="#c96a1f" stroke-width="1"/>
+  <text x="1139" y="227" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">8</text>
+  <rect x="1004" y="234" width="30" height="22" rx="3" fill="#e0f0f0" stroke="#b4d8d8" stroke-width="1"/>
+  <text x="1019" y="249" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">1</text>
+  <rect x="1034" y="234" width="30" height="22" rx="3" fill="#0c5460" stroke="#083e47" stroke-width="1"/>
+  <text x="1049" y="249" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">0</text>
+  <rect x="1064" y="234" width="30" height="22" rx="3" fill="#efb383" stroke="#dc9257" stroke-width="1"/>
+  <text x="1079" y="249" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">6</text>
+  <rect x="1094" y="234" width="30" height="22" rx="3" fill="#e08636" stroke="#c96a1f" stroke-width="1"/>
+  <text x="1109" y="249" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">8</text>
+  <rect x="1124" y="234" width="30" height="22" rx="3" fill="#e89a58" stroke="#cf7d34" stroke-width="1"/>
+  <text x="1139" y="249" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">7</text>
+  <rect x="1004" y="256" width="30" height="22" rx="3" fill="#f4cba6" stroke="#e0a874" stroke-width="1"/>
+  <text x="1019" y="271" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">5</text>
+  <rect x="1034" y="256" width="30" height="22" rx="3" fill="#efb383" stroke="#dc9257" stroke-width="1"/>
+  <text x="1049" y="271" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">6</text>
+  <rect x="1064" y="256" width="30" height="22" rx="3" fill="#0c5460" stroke="#083e47" stroke-width="1"/>
+  <text x="1079" y="271" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">0</text>
+  <rect x="1094" y="256" width="30" height="22" rx="3" fill="#c4e4e4" stroke="#97cccc" stroke-width="1"/>
+  <text x="1109" y="271" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">2</text>
+  <rect x="1124" y="256" width="30" height="22" rx="3" fill="#a6d4d4" stroke="#7dbcbc" stroke-width="1"/>
+  <text x="1139" y="271" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">3</text>
+  <rect x="1004" y="278" width="30" height="22" rx="3" fill="#e89a58" stroke="#cf7d34" stroke-width="1"/>
+  <text x="1019" y="293" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">7</text>
+  <rect x="1034" y="278" width="30" height="22" rx="3" fill="#e08636" stroke="#c96a1f" stroke-width="1"/>
+  <text x="1049" y="293" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">8</text>
+  <rect x="1064" y="278" width="30" height="22" rx="3" fill="#c4e4e4" stroke="#97cccc" stroke-width="1"/>
+  <text x="1079" y="293" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">2</text>
+  <rect x="1094" y="278" width="30" height="22" rx="3" fill="#0c5460" stroke="#083e47" stroke-width="1"/>
+  <text x="1109" y="293" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">0</text>
+  <rect x="1124" y="278" width="30" height="22" rx="3" fill="#e0f0f0" stroke="#b4d8d8" stroke-width="1"/>
+  <text x="1139" y="293" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">1</text>
+  <rect x="1004" y="300" width="30" height="22" rx="3" fill="#e08636" stroke="#c96a1f" stroke-width="1"/>
+  <text x="1019" y="315" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">8</text>
+  <rect x="1034" y="300" width="30" height="22" rx="3" fill="#e89a58" stroke="#cf7d34" stroke-width="1"/>
+  <text x="1049" y="315" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a2c0c">7</text>
+  <rect x="1064" y="300" width="30" height="22" rx="3" fill="#a6d4d4" stroke="#7dbcbc" stroke-width="1"/>
+  <text x="1079" y="315" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">3</text>
+  <rect x="1094" y="300" width="30" height="22" rx="3" fill="#e0f0f0" stroke="#b4d8d8" stroke-width="1"/>
+  <text x="1109" y="315" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0c5460">1</text>
+  <rect x="1124" y="300" width="30" height="22" rx="3" fill="#0c5460" stroke="#083e47" stroke-width="1"/>
+  <text x="1139" y="315" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">0</text>
+  <!-- cluster cutoffs -->
+  <rect x="1004" y="212" width="60" height="44" rx="5" fill="none" stroke="#0c5460" stroke-width="1.5" stroke-dasharray="4 3"/>
+  <rect x="1064" y="256" width="90" height="66" rx="5" fill="none" stroke="#0c5460" stroke-width="1.5" stroke-dasharray="4 3"/>
+
+  <!-- legend: continuous 0–10 gradient -->
+  <defs>
+    <linearGradient id="snpDistGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0c5460"/>
+      <stop offset="20%" stop-color="#a6d4d4"/>
+      <stop offset="45%" stop-color="#f4cba6"/>
+      <stop offset="75%" stop-color="#e08636"/>
+      <stop offset="100%" stop-color="#c96a1f"/>
+    </linearGradient>
+  </defs>
+  <text x="1188" y="208" font-size="10.5" font-weight="700" fill="#0c5460">SNP distance</text>
+  <rect x="1188" y="218" width="150" height="14" rx="3" fill="url(#snpDistGrad)" stroke="#9fcfcf" stroke-width="0.8"/>
+  <line x1="1188" y1="232" x2="1188" y2="236" stroke="#083e47" stroke-width="1"/>
+  <line x1="1263" y1="232" x2="1263" y2="236" stroke="#083e47" stroke-width="1"/>
+  <line x1="1338" y1="232" x2="1338" y2="236" stroke="#083e47" stroke-width="1"/>
+  <text x="1188" y="248" text-anchor="middle" font-size="10" fill="#083e47">0</text>
+  <text x="1263" y="248" text-anchor="middle" font-size="10" fill="#083e47">5</text>
+  <text x="1338" y="248" text-anchor="middle" font-size="10" fill="#083e47">10</text>
+  <text x="1188" y="270" font-size="10.5" font-style="italic" fill="#15737f">dashed boxes = clusters;</text>
+  <text x="1188" y="286" font-size="10.5" font-style="italic" fill="#15737f">cutoff sets the threshold</text>
+
+  <!-- RESULT B: tree -->
+  <rect x="900" y="356" width="464" height="250" rx="16" fill="#ffffff" stroke="#e48430" stroke-width="1.6"/>
+  <rect x="900" y="356" width="5" height="250" rx="2.5" fill="#e48430"/>
+  <text x="928" y="386" font-size="11" font-weight="700" letter-spacing="2" fill="#c96a1f">03b</text>
+  <text x="928" y="410" font-size="16" font-weight="600" fill="#0c5460">Phylogenetic tree</text>
+  <text x="928" y="430" font-size="12" fill="#15737f">shared SNPs group related isolates</text>
+  <line x1="1064" y1="456" x2="1122" y2="456" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1064" y1="482" x2="1122" y2="482" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1064" y1="456" x2="1064" y2="482" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1024" y1="508" x2="1122" y2="508" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1078" y1="534" x2="1122" y2="534" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1078" y1="560" x2="1122" y2="560" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1078" y1="534" x2="1078" y2="560" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1024" y1="547" x2="1078" y2="547" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="1024" y1="508" x2="1024" y2="547" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="986" y1="469" x2="1064" y2="469" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="986" y1="528" x2="1024" y2="528" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="986" y1="469" x2="986" y2="528" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <line x1="968" y1="498" x2="986" y2="498" stroke="#0c5460" stroke-width="2.2" stroke-linecap="round"/>
+    <circle cx="1122" cy="456" r="4" fill="#0c5460"/>
+    <text x="1133" y="460" font-size="11" font-weight="400" font-family="'Courier New', monospace" fill="#083e47">ISO-1</text>
+    <circle cx="1122" cy="482" r="4" fill="#e48430"/>
+    <text x="1133" y="486" font-size="11" font-weight="700" font-family="'Courier New', monospace" fill="#c96a1f">ISO-2</text>
+    <circle cx="1122" cy="508" r="4" fill="#0c5460"/>
+    <text x="1133" y="512" font-size="11" font-weight="400" font-family="'Courier New', monospace" fill="#083e47">ISO-3</text>
+    <circle cx="1122" cy="534" r="4" fill="#0c5460"/>
+    <text x="1133" y="538" font-size="11" font-weight="400" font-family="'Courier New', monospace" fill="#083e47">ISO-4</text>
+    <circle cx="1122" cy="560" r="4" fill="#0c5460"/>
+    <text x="1133" y="564" font-size="11" font-weight="400" font-family="'Courier New', monospace" fill="#083e47">ISO-5</text>
+    <path d="M1176 445 h10 v48 h-10" fill="none" stroke="#c96a1f" stroke-width="1.5"/>
+    <text x="1192" y="473" font-size="10.5" font-weight="600" fill="#c96a1f">cluster</text>
+    <line x1="986" y1="582" x2="1046" y2="582" stroke="#083e47" stroke-width="2"/>
+    <line x1="986" y1="578" x2="986" y2="586" stroke="#083e47" stroke-width="2"/>
+    <line x1="1046" y1="578" x2="1046" y2="586" stroke="#083e47" stroke-width="2"/>
+    <text x="1016" y="600" text-anchor="middle" font-size="10.5" font-family="'Courier New', monospace" fill="#083e47">10 SNPs</text>
+
+</svg>
