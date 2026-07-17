@@ -1,0 +1,29 @@
+---
+config:
+  themeVariables:
+    fontSize: 16px
+  layout: dagre
+---
+flowchart LR
+ subgraph F["Subject Epi"]
+        C["Validated Results"]
+        E["Interpretation"]
+  end
+ subgraph G["Molecular Epi"]
+        I["BigBacter"]
+        D["Evaluated Results"]
+  end
+    A["Bacteria - non TB"] --> B["Assembly and Analysis"]
+    B --> I & C & D
+    I --> E
+    D --> E
+
+     C:::binfx
+     E:::mep
+     I:::mep
+     D:::binfx
+     A:::category
+     B:::binfx
+    classDef category fill:#d8f0f0,color:#0c5460,stroke:#0c5460,stroke-width:1px
+    classDef binfx fill:#fbe7d1,color:#8a4a12,stroke:#e48430,stroke-width:1px
+    classDef mep fill:#f4a259,color:#4a2708,stroke:#c96a1f,stroke-width:2px
