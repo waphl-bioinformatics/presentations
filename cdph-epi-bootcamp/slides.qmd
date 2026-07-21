@@ -240,18 +240,15 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 - Show examples of results (de-identified or contrived)
 
 ## Bacterial Sequencing Overview
-<img src="media/hai_gb_mermaid_3.svg" alt="Bacteria Overview">
-
-- Pipeline
-- TB is our only clinically validated pipeline and is processed separately from other bacterial species
+<img src="media/hai_gb_mermaid_3.png" alt="Bacteria Overview">
 
 
 ## Phoenix vs TheiaProk
-<img src="media/phoenix_vs_theiaprok_1.svg" alt="Bacteria Overview">
+<img src="media/phoenix_vs_theiaprok_1.png" alt="Bacteria Overview">
 
 
 ## Bacterial Dataflow
-<img src="media/binfx_data_workflow.svg" alt="Bacteria Dataflow">
+<img src="media/bacterial_pgcoe_workflow.png" alt="Bacteria Dataflow">
 
 
 ## Pipeline Output: HAI Bacteria
@@ -457,49 +454,73 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 </div>
 
 
+## Pipeline Output: HAI Bacteria
+<img src="media/bacterial_microreact_redacted_1.png" alt="Shigella Microreact">
+
+
 ## Bacterial Logistics
 
-<br></br>
-<table>
+<table style="width: 100%;">
   <thead>
     <tr>
       <th></th>
       <th>HAI Bacteria</th>
-      <th>Non-HAI Bacteria</th>
       <th>Non-HAI Bacteria</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Pipeline</strong></td>
-      <td>PHoeNIx*</td>
-      <td>ThieaProk**</td>
-      <td>PHoeNIx*</td>
+      <td colspan="2" style="text-align: center;">PHoeNIx*</td>
     </tr>
     <tr>
       <td><strong>Frequency</strong></td>
       <td>~35-45 seqs/ 2x month</td>
       <td>~1-8 seqs/ week</td>
-      <td>~1-4 seqs/ week</td>
     </tr>
     <tr>
       <td><strong>Typical TAT</strong></td>
-      <td colspan="3" style="text-align: left;">1-2 business days***</td>
+      <td colspan="2" style="text-align: center;">1-2 business days***</td>
     </tr>
     <tr>
       <td><strong>Compute Resources</strong></td>
-      <td>AWS + Seqera</td>
-      <td>Terra.bio + Google Cloud</td>
-      <td>AWS + Seqera</td>
+      <td colspan="2" style="text-align: center;">AWS + Seqera</td>
     </tr>
   </tbody>
 </table>
 
 <br>
-<br>
+<table style="width: 100%;">
+  <thead>
+    <tr>
+      <th></th>
+      <th>HAI Bacteria</th>
+      <th>Non-HAI Bacteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pipeline</strong></td>
+      <td colspan="2" style="text-align: center;">BigBacter**</td>
+    </tr>
+    <tr>
+      <td><strong>Frequency</strong></td>
+      <td>~3-19 seqs/ 2x month</td>
+      <td>~1-8 seqs/ week</td>
+    </tr>
+    <tr>
+      <td><strong>Typical TAT</strong></td>
+      <td colspan="2" style="text-align: center;">1-2 business days***</td>
+    </tr>
+    <tr>
+      <td><strong>Compute Resources</strong></td>
+      <td colspan="2" style="text-align: center;">AWS + Seqera</td>
+    </tr>
+  </tbody>
+</table>
 
 - [*PHoeNIx](https://github.com/CDCgov/phoenix)
-- [**TheiaProk](https://github.com/theiagen/public_health_bioinformatics/blob/main/workflows/theiaprok/wf_theiaprok_illumina_pe.wdl)
+- [**BigBacter](https://github.com/NW-PaGe/bigbacter)
 - ***Prioritized based on epi needs
 
 ## Summary
