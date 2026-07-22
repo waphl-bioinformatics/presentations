@@ -24,10 +24,10 @@
   <g transform="scale(0.8, 1)">
   <!-- Group containers -->
   <rect x="270" y="50" width="355" height="215" rx="18" fill="#d8f0f0" stroke="#0c5460" stroke-width="1.5"/>
-  <text x="288" y="74" class="grp" fill="#083e47">Wet Lab</text>
+  <text x="288" y="74" class="grp" fill="#083e47">ARLN Lab</text>
 
   <rect x="655" y="50" width="685" height="420" rx="18" fill="#e1d5ef" stroke="#6b4a8f" stroke-width="1.5"/>
-  <text x="673" y="74" class="grp" fill="#4f3670">WA PHL &#183; CorgiSNPs</text>
+  <text x="673" y="74" class="grp" fill="#4f3670">Bioinformatics &#183; CorgiSNPs</text>
 
   <!-- Boxed internal analysis sections -->
   <rect x="675" y="84" width="630" height="166" rx="14" fill="none" stroke="#6b4a8f" stroke-width="1.4" stroke-dasharray="6 5" opacity="0.78"/>
