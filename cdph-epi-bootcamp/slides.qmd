@@ -526,5 +526,8 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 ## Fungal Dataflow {.small-margin}
 <img src="media/fungal_dataflow.svg" alt="Fungal Dataflow" style="width:200%; max-width:none;">
 
+- 
+- Bioinformatics and genomic epidemiology sometimes overlap - driven by policy and funding differences
+
 ## Summary
 - Jared will complete after all content is available
