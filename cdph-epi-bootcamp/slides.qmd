@@ -126,7 +126,7 @@ fig
 
 | Metric | De novo analysis | Phylogenetic analysis |
 |:-------|:-----------------|:----------------------|
-| **Read depth** | ≥ 30× average across the genome | ≥ 10× at every genome site |
+| **Read depth** | ≥ 40× average across the genome | ≥ 10× at every genome site |
 | **Genome coverage** | Assembly size within the expected range for the species | ≥ 90% of the reference covered at ≥ 10× |
 | **Contamination signal** | Inflated assembly size; species not resolved | Reads supporting multiple alleles at a site |
 
@@ -238,6 +238,290 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 
 ## (Bacterial | Fungal) Analysis - Sharing Results
 - Show examples of results (de-identified or contrived)
+
+## Bacterial Sequencing Overview
+<img src="media/hai_gb_mermaid_3.png" alt="Bacteria Overview">
+
+
+## Phoenix vs TheiaProk
+<img src="media/phoenix_vs_theiaprok_1.png" alt="Bacteria Overview">
+
+
+## Bacterial Dataflow
+<img src="media/bacterial_pgcoe_workflow.png" alt="Bacteria Dataflow">
+
+
+## Pipeline Output: HAI Bacteria
+
+### PHoeNix
+
+<div class="slide-metrics-table" style="overflow-x: auto; width: 100%;">
+  <table style="width: 100%; border-collapse: collapse; white-space: nowrap;">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Auto_QC_Status</th>
+        <th>Species</th>
+        <th>MLST_Scheme_1</th>
+        <th>MLST_1</th>
+        <th>MLST_Scheme_2</th>
+        <th>MLST_2</th>
+        <th>GAMMA_Beta_Lactamase</th>
+        <th>Auto_QC_Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>VeryRealSample_01</td>
+        <td>PASS</td>
+        <td>Pseudomonas aeruginosa</td>
+        <td>paeruginosa</td>
+        <td>ST654</td>
+        <td>-</td>
+        <td>-</td>
+        <td>blaNDM-1_NG_049326</td>
+        <td>PASS</td>
+      </tr>
+      <tr>
+        <td>VeryRealSample_02</td>
+        <td>PASS</td>
+        <td>Acinetobacter baumannii</td>
+        <td>abaumannii</td>
+        <td>ST955</td>
+        <td>abaumannii</td>
+        <td>ST126</td>
+        <td>Mbl_NC_010410,Zn-dep_hydrolase</td>
+        <td>PASS</td>
+      </tr>
+      <tr>
+        <td>VeryRealSample_03</td>
+        <td>PASS</td>
+        <td>Klebsiella pneumoniae</td>
+        <td>klebsiella</td>
+        <td>ST147</td>
+        <td>-</td>
+        <td>-</td>
+        <td>ampH_CP003785,blaCTX-M-15</td>
+        <td>PASS</td>
+      </tr>
+      <tr>
+        <td>VeryRealSample_04</td>
+        <td>PASS</td>
+        <td>Escherichia coli</td>
+        <td>ecoli(Achtman)</td>
+        <td>ST410</td>
+        <td>ecoli_2(Pasteur)</td>
+        <td>ST471</td>
+        <td>AmpC1_Ecoli_FN649414,blaCTX-M-15</td>
+        <td>PASS</td>
+      </tr>
+      <tr>
+        <td>VeryRealSample_05</td>
+        <td>PASS</td>
+        <td>Acinetobacter baumannii</td>
+        <td>abaumannii</td>
+        <td>ST2535-PA</td>
+        <td>abaumannii</td>
+        <td>ST2</td>
+        <td>Mbl_NC_010410,Zn-dep_hydrolase</td>
+        <td>PASS</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</br>
+
+### BigBacter
+
+<div class="slide-metrics-table" style="overflow-x: auto; width: 100%;">
+  <table style="width: 100%; border-collapse: collapse; white-space: nowrap;">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>run</th>
+        <th>status</th>
+        <th>included</th>
+        <th>taxa</th>
+        <th>cluster</th>
+        <th>partition</th>
+        <th>strong_links</th>
+        <th>inter_links</th>
+        <th>genome_fr</th>
+        <th>core_fract</th>
+        <th>length</th>
+        <th>masked</th>
+        <th>missing</th>
+        <th>mixed</th>
+        <th>variants</th>
+        <th>recomb_m</th>
+        <th>max_snp_c</th>
+        <th>mean_snp</th>
+        <th>min_snp_d</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>RealSample</td>
+        <td>1.78E+09</td>
+        <td>new</td>
+        <td>TRUE</td>
+        <td>Shigella_sc</td>
+        <td>1</td>
+        <td>34</td>
+        <td>RealSample03:RealSample</td>
+        <td>WA100150</td>
+        <td>0.994833</td>
+        <td>0.994833</td>
+        <td>5057083</td>
+        <td>0</td>
+        <td>26130</td>
+        <td>0</td>
+        <td>8</td>
+        <td>FALSE</td>
+        <td>580</td>
+        <td>232</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>RealSample</td>
+        <td>1.78E+09</td>
+        <td>new</td>
+        <td>TRUE</td>
+        <td>Shigella_sc</td>
+        <td>1</td>
+        <td>40</td>
+        <td>RealSample05</td>
+        <td>WA100150</td>
+        <td>0.964828</td>
+        <td>0.961383</td>
+        <td>5057083</td>
+        <td>0</td>
+        <td>177861</td>
+        <td>0</td>
+        <td>12</td>
+        <td>FALSE</td>
+        <td>586</td>
+        <td>236</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td>RealSample</td>
+        <td>1.78E+09</td>
+        <td>new</td>
+        <td>TRUE</td>
+        <td>Shigella_sc</td>
+        <td>1</td>
+        <td>34</td>
+        <td>RealSample01:RealSample</td>
+        <td>WA100150</td>
+        <td>0.964795</td>
+        <td>0.961146</td>
+        <td>5057083</td>
+        <td>0</td>
+        <td>178027</td>
+        <td>0</td>
+        <td>8</td>
+        <td>FALSE</td>
+        <td>584</td>
+        <td>234</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>RealSample</td>
+        <td>1.78E+09</td>
+        <td>new</td>
+        <td>TRUE</td>
+        <td>Shigella_sc</td>
+        <td>1</td>
+        <td>34</td>
+        <td>RealSample01:RealSample</td>
+        <td>WA100150</td>
+        <td>0.964756</td>
+        <td>0.960951</td>
+        <td>5057083</td>
+        <td>0</td>
+        <td>178224</td>
+        <td>0</td>
+        <td>8</td>
+        <td>FALSE</td>
+        <td>584</td>
+        <td>234</td>
+        <td>0</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+## Pipeline Output: HAI Bacteria
+<img src="media/bacterial_microreact_redacted_1.png" alt="Shigella Microreact">
+
+
+## Bacterial Logistics
+
+<table style="width: 100%;">
+  <thead>
+    <tr>
+      <th></th>
+      <th>HAI Bacteria</th>
+      <th>Non-HAI Bacteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pipeline</strong></td>
+      <td colspan="2" style="text-align: center;">PHoeNIx*</td>
+    </tr>
+    <tr>
+      <td><strong>Frequency</strong></td>
+      <td>~35-45 seqs/ 2x month</td>
+      <td>~1-8 seqs/ week</td>
+    </tr>
+    <tr>
+      <td><strong>Typical TAT</strong></td>
+      <td colspan="2" style="text-align: center;">1-2 business days***</td>
+    </tr>
+    <tr>
+      <td><strong>Compute Resources</strong></td>
+      <td colspan="2" style="text-align: center;">AWS + Seqera</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<table style="width: 100%;">
+  <thead>
+    <tr>
+      <th></th>
+      <th>HAI Bacteria</th>
+      <th>Non-HAI Bacteria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pipeline</strong></td>
+      <td colspan="2" style="text-align: center;">BigBacter**</td>
+    </tr>
+    <tr>
+      <td><strong>Frequency</strong></td>
+      <td>~3-19 seqs/ 2x month</td>
+      <td>~1-8 seqs/ week</td>
+    </tr>
+    <tr>
+      <td><strong>Typical TAT</strong></td>
+      <td colspan="2" style="text-align: center;">1-2 business days***</td>
+    </tr>
+    <tr>
+      <td><strong>Compute Resources</strong></td>
+      <td colspan="2" style="text-align: center;">AWS + Seqera</td>
+    </tr>
+  </tbody>
+</table>
+
+- [*PHoeNIx](https://github.com/CDCgov/phoenix)
+- [**BigBacter](https://github.com/NW-PaGe/bigbacter)
+- ***Prioritized based on epi needs
 
 ## Summary
 - Jared will complete after all content is available
