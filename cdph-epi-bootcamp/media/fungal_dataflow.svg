@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1900 590" font-family="'Public Sans', -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" role="img" aria-labelledby="ttl desc">
+  <title id="ttl">C. auris genomic dataflow</title>
+  <desc id="desc">Submitters provide C. auris isolates for wet-lab sequencing. WA PHL CorgiSNPs performs sample-level classification, SNP calling, and antifungal resistance screening, followed by population-level phylogeny building. Results support molecular and subject epidemiology.</desc>
+
+  <defs>
+    <marker id="a-teal" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0.0,0 L10.0,5 L0.0,10 z" fill="#0c5460"/>
+    </marker>
+    <marker id="a-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0.0,0 L10.0,5 L0.0,10 z" fill="#6b4a8f"/>
+    </marker>
+    <marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0.0,0 L10.0,5 L0.0,10 z" fill="#e48430"/>
+    </marker>
+    <style>
+      .grp { font-size:13px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; }
+      .subgrp { font-size:12px; font-weight:700; letter-spacing:.045em; text-transform:uppercase; }
+      .n-t { font-size:14px; font-weight:700; }
+      .n-s { font-size:10.5px; font-weight:400; }
+      .list { font-size:12px; font-weight:500; }
+    </style>
+  </defs>
+
+  <!-- Group containers -->
+  <rect x="270" y="50" width="355" height="215" rx="18" fill="#d8f0f0" stroke="#0c5460" stroke-width="1.5"/>
+  <text x="288" y="74" class="grp" fill="#083e47">Wet Lab</text>
+
+  <rect x="655" y="50" width="685" height="420" rx="18" fill="#e1d5ef" stroke="#6b4a8f" stroke-width="1.5"/>
+  <text x="673" y="74" class="grp" fill="#4f3670">WA PHL &#183; CorgiSNPs</text>
+
+  <!-- Boxed internal analysis sections -->
+  <rect x="675" y="84" width="630" height="166" rx="14" fill="none" stroke="#6b4a8f" stroke-width="1.4" stroke-dasharray="6 5" opacity="0.78"/>
+  <text x="693" y="105" class="subgrp" fill="#4f3670">Sample-level Analysis</text>
+
+  <rect x="1055" y="275" width="250" height="166" rx="14" fill="none" stroke="#6b4a8f" stroke-width="1.4" stroke-dasharray="6 5" opacity="0.78"/>
+  <text x="1073" y="296" class="subgrp" fill="#4f3670">Population-level Analysis</text>
+
+  <rect x="1365.0" y="50" width="365" height="215" rx="18" fill="#fdeede" fill-opacity="0.78" stroke="#e48430" stroke-width="1.5"/>
+  <text x="1388.0" y="74" class="grp" fill="#c96a1f">Epidemiology</text>
+
+  <!-- Main edges -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M230.0,167 H300.0" stroke="#0c5460" stroke-width="2.5" marker-end="url(#a-teal)"/>
+    <path d="M430.0,167 H465.0" stroke="#0c5460" stroke-width="2.5" marker-end="url(#a-teal)"/>
+    <path d="M595.0,167 H695.0" stroke="#0c5460" stroke-width="2.5" marker-end="url(#a-teal)"/><path d="M855.0,167 H895.0" stroke="#6b4a8f" stroke-width="2.5" marker-end="url(#a-purple)"/>
+    <path d="M1055.0,167 H1100.0" stroke="#6b4a8f" stroke-width="2.5" marker-end="url(#a-purple)"/>
+
+    <!-- SNP calling also feeds population-level phylogeny -->
+    <path d="M975.0,211 V265 H1040.0 V358 H1100.0" stroke="#6b4a8f" stroke-width="2.5" marker-end="url(#a-purple)"/>
+
+    <!-- Resistance and phylogeny outputs merge before Molecular Epi -->
+    <path d="M1245.0,167 H1295.0" stroke="#6b4a8f" stroke-width="2.5"/>
+    <path d="M1245.0,358 H1295.0 V167" stroke="#6b4a8f" stroke-width="2.5"/>
+    <path d="M1295.0,167 H1388.0" stroke="#6b4a8f" stroke-width="2.5" marker-end="url(#a-purple)"/>
+    <path d="M1545.0,169 H1575.0" stroke="#e48430" stroke-width="2.5" marker-end="url(#a-orange)"/>
+  </g>
+
+  <!-- Submitter node -->
+  <rect x="35" y="123" width="195" height="88" rx="14" fill="#ffffff" stroke="#083e47" stroke-width="2"/>
+  <text x="132.5" y="162" text-anchor="middle" class="n-t" fill="#083e47">Submitters</text>
+  <text x="132.5" y="185" text-anchor="middle" class="n-s" fill="#083e47" opacity="0.75">Hospitals &#183; Clinics &#183; Providers</text>
+
+  <!-- Wet lab nodes -->
+  <g fill="#ffffff" stroke="#0c5460" stroke-width="1.5">
+    <rect x="300" y="123" width="130" height="88" rx="14"/>
+    <rect x="465" y="123" width="130" height="88" rx="14"/>
+  </g>
+  <g text-anchor="middle" fill="#1c2b2b">
+    <text x="365" y="172" class="n-t">C. auris isolates</text>
+    <text x="530" y="150" class="n-t">Illumina</text>
+    <text x="530" y="166" class="n-t">sequencing results</text>
+    <text x="530" y="188" class="n-s" opacity="0.7">BaseSpace output</text>
+  </g>
+
+  <!-- Sample-level analysis nodes -->
+  <g fill="#ffffff" stroke="#6b4a8f" stroke-width="1.5">
+    <rect x="695" y="123" width="160" height="88" rx="14"/>
+    <rect x="895" y="123" width="160" height="88" rx="14"/>
+    <rect x="1100" y="123" width="170" height="88" rx="14"/>
+  </g>
+  <g text-anchor="middle" fill="#4f3670">
+    <text x="775" y="150" class="n-t">Sample</text>
+    <text x="775" y="166" class="n-t">Classification</text>
+    <text x="775" y="186" class="n-s" opacity="0.75">Assembly &#183; Taxonomy &#183; Clade</text>
+    <text x="775" y="201" class="n-s" opacity="0.75">Reference selection</text>
+
+    <text x="975" y="158" class="n-t">Reference-based</text>
+    <text x="975" y="174" class="n-t">SNP Calling</text>
+
+    <text x="1185" y="150" class="n-t" font-size="12.5">Antifungal Resistance</text>
+    <text x="1185" y="166" class="n-t">Screening</text>
+    <text x="1185" y="185" class="n-s" font-size="8.8" opacity="0.75">Echinocandin resistance mutations</text>
+  </g>
+
+  <!-- Population-level analysis node, stacked beneath resistance screening -->
+  <rect x="1100" y="314" width="170" height="88" rx="14" fill="#ffffff" stroke="#6b4a8f" stroke-width="1.5"/>
+  <g text-anchor="middle" fill="#4f3670">
+    <text x="1185" y="341" class="n-t">Phylogeny</text>
+    <text x="1185" y="357" class="n-t">Building</text>
+    <text x="1185" y="376" class="n-s" opacity="0.75">Clade-specific trees</text>
+  </g>
+
+  <!-- Validated outputs split into sample-level and population-level sections -->
+  <rect x="672" y="295" width="337" height="140" rx="14" fill="#ffffff" stroke="#6b4a8f" stroke-width="1.5"/>
+  <text x="692" y="321" class="grp" fill="#4f3670">Validated Outputs</text>
+  <line x1="835" y1="334" x2="835" y2="420" stroke="#6b4a8f" stroke-width="1" opacity="0.35"/>
+
+  <text x="692" y="348" class="subgrp" fill="#4f3670">Sample-level</text>
+  <text x="692" y="373" class="list" fill="#4f3670">&#8226; Taxonomy/Clade</text>
+  <text x="692" y="394" class="list" fill="#4f3670">&#8226; SNP Matrix</text>
+  <text x="692" y="415" class="list" fill="#4f3670">&#8226; AMR Variants</text>
+
+  <text x="865" y="348" class="subgrp" fill="#4f3670">Population-level</text>
+  <text x="865" y="373" class="list" fill="#4f3670">&#8226; Phylogenetic Trees</text>
+  <text x="874" y="394" class="list" fill="#4f3670">(per clade)</text>
+
+  <!-- Epidemiology nodes -->
+  <g fill="#e48430" stroke="#c96a1f" stroke-width="1.5">
+    <rect x="1390.0" y="125" width="153" height="88" rx="14"/>
+    <rect x="1575.0" y="125" width="135" height="88" rx="14"/>
+  </g>
+  <g text-anchor="middle" fill="#ffffff">
+    <text x="1465.5" y="152" class="n-t">Molecular Epi</text>
+    <text x="1465.5" y="172" class="n-s" opacity="0.9">Tree interpretation</text>
+    <text x="1465.5" y="187" class="n-s" font-size="9.5" opacity="0.9">Linkages with historical isolates</text>
+
+    <text x="1643.5" y="152" class="n-t">Subject Epi</text>
+    <text x="1643.5" y="172" class="n-s" opacity="0.9">LHJ data sharing</text>
+    <text x="1643.5" y="187" class="n-s" opacity="0.9">Facility-level investigation</text>
+    <text x="1643.5" y="202" class="n-s" opacity="0.9">and action</text>
+  </g>
+</svg>
