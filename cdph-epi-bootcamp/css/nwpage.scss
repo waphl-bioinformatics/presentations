@@ -333,3 +333,15 @@ $code-color:      $nw-teal-dark;
   max-width: calc(100% - 3em);
 }
 
+.reveal .contact {
+  font-size: 0.55em;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 0.6em;
+}
+
+.reveal .contact a {
+  color: inherit;
+  border-bottom: 1px solid rgba(12, 84, 96, 0.4);
+  text-decoration: none;
+}

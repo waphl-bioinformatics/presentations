@@ -587,3 +587,9 @@ Genomic analysis of hospital associated infections can be split into two primary
 #### Both
 - **1–2 business day TAT** and prioritized by epi need.
 - Interpretation is generally the bottleneck, not computational analysis
+
+# Questions? {.center}
+
+::: {.contact}
+**Contact:** [waphl-bioinformatics@doh.wa.gov](mailto:waphl-bioinformatics@doh.wa.gov)
+:::
