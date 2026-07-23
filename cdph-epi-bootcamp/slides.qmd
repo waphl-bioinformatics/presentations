@@ -560,7 +560,7 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 - *[CorgiSNPs](https://github.com/NW-PaGe/CorgiSNPs) currently undergoing validation. [MycoSNP](https://github.com/CDCgov/mycosnp-nf) is used for production runs currently.
 
 ## Pipeline Output: _Candida auris_
-<img src="media/fungal_microreact_redacted.png" alt="Fungal pipeline output">
+<img src="media/fungal_microreact.png" alt="Fungal pipeline microreact output">
 
 ## Summary
 - Jared will complete after all content is available
