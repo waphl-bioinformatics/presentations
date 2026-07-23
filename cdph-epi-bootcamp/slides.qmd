@@ -1,9 +1,12 @@
 ---
-title: "Genomic analysis of fungal and bacterial infections from hospital settings at the Washington State Public Health Laboratory"
+title: "Genomic Surveillance of Hospital-Associated Bacterial and Fungal Infections at the Washington State Public Health Laboratory"
 author:
-  - name: Jared Johnson
-  - name: Holly Halstead
-  - name: Zack Mudge
+  - name: Holly Halstead, MSc
+  - name: Zack Mudge, MSc
+  - name: Jared Johnson, PhD, MSc
+
+date: today
+
 format:
   revealjs:
     embed-resources: true
@@ -124,7 +127,7 @@ fig
 
 ### How we measure quality depends on the metric being reported:
 
-| Metric | De novo analysis | Phylogenetic analysis |
+| Metric | Sample-level | Population-level |
 |:-------|:-----------------|:----------------------|
 | **Read depth** | ≥ 40× average across the genome | ≥ 10× at every genome site |
 | **Genome coverage** | Assembly size within the expected range for the species | ≥ 90% of the reference covered at ≥ 10× |
@@ -170,12 +173,9 @@ Communicating these results can be challenging!
 
 ## Microreact Reports
 
-<iframe src="https://microreact.org/project/zika-virus?tt=rc"
-        width="100%"
-        height="600"
-        style="border:none;"
-        title="Microreact Example">
-</iframe>
+<img src="media/mr-example.png">
+
+# .{ background-image="media/soap-box.png" background-size="contain"}
 
 ## Quality Management System
 
@@ -231,13 +231,7 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 ![](media/into-knots.png){.absolute top="47%" left="85%" width="300" style="z-index: 10;"}
 :::
 
-## (Bacterial | Fungal) Analysis - Overview
-- Include flowchart emphasizing sample-level and population-level analyses, who performs these analyses (bioinfo or mol epi), and connection to policy / funding reason why.
-- Discuss the number of samples per week / month and the time spent (or anticipated time spent for CorgiSNPs)
-- Briefly discuss the workflows and where they are performed (AWS + Seqera) - keep very high level but include links to GitHub
-
-## (Bacterial | Fungal) Analysis - Sharing Results
-- Show examples of results (de-identified or contrived)
+# Bacterial Surveillance
 
 ## Bacterial Sequencing Overview
 <img src="media/hai_gb_mermaid_3.png" alt="Bacteria Overview">
@@ -523,10 +517,12 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 - [**BigBacter](https://github.com/NW-PaGe/bigbacter)
 - ***Prioritized based on epi needs
 
+# Fungal Surveillance
+
 ## Fungal Dataflow
 <img src="media/fungal_dataflow.svg" alt="Fungal Dataflow">
 
-- WA PHL's only routine fungal bioinformatics workflow is for _Candida auris_ WGS, for the AR Lab Network
+- WA PHL's only routine fungal bioinformatics workflow is for _Candidozyma auris_ WGS, for the AR Lab Network
 - WA PHL Bioinformatics can provide analyses for other fungi on an ad-hoc basis
 
 ## Fungal Logistics
@@ -560,7 +556,40 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 - *[CorgiSNPs](https://github.com/NW-PaGe/CorgiSNPs) currently undergoing validation. [MycoSNP](https://github.com/CDCgov/mycosnp-nf) is used for production runs currently.
 
 ## Pipeline Output: _Candida auris_
-<img src="media/fungal_microreact_redacted.png" alt="Fungal pipeline output">
+<img src="media/fungal_microreact.png" alt="Fungal pipeline microreact output">
 
 ## Summary
-- Jared will complete after all content is available
+
+Genomic analysis of hospital associated infections can be split into two primary analyses - **sample**-level and **population**-level - each requiring different quality control considerations!
+
+<br>
+
+:::: {.columns}
+::: {.column width=49%}
+#### Bacteria
+
+- **PHoeNIx** for per-sample QC, typing, and AMR gene detection
+- **BigBacter** for clustering and core-SNP phylogenies
+- HAI: ~35–45 seqs 2×/month · Non-HAI: ~1–8 seqs/week
+:::
+
+::: {.column  width=49%}
+#### Fungi
+
+- Routine workflow is *Candidozyma auris* WGS only — other fungi are **ad-hoc**
+- **MycoSNP** in production; **CorgiSNPs** in validation
+- ~20–30 seqs 2×/month
+:::
+::::
+
+<br>
+
+#### Both
+- **1–2 business day TAT** and prioritized by epi need.
+- Interpretation is generally the bottleneck, not computational analysis
+
+# Questions? {.center}
+
+::: {.contact}
+**Contact:** [waphl-bioinformatics@doh.wa.gov](mailto:waphl-bioinformatics@doh.wa.gov)
+:::
