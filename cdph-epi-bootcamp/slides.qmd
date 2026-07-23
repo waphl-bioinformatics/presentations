@@ -523,5 +523,44 @@ WA PHL has a **DSA** with WA DOH Molecular Epidemiologists
 - [**BigBacter](https://github.com/NW-PaGe/bigbacter)
 - ***Prioritized based on epi needs
 
+## Fungal Dataflow
+<img src="media/fungal_dataflow.svg" alt="Fungal Dataflow">
+
+- WA PHL's only routine fungal bioinformatics workflow is for _Candida auris_ WGS, for the AR Lab Network
+- WA PHL Bioinformatics can provide analyses for other fungi on an ad-hoc basis
+
+## Fungal Logistics
+
+<table style="width: 60%;">
+  <thead>
+    <tr>
+      <th></th>
+      <th><span style="font-style: italic;">Candida auris</span></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Pipeline</strong></td>
+      <td>CorgiSNPs*</td>
+    </tr>
+    <tr>
+      <td><strong>Frequency</strong></td>
+      <td>~20-30 seqs/ 2x month</td>
+    </tr>
+    <tr>
+      <td><strong>Typical TAT</strong></td>
+      <td>1-2 business days</td>
+    </tr>
+    <tr>
+      <td><strong>Compute Resources</strong></td>
+      <td>AWS + Seqera</td>
+    </tr>
+  </tbody>
+</table>
+- *[CorgiSNPs](https://github.com/NW-PaGe/CorgiSNPs) currently undergoing validation. [MycoSNP](https://github.com/CDCgov/mycosnp-nf) is used for production runs currently.
+
+## Pipeline Output: _Candida auris_
+<img src="media/fungal_microreact_redacted.png" alt="Fungal pipeline output">
+
 ## Summary
 - Jared will complete after all content is available
