@@ -34,22 +34,22 @@ PRESENTER SETUP
 
 ## A suspected outbreak
 
-::: {.box .note}
+<!--
+The first statment about epis reaching out should be kept as the focus with the description of C. striatum being in a rounded box that has a simplistic picture of a bacterium. Maybe embed an SVG?
+-->
+
 Epis reach out about a suspected ***Corynebacterium striatum*** outbreak and ask the lab to use
 whole genome sequencing to investigate.
-:::
 
 - *C. striatum*: skin and mucosal commensal, increasingly recognized as a multidrug-resistant,
   healthcare-associated pathogen
 - Two isolates from the suspected outbreak have been sequenced: **sim01** and **sim02**
 - The question: **are they genomically related?**
 
-::: {.notes}
-The isolates in this demo are simulated from a public C. striatum genome
-(sim01 = 10 SNPs, sim02 = 1 SNP, sim03 = 0 SNPs; see simulated/manifest.tsv).
-:::
-
-## Challenge 1: no database for this species
+## Run samples through BigBacter
+<!--
+Update to include description that the lab has already been using BigBacter but you have never analyzed this species before, so you know you will need to establish a BigBacter database. Include an SVG that shows up when clicked that demonstrates how BigBacter v1 used PopPUNK and BBv2 uses floc, the first requiring a new DB to be created, the second being usable right away.
+-->
 
 - BigBacter v1 required a **PopPUNK database** for the species
 - Check what's available: [bacpop.org/poppunk-databases](https://bacpop.org/poppunk-databases/)
@@ -63,20 +63,24 @@ The isolates in this demo are simulated from a public C. striatum genome
 - We'll try it and build a *C. striatum* database from these two isolates
 :::
 
-::: {.notes}
-Optional: open the PopPUNK database page in the browser and scroll the species list.
-v1 databases aren't compatible with v2.
-:::
-
 # Run 1: the outbreak isolates
 
 ## 1. Install the prerequisites
+
+<!--
+This slide is sparse - include more detail. For example - getting started with BigBacter: 1) Install nextflow, 2) .; maybe also include the nextflow and containerization logos for reference?
+-->
 
 - [Nextflow](https://www.nextflow.io/docs/latest/install.html) **≥ 25.04**
 - A container engine: **Docker**, **Podman**, **Apptainer**, or **Singularity**
 - That's it. Every tool runs in a container (Conda/Mamba aren't supported)
 
 ## 2. Samplesheet and params file
+
+<!--
+The spacing is weird here. There needs to be more compartmentalization of the different inputs. The two files should include headers that describe them. Maybe split into two slides? Also worth a note that it is best to use a params file or config file with newer versions of nextflow to avoid issues with passing params via command line.
+-->
+
 
 `samplesheets/samplesheet.1.csv`
 
@@ -106,6 +110,10 @@ publish_dir_mode: copy
 
 ## 3. Run BigBacter 💻
 
+<!--
+Slide has little content, which makes it look awkward. Adjust layout to improve this. The params file has been updated to not include push true - this will be updated during the talk when running with resume at the later stage.
+-->
+
 ```bash
 nextflow run NW-PaGe/BigBacter -r main \
   -profile docker \
@@ -115,14 +123,13 @@ nextflow run NW-PaGe/BigBacter -r main \
 
 - `--push false` overrides the params file: **review first, push later**
 
-::: {.notes}
-Switch to the terminal and start the run (~3 min). Leave it visible, then come back to the slides.
-Local equivalent: nextflow run ../../bigbacter/main.nf -profile docker,pc -params-file params/params.1.yml --push false
-:::
-
 # While that's running…
 
 ## How BigBacter works
+
+<!--
+Replace this with an SVG. Use the two SVGs in the svg directory (e.g., bigbacter_surveillance_cycle.svg) as reference for this.
+-->
 
 :::: {.pipeline}
 ::: {.step}
@@ -159,18 +166,11 @@ The **database** feeds clustering and reference selection, and receives the resu
 Reference: https://nw-page.github.io/bigbacter-docs/docs/v2.0/pages/overview/
 :::
 
-## Step by step
-
-1. **Input prep**: downsample reads (seqtk), QC (fastp), assemble (shovill) and classify (GAMBIT) **only if needed**. Samples are split by species
-2. **Clustering** with **floc**
-3. **Reference selection**: one reference per cluster, saved to the database and reused
-4. **Core genome**: Snippy maps each sample → polycore builds a **soft-core** alignment
-5. **SNPs + recombination**: polycore calls SNPs; Gubbins masks recombination when possible
-6. **Tree**: IQ-TREE2 maximum-likelihood tree, split into partitions
-7. **Report**: summary table and an interactive **Microreact** report per cluster
-8. **Database**: clusters, references and per-sample SNP files are saved for the next run
-
 ## Clustering with floc
+
+<!--
+Include floc logo from https://github.com/nw-page/floc and this SVG that shows how floc clustering works https://nw-page.github.io/bigbacter-docs/assets/media/blog/floc_cluster_flow_filtered.svg
+-->
 
 - Uses **sourmash containment** to group samples *within a species*
 - Every run loads the existing database, so new samples are placed **relative to every cluster
@@ -184,6 +184,10 @@ Clustering settings are recorded with the database and must stay the same across
 
 ## Core SNPs and linkage
 
+<!--
+Include an SVG that shows a simple phylogenetic tree with branch lengths that represent pairwise subs and has 3 samples that are part of the same parition (within 100 subs) and one sample in a different parition. Within the first partition, you have two samples that are within 10 SNPs so are strongly linked, but only intermediately linked with the other sample.
+-->
+
 - One reference per cluster, **reused on every later run**
 - Soft-core alignment: a site is kept if it's covered in **≥ 90%** of samples (`--min_core_fraction`)
 - Samples already in the database are **not re-mapped**, only new ones
@@ -194,11 +198,11 @@ Clustering settings are recorded with the database and must stay the same across
 | **Intermediate** | ≤ 50 (`--inter_link_threshold`) |
 | **Partition** | ≤ 100 substitutions (`--partition_distance`) |
 
-::: {.notes}
-These are BigBacter defaults, not outbreak definitions for C. striatum. Agree on thresholds with epis.
-:::
 
 ## The database grows with every run
+<!--
+Replace with an SVG that matches the theme of the bigbacter_surveillance_cycle.svg
+-->
 
 ```{mermaid}
 flowchart LR

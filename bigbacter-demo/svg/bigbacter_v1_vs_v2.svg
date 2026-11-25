@@ -1,0 +1,271 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2020 1150" width="2020" height="1150" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo2M2ExNWZkNC1kZmM0LTQ1NWUtODk2NC1iMTFlOGJiZjA1YmEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaHkHxLyCokatLWIhmxuT5PsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDozY2Y5MDk3Ni01NDFkLTQ1NTUtYjAzYy03MzUyNmI1MTkxMGZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoU4BmYlUACcAOBdBK1wwuDAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgglyRaLT5xmzv4eM3B35OL/X+2zbN294d3UQzNGhT5+dmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaIhS/1QBX2lWPsIz3N00XO4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCB9WIXxnGTvQdbSHlaeifZrPOTGfTq0BvJRGS0H6xGZVmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjVZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjYzYTE1ZmQ0LWRmYzQtNDU1ZS04OTY0LWIxMWU4YmJmMDViYS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmIzZGRkMmIyLTU0ZjAtNDBmOS1hZGM3LTliMTBhZmI2MzQ3NHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCXJFotPnGbO/h4zcHfk4v9f7bNs3b3h3dRDM0aFPn52aJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggF5Ssw5QEUlKQX/pc4MV0b5kMBgrpnJ3PQVKFKTM6qSyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggJy8sSf3T8FfhIaXwWfykt5BF3xnaXLnW3qqFZkxWKc50Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQL2+yj0brfSojcSciriwIwCu8hh1pSnpSye05eehnyu80H/lB4LsG8R2XgBFNRPbuxKa9Qx8+llU8vhTBAJ464I=</c2pa:manifest></metadata>
+<g transform="translate(40,100)">
+<text x="0.0" y="8.0" font-size="32" font-weight="700" fill="#3a4a4a" text-anchor="start">BigBacter v1</text>
+<text x="0.0" y="40.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="start">Assembly and database setup happen before you run it.</text>
+<path d="M729.7,310.8 A293,293 0 0 1 240.9,622.2 L331.4,543.5 A173,173 0 0 0 620.0,359.6 Z" fill="#E9EBF1" stroke="#E9EBF1" stroke-width="24" stroke-linejoin="round"/>
+<text x="772.1" y="358.1" font-size="24" font-weight="700" fill="#3C3F5C" text-anchor="start">BigBacter</text>
+<text x="772.1" y="380.1" font-size="15" font-weight="400" fill="#5d6b6b" text-anchor="start">runs three steps</text>
+<circle cx="462.0" cy="430.0" r="235" fill="none" stroke="#B9BEC1" stroke-width="5" />
+<polygon points="264.5,302.1 262.9,328.9 242.1,316.9" fill="#B9BEC1"/>
+<polygon points="474.0,195.0 450.0,207.0 450.0,183.0" fill="#B9BEC1"/>
+<polygon points="671.5,322.9 649.1,308.1 669.9,296.1" fill="#B9BEC1"/>
+<polygon points="659.5,557.9 661.1,531.1 681.9,543.1" fill="#B9BEC1"/>
+<polygon points="450.0,665.0 474.0,653.0 474.0,677.0" fill="#B9BEC1"/>
+<polygon points="252.5,537.1 274.9,551.9 254.1,563.9" fill="#B9BEC1"/>
+<line x1="560.0" y1="430.0" x2="637.0" y2="430.0" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="646.0,430.0 628.0,439.0 628.0,421.0" fill="#B9BEC1"/>
+<line x1="511.0" y1="514.9" x2="549.5" y2="581.6" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="554.0,589.3 537.2,578.3 552.8,569.3" fill="#B9BEC1"/>
+<line x1="413.0" y1="514.9" x2="374.5" y2="581.6" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="417.5,507.1 416.3,527.2 400.7,518.2" fill="#B9BEC1"/>
+<text x="578.9" y="374.4" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">cluster</text>
+<text x="578.9" y="391.4" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">references</text>
+<text x="568.1" y="498.1" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">historic</text>
+<text x="568.1" y="515.1" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">samples</text>
+<text x="354.7" y="496.2" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="end">add new</text>
+<text x="354.7" y="513.2" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="end">samples</text>
+<circle cx="227.0" cy="430.0" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<circle cx="227.0" cy="430.0" r="10" fill="#BDBFCE" />
+<circle cx="227.0" cy="405.0" r="10" fill="#F8E6CA" />
+<circle cx="248.7" cy="417.5" r="10" fill="#F2C9BD" />
+<circle cx="248.7" cy="442.5" r="10" fill="#BDBFCE" />
+<rect x="217.0" y="445.0" width="20" height="20" rx="3" fill="#F8E6CA" />
+<circle cx="205.3" cy="442.5" r="10" fill="#F2C9BD" />
+<circle cx="205.3" cy="417.5" r="10" fill="#BDBFCE" />
+<circle cx="344.5" cy="226.5" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<rect x="308.5" y="196.0" width="40" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="336.5" y="196.0" width="44" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="304.5" y="209.0" width="30" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="340.5" y="209.0" width="42" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="314.5" y="222.0" width="50" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="306.5" y="235.0" width="26" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="338.5" y="235.0" width="40" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="322.5" y="248.0" width="46" height="9" rx="4.5" fill="#DCDDE4" />
+<circle cx="697.0" cy="430.0" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<circle cx="678.0" cy="418.0" r="19" fill="#ffffff" stroke="#B9BEC1" stroke-width="2.5" />
+<circle cx="716.0" cy="442.0" r="19" fill="#ffffff" stroke="#B9BEC1" stroke-width="2.5" />
+<circle cx="678.0" cy="411.0" r="5.5" fill="#BDBFCE" />
+<circle cx="671.0" cy="423.0" r="5.5" fill="#BDBFCE" />
+<circle cx="685.0" cy="423.0" r="5.5" fill="#BDBFCE" />
+<rect x="704.5" y="430.5" width="11" height="11" rx="2" fill="#BDBFCE" />
+<rect x="716.5" y="442.5" width="11" height="11" rx="2" fill="#BDBFCE" />
+<circle cx="579.5" cy="633.5" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<rect x="543.5" y="605.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="543.5" y="621.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="543.5" y="637.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="543.5" y="653.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="559.0" y="602.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="559.0" y="634.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="579.0" y="618.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="579.0" y="634.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="579.0" y="650.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="597.0" y="602.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="597.0" y="650.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<circle cx="344.5" cy="633.5" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<path d="M318.50000000000006,635.5159698893431 V653.5159698893431 H370.50000000000006 V635.5159698893431" fill="none" stroke="#B9BEC1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="344.50000000000006" y1="605.5159698893431" x2="344.50000000000006" y2="635.5159698893431" stroke="#B9BEC1" stroke-width="5" stroke-linecap="round"/>
+<polygon points="344.5,647.7 334.3,627.3 354.7,627.3" fill="#B9BEC1"/>
+<circle cx="325.5" cy="616.5" r="6.5" fill="#F8E6CA" />
+<circle cx="363.5" cy="616.5" r="6.5" fill="#F2C9BD" />
+<text x="155.0" y="426.0" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="end">New samples</text>
+<text x="155.0" y="448.0" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="end">each surveillance batch</text>
+<text x="344.5" y="122.5" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="middle">Sequencing</text>
+<text x="769.0" y="424.0" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="start">Classify into</text>
+<text x="769.0" y="449.0" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="start">clusters</text>
+<text x="579.5" y="717.5" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="middle">Core SNP analysis</text>
+<text x="579.5" y="739.5" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="middle">with historic samples</text>
+<text x="344.5" y="717.5" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="middle">Save to database</text>
+<text x="344.5" y="739.5" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="middle">for reuse next cycle</text>
+<text x="220.5" y="560.3" font-size="16" font-weight="700" fill="#B9BEC1" text-anchor="end">Next batch</text>
+<text x="220.5" y="579.3" font-size="14" font-weight="400" fill="#AFB6B6" text-anchor="end">the cycle repeats</text>
+<line x1="633.5" y1="633.5159698893431" x2="794" y2="633.5159698893431" stroke="#B9BEC1" stroke-width="5" stroke-linecap="round"/>
+<polygon points="811.4,633.5 782.6,647.9 782.6,619.1" fill="#B9BEC1"/>
+<path d="M820,577.5159698893431 H880 L904,601.5159698893431 V689.5159698893431 H820 Z" fill="#ffffff" stroke="#B9BEC1" stroke-width="4.5" stroke-linejoin="round"/>
+<path d="M880,577.5159698893431 V601.5159698893431 H904" fill="none" stroke="#B9BEC1" stroke-width="4.5" stroke-linejoin="round"/>
+<path d="M834,629.5159698893431 H844 M844,618.5159698893431 V640.5159698893431 M844,618.5159698893431 H856 M856,611.5159698893431 V625.5159698893431 M856,611.5159698893431 H869 M856,625.5159698893431 H869 M844,640.5159698893431 H869" fill="none" stroke="#B9BEC1" stroke-width="3" stroke-linecap="round"/>
+<circle cx="875.0" cy="611.5" r="4.5" fill="#F8E6CA" />
+<circle cx="875.0" cy="625.5" r="4.5" fill="#F8E6CA" />
+<circle cx="875.0" cy="640.5" r="4.5" fill="#BDBFCE" />
+<line x1="834" y1="657.5159698893431" x2="890" y2="657.5159698893431" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="834" y1="669.5159698893431" x2="890" y2="669.5159698893431" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<text x="862.0" y="541.5" font-size="19" font-weight="700" fill="#B9BEC1" text-anchor="middle">Phylogenetic</text>
+<text x="862.0" y="564.5" font-size="19" font-weight="700" fill="#B9BEC1" text-anchor="middle">summary</text>
+<line x1="511.0" y1="345.1" x2="549.5" y2="278.4" stroke="#1f2426" stroke-width="3.5" stroke-dasharray="9 8" stroke-linecap="round"/>
+<polygon points="506.5,352.9 507.7,332.8 523.3,341.8" fill="#1f2426"/>
+<text x="486.3" y="288.6" font-size="14.5" font-weight="700" fill="#0E8C7F" text-anchor="end">manual setup,</text>
+<text x="486.3" y="305.6" font-size="14.5" font-weight="700" fill="#0E8C7F" text-anchor="end">before first run</text>
+<circle cx="462.0" cy="430.0" r="102" fill="none" stroke="#0E8C7F" stroke-width="3.5" />
+<circle cx="462.0" cy="430.0" r="92" fill="#F3F5F5" stroke="#1f2426" stroke-width="4" />
+<path d="M430,380 V420 A32,10 0 0 0 494,420 V380 Z" fill="#3C3F5C"/>
+<ellipse cx="462" cy="380" rx="32" ry="10" fill="#5A5E80"/>
+<path d="M430,393.3 A32,10 0 0 0 494,393.3" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<path d="M430,406.7 A32,10 0 0 0 494,406.7" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<text x="462.0" y="454.0" font-size="16" font-weight="700" fill="#1f2426" text-anchor="middle">Cluster database</text>
+<text x="462.0" y="474.0" font-size="13.5" font-weight="400" fill="#5d6b6b" text-anchor="middle">one per species,</text>
+<text x="462.0" y="491.0" font-size="13.5" font-weight="400" fill="#5d6b6b" text-anchor="middle">grows each cycle</text>
+<circle cx="389.9" cy="357.9" r="16" fill="#0E8C7F" stroke="#ffffff" stroke-width="3" />
+<text x="389.9" y="364.4" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="579.5" cy="226.5" r="64" fill="none" stroke="#0E8C7F" stroke-width="3.5" />
+<circle cx="579.5" cy="226.5" r="54" fill="#ffffff" stroke="#1f2426" stroke-width="4" stroke-dasharray="11 7"/>
+<rect x="546.5" y="200.5" width="66" height="12" rx="6" fill="#F2C98A" />
+<rect x="546.5" y="220.5" width="54" height="12" rx="6" fill="#3C3F5C" />
+<rect x="546.5" y="240.5" width="60" height="12" rx="6" fill="#E07A5F" />
+<text x="579.5" y="122.5" font-size="20" font-weight="700" fill="#1f2426" text-anchor="middle">Assembly &amp; taxonomy</text>
+<text x="579.5" y="144.5" font-size="15" font-weight="700" fill="#0E8C7F" text-anchor="middle">separate workflow, run first</text>
+<circle cx="534.3" cy="181.2" r="16" fill="#0E8C7F" stroke="#ffffff" stroke-width="3" />
+<text x="534.3" y="187.7" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="651.5" y="179.48403011065693" width="104" height="26" rx="13" fill="#ffffff" stroke="#1f2426" stroke-width="2"/>
+<text x="703.5" y="197.5" font-size="14" font-weight="700" fill="#1f2426" text-anchor="middle">PHoeNIx</text>
+<rect x="651.5" y="213.48403011065693" width="104" height="26" rx="13" fill="#ffffff" stroke="#1f2426" stroke-width="2"/>
+<text x="703.5" y="231.5" font-size="14" font-weight="700" fill="#1f2426" text-anchor="middle">Bactopia</text>
+<rect x="651.5" y="247.48403011065693" width="104" height="26" rx="13" fill="#ffffff" stroke="#1f2426" stroke-width="2"/>
+<text x="703.5" y="265.5" font-size="14" font-weight="700" fill="#1f2426" text-anchor="middle">TheiaProk</text>
+<path d="M647.5,226.48403011065693 H644.5 M644.5,192.48403011065693 V260.48403011065693 M644.5,192.48403011065693 H651.5 M644.5,260.48403011065693 H651.5 M644.5,226.48403011065693 H651.5" fill="none" stroke="#1f2426" stroke-width="2"/>
+</g>
+<line x1="1010.0" y1="175" x2="1010.0" y2="1120" stroke="#DDE0E3" stroke-width="2"/>
+<g transform="translate(1045,100)">
+<text x="0.0" y="8.0" font-size="32" font-weight="700" fill="#3a4a4a" text-anchor="start">BigBacter v2</text>
+<text x="0.0" y="40.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="start">Assembly, taxonomy, and database setup are built in.</text>
+<path d="M527.9,144.5 A293,293 0 0 1 750.5,379.1 L632.4,400.0 A173,173 0 0 0 500.9,261.4 Z" fill="#D3EEE8" stroke="#D3EEE8" stroke-width="24" stroke-linejoin="round"/>
+<path d="M729.7,310.8 A293,293 0 0 1 240.9,622.2 L331.4,543.5 A173,173 0 0 0 620.0,359.6 Z" fill="#E9EBF1" stroke="#E9EBF1" stroke-width="24" stroke-linejoin="round"/>
+<text x="772.1" y="358.1" font-size="24" font-weight="700" fill="#3C3F5C" text-anchor="start">BigBacter</text>
+<text x="772.1" y="380.1" font-size="15" font-weight="700" fill="#0E8C7F" text-anchor="start">now runs four steps</text>
+<circle cx="462.0" cy="430.0" r="235" fill="none" stroke="#B9BEC1" stroke-width="5" />
+<polygon points="264.5,302.1 262.9,328.9 242.1,316.9" fill="#B9BEC1"/>
+<polygon points="474.0,195.0 450.0,207.0 450.0,183.0" fill="#B9BEC1"/>
+<polygon points="671.5,322.9 649.1,308.1 669.9,296.1" fill="#B9BEC1"/>
+<polygon points="659.5,557.9 661.1,531.1 681.9,543.1" fill="#B9BEC1"/>
+<polygon points="450.0,665.0 474.0,653.0 474.0,677.0" fill="#B9BEC1"/>
+<polygon points="252.5,537.1 274.9,551.9 254.1,563.9" fill="#B9BEC1"/>
+<line x1="560.0" y1="430.0" x2="637.0" y2="430.0" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="646.0,430.0 628.0,439.0 628.0,421.0" fill="#B9BEC1"/>
+<line x1="511.0" y1="514.9" x2="549.5" y2="581.6" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="554.0,589.3 537.2,578.3 552.8,569.3" fill="#B9BEC1"/>
+<line x1="413.0" y1="514.9" x2="374.5" y2="581.6" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<polygon points="417.5,507.1 416.3,527.2 400.7,518.2" fill="#B9BEC1"/>
+<text x="578.9" y="374.4" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">cluster</text>
+<text x="578.9" y="391.4" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">references</text>
+<text x="568.1" y="498.1" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">historic</text>
+<text x="568.1" y="515.1" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="start">samples</text>
+<text x="354.7" y="496.2" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="end">add new</text>
+<text x="354.7" y="513.2" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="end">samples</text>
+<circle cx="227.0" cy="430.0" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<circle cx="227.0" cy="430.0" r="10" fill="#BDBFCE" />
+<circle cx="227.0" cy="405.0" r="10" fill="#F8E6CA" />
+<circle cx="248.7" cy="417.5" r="10" fill="#F2C9BD" />
+<circle cx="248.7" cy="442.5" r="10" fill="#BDBFCE" />
+<rect x="217.0" y="445.0" width="20" height="20" rx="3" fill="#F8E6CA" />
+<circle cx="205.3" cy="442.5" r="10" fill="#F2C9BD" />
+<circle cx="205.3" cy="417.5" r="10" fill="#BDBFCE" />
+<circle cx="344.5" cy="226.5" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<rect x="308.5" y="196.0" width="40" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="336.5" y="196.0" width="44" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="304.5" y="209.0" width="30" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="340.5" y="209.0" width="42" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="314.5" y="222.0" width="50" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="306.5" y="235.0" width="26" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="338.5" y="235.0" width="40" height="9" rx="4.5" fill="#DCDDE4" />
+<rect x="322.5" y="248.0" width="46" height="9" rx="4.5" fill="#DCDDE4" />
+<circle cx="697.0" cy="430.0" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<circle cx="678.0" cy="418.0" r="19" fill="#ffffff" stroke="#B9BEC1" stroke-width="2.5" />
+<circle cx="716.0" cy="442.0" r="19" fill="#ffffff" stroke="#B9BEC1" stroke-width="2.5" />
+<circle cx="678.0" cy="411.0" r="5.5" fill="#BDBFCE" />
+<circle cx="671.0" cy="423.0" r="5.5" fill="#BDBFCE" />
+<circle cx="685.0" cy="423.0" r="5.5" fill="#BDBFCE" />
+<rect x="704.5" y="430.5" width="11" height="11" rx="2" fill="#BDBFCE" />
+<rect x="716.5" y="442.5" width="11" height="11" rx="2" fill="#BDBFCE" />
+<circle cx="579.5" cy="633.5" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<rect x="543.5" y="605.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="543.5" y="621.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="543.5" y="637.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="543.5" y="653.5" width="72" height="8" rx="4" fill="#EBEDF0" />
+<rect x="559.0" y="602.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="559.0" y="634.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="579.0" y="618.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="579.0" y="634.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="579.0" y="650.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="597.0" y="602.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<rect x="597.0" y="650.5" width="7" height="14" rx="2" fill="#F2C9BD" />
+<circle cx="344.5" cy="633.5" r="54" fill="#ffffff" stroke="#B9BEC1" stroke-width="4" />
+<path d="M318.50000000000006,635.5159698893431 V653.5159698893431 H370.50000000000006 V635.5159698893431" fill="none" stroke="#B9BEC1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<line x1="344.50000000000006" y1="605.5159698893431" x2="344.50000000000006" y2="635.5159698893431" stroke="#B9BEC1" stroke-width="5" stroke-linecap="round"/>
+<polygon points="344.5,647.7 334.3,627.3 354.7,627.3" fill="#B9BEC1"/>
+<circle cx="325.5" cy="616.5" r="6.5" fill="#F8E6CA" />
+<circle cx="363.5" cy="616.5" r="6.5" fill="#F2C9BD" />
+<text x="155.0" y="426.0" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="end">New samples</text>
+<text x="155.0" y="448.0" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="end">each surveillance batch</text>
+<text x="344.5" y="122.5" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="middle">Sequencing</text>
+<text x="769.0" y="424.0" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="start">Classify into</text>
+<text x="769.0" y="449.0" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="start">clusters</text>
+<text x="579.5" y="717.5" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="middle">Core SNP analysis</text>
+<text x="579.5" y="739.5" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="middle">with historic samples</text>
+<text x="344.5" y="717.5" font-size="20" font-weight="700" fill="#B9BEC1" text-anchor="middle">Save to database</text>
+<text x="344.5" y="739.5" font-size="14.5" font-weight="400" fill="#AFB6B6" text-anchor="middle">for reuse next cycle</text>
+<text x="220.5" y="560.3" font-size="16" font-weight="700" fill="#B9BEC1" text-anchor="end">Next batch</text>
+<text x="220.5" y="579.3" font-size="14" font-weight="400" fill="#AFB6B6" text-anchor="end">the cycle repeats</text>
+<line x1="633.5" y1="633.5159698893431" x2="794" y2="633.5159698893431" stroke="#B9BEC1" stroke-width="5" stroke-linecap="round"/>
+<polygon points="811.4,633.5 782.6,647.9 782.6,619.1" fill="#B9BEC1"/>
+<path d="M820,577.5159698893431 H880 L904,601.5159698893431 V689.5159698893431 H820 Z" fill="#ffffff" stroke="#B9BEC1" stroke-width="4.5" stroke-linejoin="round"/>
+<path d="M880,577.5159698893431 V601.5159698893431 H904" fill="none" stroke="#B9BEC1" stroke-width="4.5" stroke-linejoin="round"/>
+<path d="M834,629.5159698893431 H844 M844,618.5159698893431 V640.5159698893431 M844,618.5159698893431 H856 M856,611.5159698893431 V625.5159698893431 M856,611.5159698893431 H869 M856,625.5159698893431 H869 M844,640.5159698893431 H869" fill="none" stroke="#B9BEC1" stroke-width="3" stroke-linecap="round"/>
+<circle cx="875.0" cy="611.5" r="4.5" fill="#F8E6CA" />
+<circle cx="875.0" cy="625.5" r="4.5" fill="#F8E6CA" />
+<circle cx="875.0" cy="640.5" r="4.5" fill="#BDBFCE" />
+<line x1="834" y1="657.5159698893431" x2="890" y2="657.5159698893431" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<line x1="834" y1="669.5159698893431" x2="890" y2="669.5159698893431" stroke="#B9BEC1" stroke-width="3.5" stroke-linecap="round"/>
+<text x="862.0" y="541.5" font-size="19" font-weight="700" fill="#B9BEC1" text-anchor="middle">Phylogenetic</text>
+<text x="862.0" y="564.5" font-size="19" font-weight="700" fill="#B9BEC1" text-anchor="middle">summary</text>
+<line x1="511.0" y1="345.1" x2="549.5" y2="278.4" stroke="#C9CED1" stroke-width="3.5" stroke-dasharray="9 8" stroke-linecap="round"/>
+<circle cx="530.2" cy="311.8" r="13" fill="#ffffff" stroke="#0E8C7F" stroke-width="3" />
+<path d="M524.75,306.28753238342415 L535.75,317.28753238342415 M535.75,306.28753238342415 L524.75,317.28753238342415" stroke="#0E8C7F" stroke-width="3.2" stroke-linecap="round"/>
+<text x="486.3" y="297.1" font-size="14.5" font-weight="700" fill="#0E8C7F" text-anchor="end">no setup step</text>
+<circle cx="462.0" cy="430.0" r="102" fill="none" stroke="#0E8C7F" stroke-width="3.5" />
+<circle cx="462.0" cy="430.0" r="92" fill="#F3F5F5" stroke="#1f2426" stroke-width="4" />
+<path d="M430,380 V420 A32,10 0 0 0 494,420 V380 Z" fill="#3C3F5C"/>
+<ellipse cx="462" cy="380" rx="32" ry="10" fill="#5A5E80"/>
+<path d="M430,393.3 A32,10 0 0 0 494,393.3" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<path d="M430,406.7 A32,10 0 0 0 494,406.7" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<text x="462.0" y="454.0" font-size="16" font-weight="700" fill="#1f2426" text-anchor="middle">Cluster database</text>
+<text x="462.0" y="474.0" font-size="14" font-weight="700" fill="#0E8C7F" text-anchor="middle">created on first run</text>
+<text x="462.0" y="491.0" font-size="13.5" font-weight="400" fill="#5d6b6b" text-anchor="middle">grows each cycle</text>
+<circle cx="389.9" cy="357.9" r="16" fill="#0E8C7F" stroke="#ffffff" stroke-width="3" />
+<text x="389.9" y="364.4" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<circle cx="579.5" cy="226.5" r="64" fill="none" stroke="#0E8C7F" stroke-width="3.5" />
+<circle cx="579.5" cy="226.5" r="54" fill="#ffffff" stroke="#1f2426" stroke-width="4"/>
+<rect x="546.5" y="200.5" width="66" height="12" rx="6" fill="#F2C98A" />
+<rect x="546.5" y="220.5" width="54" height="12" rx="6" fill="#3C3F5C" />
+<rect x="546.5" y="240.5" width="60" height="12" rx="6" fill="#E07A5F" />
+<text x="579.5" y="122.5" font-size="20" font-weight="700" fill="#1f2426" text-anchor="middle">Assembly &amp; taxonomy</text>
+<text x="579.5" y="144.5" font-size="15" font-weight="700" fill="#0E8C7F" text-anchor="middle">built into BigBacter</text>
+<circle cx="534.3" cy="181.2" r="16" fill="#0E8C7F" stroke="#ffffff" stroke-width="3" />
+<text x="534.3" y="187.7" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<rect x="651.5" y="179.48403011065693" width="104" height="26" rx="13" fill="#ffffff" stroke="#C9CED1" stroke-width="2"/>
+<text x="703.5" y="197.5" font-size="14" font-weight="700" fill="#C9CED1" text-anchor="middle">PHoeNIx</text>
+<line x1="665.5" y1="192.48403011065693" x2="741.5" y2="192.48403011065693" stroke="#C9CED1" stroke-width="2"/>
+<rect x="651.5" y="213.48403011065693" width="104" height="26" rx="13" fill="#ffffff" stroke="#C9CED1" stroke-width="2"/>
+<text x="703.5" y="231.5" font-size="14" font-weight="700" fill="#C9CED1" text-anchor="middle">Bactopia</text>
+<line x1="665.5" y1="226.48403011065693" x2="741.5" y2="226.48403011065693" stroke="#C9CED1" stroke-width="2"/>
+<rect x="651.5" y="247.48403011065693" width="104" height="26" rx="13" fill="#ffffff" stroke="#C9CED1" stroke-width="2"/>
+<text x="703.5" y="265.5" font-size="14" font-weight="700" fill="#C9CED1" text-anchor="middle">TheiaProk</text>
+<line x1="665.5" y1="260.48403011065693" x2="741.5" y2="260.48403011065693" stroke="#C9CED1" stroke-width="2"/>
+<path d="M647.5,226.48403011065693 H644.5 M644.5,192.48403011065693 V260.48403011065693 M644.5,192.48403011065693 H651.5 M644.5,260.48403011065693 H651.5 M644.5,226.48403011065693 H651.5" fill="none" stroke="#C9CED1" stroke-width="2"/>
+<circle cx="779.5" cy="226.5" r="13" fill="#ffffff" stroke="#0E8C7F" stroke-width="3" />
+<path d="M774.0,220.98403011065693 L785.0,231.98403011065693 M785.0,220.98403011065693 L774.0,231.98403011065693" stroke="#0E8C7F" stroke-width="3.2" stroke-linecap="round"/>
+<text x="799.5" y="223.5" font-size="14.5" font-weight="700" fill="#0E8C7F" text-anchor="start">no longer</text>
+<text x="799.5" y="241.5" font-size="14.5" font-weight="700" fill="#0E8C7F" text-anchor="start">required</text>
+</g>
+<text x="40.0" y="885.0" font-size="22" font-weight="700" fill="#3a4a4a" text-anchor="start">What changed</text>
+<line x1="40" y1="901" x2="1980" y2="901" stroke="#DDE0E3" stroke-width="1.5"/>
+<circle cx="56.0" cy="930.0" r="16" fill="#0E8C7F" stroke="#ffffff" stroke-width="3" />
+<text x="56.0" y="936.5" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+<text x="84.0" y="937.0" font-size="19" font-weight="700" fill="#1f2426" text-anchor="start">Assembly &amp; taxonomy</text>
+<text x="340.0" y="936.0" font-size="17" font-weight="400" fill="#5d6b6b" text-anchor="start">Run PHoeNIx, Bactopia, or TheiaProk before BigBacter</text>
+<text x="1045.0" y="936.0" font-size="17" font-weight="700" fill="#0E8C7F" text-anchor="start">Built into BigBacter, no separate workflow needed</text>
+<line x1="40" y1="959" x2="1980" y2="959" stroke="#DDE0E3" stroke-width="1.5"/>
+<circle cx="56.0" cy="988.0" r="16" fill="#0E8C7F" stroke="#ffffff" stroke-width="3" />
+<text x="56.0" y="994.5" font-size="18" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+<text x="84.0" y="995.0" font-size="19" font-weight="700" fill="#1f2426" text-anchor="start">Cluster database</text>
+<text x="340.0" y="994.0" font-size="17" font-weight="400" fill="#5d6b6b" text-anchor="start">Set up manually for each species before the first run</text>
+<text x="1045.0" y="994.0" font-size="17" font-weight="700" fill="#0E8C7F" text-anchor="start">Created automatically the first time a species is run</text>
+<line x1="40" y1="1017" x2="1980" y2="1017" stroke="#DDE0E3" stroke-width="1.5"/>
+</svg>

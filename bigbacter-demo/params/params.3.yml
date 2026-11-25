@@ -1,6 +1,5 @@
-# params.yml
+# params.3.yml
 input: samplesheets/samplesheet.3.csv
 outdir: results
 db: bigbacter_db/
-push: true
-publish_dir_mode: copy
+push: false
