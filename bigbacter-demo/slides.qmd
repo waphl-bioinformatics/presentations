@@ -1,0 +1,28 @@
+# Present scenario
+
+Epis reach out about a suspected Corynebacterium striatum outbreak and request that the lab use whole genome sequencing to invesigate. 
+
+# Challenge 1
+You use the BigBacter pipeline but this requires use of a PopPUNK database. You go to check which poppunk databases are available and find that there is no Corynebacterium striatum database. https://bacpop.org/poppunk-databases/
+
+But you see that there is a new version of BigBacter that says it can build databases for any species. You decide to try this out and build a Corynebacterium striatum database using the BigBacter pipeline.
+
+# Running BigBacter v2
+
+## 1. Install Nextflow and container engine (Docker, Singularity, or Podman) on your system.
+
+## 2. Make your samplesheet and params.yml file
+
+## 3. Run the BigBacter pipeline
+
+# While that is running
+
+## Overview of BigBacter workflow
+Use https://nw-page.github.io/bigbacter-docs/docs/v2.0/pages/overview/ as reference
+
+# Once complete
+## 4. Check the results
+Pull up run summary, showing that each run is output to a timestamped directory. Show that both samples were placed in the same cluster and that one of the samples was selected as the reference. Show the microreact report - not super informative at the moment but will be better as more samples are added.
+
+## 5. Push the samples
+We are happy with these results, so can re-run the workflow with `--push true -resume`.

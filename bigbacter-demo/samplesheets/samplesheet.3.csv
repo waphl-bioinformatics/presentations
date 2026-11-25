@@ -1,0 +1,3 @@
+sample,taxa,assembly,fastq_1,fastq_2
+sim03,Corynebacterium striatum,simulated/genomes/sim03.fasta.gz,simulated/fastq/sim03_R1.fastq.gz,simulated/fastq/sim03_R2.fastq.gz
+

@@ -1,0 +1,42 @@
+# Conda environment for simulate_variants.py
+#
+#   conda env create -f environment.yml
+#   conda activate simulate-variants
+#
+# Channel order matters. Set strict priority once before creating the env:
+#   conda config --set channel_priority strict
+#
+# mamba is a faster drop-in if you have it:
+#   mamba env create -f environment.yml
+#
+# simulate_variants.py itself imports only the Python standard library, so
+# everything below is either an external tool it shells out to, or a
+# dependency of one of those tools.
+
+name: simulate-variants
+
+channels:
+  - conda-forge
+  - bioconda
+  - nodefaults
+
+dependencies:
+  # Python 3.12 rather than the newest release: bioconda builds of the
+  # compiled dependencies below (pysam in particular) lag the latest minor
+  # version. The script has no version-sensitive syntax, so >=3.9 is fine if
+  # you need to move this.
+  - python=3.12
+
+  # Introduces an exact number of substitutions per variant and writes the VCF.
+  - snp-mutator=1.2.0
+
+  # Default read simulator. Roughly 100x faster than InSilicoSeq.
+  - wgsim=1.0
+
+  # Only needed for --simulator iss (empirical Illumina error models).
+  # Drop this line for a smaller environment if you always use wgsim.
+  - insilicoseq=2.0.1
+
+  # Optional: parallel gzip. The script prefers pigz, falls back to gzip,
+  # then to Python's gzip module.
+  - pigz

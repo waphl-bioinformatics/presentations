@@ -1,0 +1,4 @@
+id,run,status,included,taxa,cluster,strong_links,inter_links,genome_fraction,core_fraction,length,masked,missing,mixed,variants,recomb_masked,max_snp_dist,mean_snp_dist,min_snp_dist
+sim01,1795625672,new,True,Corynebacterium_striatum,1,sim01,sim02:Reference_sim02,0.937728,0.937728,3031488,0,188778,0,11,False,11,11,11
+sim02,1795625672,new,True,Corynebacterium_striatum,1,sim02:Reference_sim02,sim01,0.937171,0.929872,3031488,0,190464,0,0,False,11,11,11
+Reference_sim02,1795625672,old,True,Corynebacterium_striatum,1,sim02:Reference_sim02,sim01,1.000000,1.000000,3031488,0,0,0,0,False,,,

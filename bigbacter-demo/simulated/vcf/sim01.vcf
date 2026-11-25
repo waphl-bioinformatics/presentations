@@ -1,0 +1,16 @@
+##fileformat=VCFv4.2
+##fileDate=20261124
+##source=snpmutator 1.2.0
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##reference=reference
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	reference_mutated_1
+CP024932.1	114222	.	T	C	.	.	.	GT	1
+CP024932.1	325922	.	T	G	.	.	.	GT	1
+CP024932.1	628230	.	T	C	.	.	.	GT	1
+CP024932.1	672325	.	T	A	.	.	.	GT	1
+CP024932.1	956877	.	C	A	.	.	.	GT	1
+CP024932.1	966459	.	G	A	.	.	.	GT	1
+CP024932.1	1321353	.	A	C	.	.	.	GT	1
+CP024932.1	2242098	.	T	C	.	.	.	GT	1
+CP024932.1	2632096	.	C	A	.	.	.	GT	1
+CP024932.1	2657073	.	A	C	.	.	.	GT	1
