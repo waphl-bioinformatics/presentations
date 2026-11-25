@@ -1,28 +1,399 @@
-# Present scenario
+---
+title: "BigBacter v2: Live Demo"
+subtitle: "Investigating a suspected *Corynebacterium striatum* outbreak"
+author:
+  - name: Jared Johnson, PhD
+    affiliation: Washington State Department of Health
+date: today
+format:
+  revealjs:
+    embed-resources: true
+    slide-number: true
+    code-line-numbers: false
+    preview-links: auto
+    theme: [default, css/nwpage.scss]
+    css: css/demo.css
+    footer: "BigBacter v2 · [nw-page.github.io/bigbacter-docs](https://nw-page.github.io/bigbacter-docs/)"
+---
 
-Epis reach out about a suspected Corynebacterium striatum outbreak and request that the lab use whole genome sequencing to invesigate. 
+<!--
+PRESENTER SETUP
+- Browser (this deck) on one side, terminal on the other, `cd bigbacter-demo`.
+- Start clean: rm -r results bigbacter_db .nextflow* work/
+- Slides tagged 💻 = switch to the terminal.
+- Backup: outputs/ holds the summary CSV and .microreact report from each of the three runs.
+  Drag a .microreact file onto https://microreact.org/upload to open it.
+- Locally the pipeline is run from a clone (see run.sh):
+    nextflow run ../../bigbacter/main.nf -profile docker,pc -params-file params/params.N.yml
+  The slides show the public form of the same command.
+- params/params.N.yml all set `push: true`. The demo overrides this on the command line with
+  `--push false` for the first pass so that results are reviewed before they're pushed.
+-->
 
-# Challenge 1
-You use the BigBacter pipeline but this requires use of a PopPUNK database. You go to check which poppunk databases are available and find that there is no Corynebacterium striatum database. https://bacpop.org/poppunk-databases/
+# The scenario
 
-But you see that there is a new version of BigBacter that says it can build databases for any species. You decide to try this out and build a Corynebacterium striatum database using the BigBacter pipeline.
+## A suspected outbreak
 
-# Running BigBacter v2
+::: {.box .note}
+Epis reach out about a suspected ***Corynebacterium striatum*** outbreak and ask the lab to use
+whole genome sequencing to investigate.
+:::
 
-## 1. Install Nextflow and container engine (Docker, Singularity, or Podman) on your system.
+- *C. striatum*: skin and mucosal commensal, increasingly recognized as a multidrug-resistant,
+  healthcare-associated pathogen
+- Two isolates from the suspected outbreak have been sequenced: **sim01** and **sim02**
+- The question: **are they genomically related?**
 
-## 2. Make your samplesheet and params.yml file
+::: {.notes}
+The isolates in this demo are simulated from a public C. striatum genome
+(sim01 = 10 SNPs, sim02 = 1 SNP, sim03 = 0 SNPs; see simulated/manifest.tsv).
+:::
 
-## 3. Run the BigBacter pipeline
+## Challenge 1: no database for this species
 
-# While that is running
+- BigBacter v1 required a **PopPUNK database** for the species
+- Check what's available: [bacpop.org/poppunk-databases](https://bacpop.org/poppunk-databases/)
+- There is **no *Corynebacterium striatum* database** 😬
 
-## Overview of BigBacter workflow
-Use https://nw-page.github.io/bigbacter-docs/docs/v2.0/pages/overview/ as reference
+. . .
 
-# Once complete
-## 4. Check the results
-Pull up run summary, showing that each run is output to a timestamped directory. Show that both samples were placed in the same cluster and that one of the samples was selected as the reference. Show the microreact report - not super informative at the moment but will be better as more samples are added.
+::: {.box .accent title="BigBacter v2"}
+- Builds its own database for **any species**, on the first run
+- Can start with as few as **1 sample**
+- We'll try it and build a *C. striatum* database from these two isolates
+:::
 
-## 5. Push the samples
-We are happy with these results, so can re-run the workflow with `--push true -resume`.
+::: {.notes}
+Optional: open the PopPUNK database page in the browser and scroll the species list.
+v1 databases aren't compatible with v2.
+:::
+
+# Run 1: the outbreak isolates
+
+## 1. Install the prerequisites
+
+- [Nextflow](https://www.nextflow.io/docs/latest/install.html) **≥ 25.04**
+- A container engine: **Docker**, **Podman**, **Apptainer**, or **Singularity**
+- That's it. Every tool runs in a container (Conda/Mamba aren't supported)
+
+## 2. Samplesheet and params file
+
+`samplesheets/samplesheet.1.csv`
+
+| sample | taxa | assembly | fastq_1 | fastq_2 |
+|---|---|---|---|---|
+| sim01 | Corynebacterium striatum | …/sim01.fasta.gz | …/sim01_R1.fastq.gz | …/sim01_R2.fastq.gz |
+| sim02 | Corynebacterium striatum | …/sim02.fasta.gz | …/sim02_R1.fastq.gz | …/sim02_R2.fastq.gz |
+
+:::: {.columns}
+::: {.column width="45%"}
+```{.yaml filename="params/params.1.yml"}
+input: samplesheets/samplesheet.1.csv
+outdir: results
+db: bigbacter_db/
+push: true
+publish_dir_mode: copy
+```
+:::
+::: {.column width="55%"}
+
+- `sample` plus reads (`fastq_1`/`fastq_2`) are all you need
+- `taxa` and `assembly` are optional. They let you **reuse outputs from your routine pipeline**
+  and skip taxonomic classification and assembly
+- `db`: where the database lives. It's **created if it doesn't exist**
+:::
+::::
+
+## 3. Run BigBacter 💻
+
+```bash
+nextflow run NW-PaGe/BigBacter -r main \
+  -profile docker \
+  -params-file params/params.1.yml \
+  --push false
+```
+
+- `--push false` overrides the params file: **review first, push later**
+
+::: {.notes}
+Switch to the terminal and start the run (~3 min). Leave it visible, then come back to the slides.
+Local equivalent: nextflow run ../../bigbacter/main.nf -profile docker,pc -params-file params/params.1.yml --push false
+:::
+
+# While that's running…
+
+## How BigBacter works
+
+:::: {.pipeline}
+::: {.step}
+**Samplesheet**<br>reads · assemblies · accessions
+:::
+::: {.step}
+**Input prep**<br>seqtk · fastp · shovill · GAMBIT
+:::
+::: {.step .hl}
+**Cluster**<br>floc
+:::
+::: {.step}
+**Select reference**<br>per cluster
+:::
+::: {.step}
+**Core genome**<br>Snippy · polycore
+:::
+::: {.step}
+**SNPs**<br>polycore · Gubbins
+:::
+::: {.step}
+**Tree**<br>IQ-TREE2
+:::
+::: {.step}
+**Report**<br>Microreact
+:::
+::::
+
+::: {.box .key .center}
+The **database** feeds clustering and reference selection, and receives the results when you **push**
+:::
+
+::: {.notes}
+Reference: https://nw-page.github.io/bigbacter-docs/docs/v2.0/pages/overview/
+:::
+
+## Step by step
+
+1. **Input prep**: downsample reads (seqtk), QC (fastp), assemble (shovill) and classify (GAMBIT) **only if needed**. Samples are split by species
+2. **Clustering** with **floc**
+3. **Reference selection**: one reference per cluster, saved to the database and reused
+4. **Core genome**: Snippy maps each sample → polycore builds a **soft-core** alignment
+5. **SNPs + recombination**: polycore calls SNPs; Gubbins masks recombination when possible
+6. **Tree**: IQ-TREE2 maximum-likelihood tree, split into partitions
+7. **Report**: summary table and an interactive **Microreact** report per cluster
+8. **Database**: clusters, references and per-sample SNP files are saved for the next run
+
+## Clustering with floc
+
+- Uses **sourmash containment** to group samples *within a species*
+- Every run loads the existing database, so new samples are placed **relative to every cluster
+  seen before**
+- Clusters are coarse bins ("close enough to be worth a SNP comparison"), not outbreak calls
+- v2.2.0 defaults: `--clust_dist 0.1`, `--clust_assign_hashfreq 0.6`
+
+::: {.box .warn}
+Clustering settings are recorded with the database and must stay the same across runs.
+:::
+
+## Core SNPs and linkage
+
+- One reference per cluster, **reused on every later run**
+- Soft-core alignment: a site is kept if it's covered in **≥ 90%** of samples (`--min_core_fraction`)
+- Samples already in the database are **not re-mapped**, only new ones
+
+| Link | Default SNP distance |
+|---|---|
+| **Strong** | ≤ 10 (`--strong_link_threshold`) |
+| **Intermediate** | ≤ 50 (`--inter_link_threshold`) |
+| **Partition** | ≤ 100 substitutions (`--partition_distance`) |
+
+::: {.notes}
+These are BigBacter defaults, not outbreak definitions for C. striatum. Agree on thresholds with epis.
+:::
+
+## The database grows with every run
+
+```{mermaid}
+flowchart LR
+  R1["Run 1<br/>2 outbreak isolates"] -->|push| DB[("bigbacter_db<br/>C. striatum")]
+  DB --> R2["Run 2<br/>+ NCBI context<br/>+ epi request"]
+  R2 -->|push| DB
+  DB --> R3["Run 3<br/>+ 1 new isolate"]
+  R3 -->|push| DB
+```
+
+- Each run compares **new samples** against **everything already in the database**
+
+# Run 1 results
+
+## 4. Check the results 💻
+
+- Each run gets a **run ID** (a timestamp, e.g. `1795625672`) and its own output directory
+- Open the run summary:
+
+| id | status | cluster | strong links | intermediate links | SNPs (min–max) |
+|---|---|---|---|---|---|
+| sim01 | new | 1 | – | sim02, Reference_sim02 | 11 |
+| sim02 | new | 1 | Reference_sim02 | sim01 | 11 |
+| Reference_sim02 | old | 1 | sim02 | sim01 | – |
+
+- Both isolates land in **cluster 1**, and **sim02 was chosen as the reference**
+- 11 SNPs apart → an **intermediate** link
+
+::: {.notes}
+Backup: outputs/1795625672-summary.csv. Point out the run ID / timestamped directory.
+Explain the Reference_sim02 row: the chosen reference is added as its own entry.
+:::
+
+## The Microreact report 💻
+
+- One interactive report per cluster: summary table, SNP and containment distance matrices,
+  core genome plot
+- With only two isolates there's **no tree yet**, so it isn't very informative
+- It gets more useful as samples are added
+
+::: {.notes}
+Backup: drag outputs/1795625672-Corynebacterium_striatum-1.microreact onto microreact.org/upload.
+:::
+
+## 5. Push the samples 💻
+
+We're happy with these results, so we re-run with `--push true -resume`:
+
+```bash
+nextflow run NW-PaGe/BigBacter -r main \
+  -profile docker \
+  -params-file params/params.1.yml \
+  --push true \
+  -resume
+```
+
+- `-resume` reuses the cached work, so **nothing is recomputed**. The results are just written to
+  the database
+- The *C. striatum* database now exists, built from **2 samples**
+
+# Run 2: adding context
+
+## Challenge 2: is this only local?
+
+- Are our isolates related to anything **outside our lab**?
+- Find public *C. striatum* genomes to add as context, e.g. from
+  [NCBI Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/)
+- An epi has also asked about one more genome (**Dan_Request**). Is it part of this?
+
+::: {.notes}
+Optional: open NCBI Pathogen Detection and show where the accessions came from.
+:::
+
+## Context samplesheet: just accessions
+
+```{.csv filename="samplesheets/samplesheet.2.csv"}
+sample,taxa,genbank
+GCA_016085355_1,Corynebacterium striatum,GCA_016085355.1
+GCA_002804085_1,Corynebacterium striatum,GCA_002804085.1
+Dan_Request,Corynebacterium striatum,GCA_015946805.1
+```
+
+- No files to download yourself: **BigBacter pulls the assemblies from NCBI**
+- Run 1 samples **aren't listed**. They're already in the database
+
+## Run 2 💻
+
+```bash
+nextflow run NW-PaGe/BigBacter -r main \
+  -profile docker \
+  -params-file params/params.2.yml \
+  --push false
+```
+
+::: {.notes}
+~2 min. While it runs, recap: floc will place these against cluster 1 from the database.
+:::
+
+## Run 2 results
+
+| id | status | cluster | strong links | SNPs (min–max) |
+|---|---|---|---|---|
+| GCA_002804085_1 | new | 1 | GCA_016085355_1, sim01, sim02, Reference_sim02 | 1–10 |
+| GCA_016085355_1 | new | 1 | GCA_002804085_1 | 10–20 |
+| sim01 | old | 1 | GCA_002804085_1 | 10–20 |
+| sim02 | old | 1 | GCA_002804085_1, Reference_sim02 | 1–11 |
+| **Dan_Request** | new | **2** | – | – |
+
+- **GCA_002804085_1** is **1 SNP** from sim02: a public genome closely linked to our outbreak
+- **Dan_Request** forms its own **cluster 2**, with its own reference → **not related**
+
+::: {.notes}
+Backup: outputs/1795625861-summary.csv and the matching .microreact.
+Point out: sim01/sim02 show status "old": they came from the database and weren't re-mapped.
+Now there are enough samples for a tree in the Microreact report.
+:::
+
+## Push run 2 💻
+
+```bash
+nextflow run NW-PaGe/BigBacter -r main \
+  -profile docker \
+  -params-file params/params.2.yml \
+  --push true \
+  -resume
+```
+
+# Run 3: a new isolate
+
+## One more isolate arrives
+
+`samplesheets/samplesheet.3.csv`
+
+| sample | taxa | assembly | fastq_1 | fastq_2 |
+|---|---|---|---|---|
+| sim03 | Corynebacterium striatum | …/sim03.fasta.gz | …/sim03_R1.fastq.gz | …/sim03_R2.fastq.gz |
+
+- A **single sample** is fine. It's compared against everything in the database
+
+```bash
+nextflow run NW-PaGe/BigBacter -r main \
+  -profile docker \
+  -params-file params/params.3.yml \
+  --push false
+```
+
+## Run 3 results
+
+| id | status | cluster | SNPs (min–max) |
+|---|---|---|---|
+| **sim03** | **new** | 1 | **0–10** |
+| GCA_002804085_1 | old | 1 | 0–10 |
+| GCA_016085355_1 | old | 1 | 10–20 |
+| sim01 | old | 1 | 10–20 |
+| sim02 | old | 1 | 1–11 |
+
+- sim03 joins **cluster 1** with **strong links to every member** (0 SNPs from GCA_002804085_1, 1 from sim02)
+- Only cluster 1 was re-analyzed. **Cluster 2 had no new samples**
+- Only sim03 was mapped. Everything else came from the database
+
+::: {.notes}
+Backup: outputs/1795625994-summary.csv and the matching .microreact.
+Open the tree in Microreact: sim03, sim02 and GCA_002804085_1 sit together, sim01 and
+GCA_016085355_1 on longer branches.
+:::
+
+## Push and share 💻
+
+```bash
+nextflow run NW-PaGe/BigBacter -r main \
+  -profile docker \
+  -params-file params/params.3.yml \
+  --push true \
+  -resume
+```
+
+::: {.box .accent}
+Share the Microreact report and run summary with the epis.
+:::
+
+# Wrap-up
+
+## Takeaways
+
+- **No PopPUNK database needed**: BigBacter v2 builds one for any species, from as few as **1 sample**
+- **Run → review → push** with `-resume`, so only results you've checked go into the database
+- The database **grows with every run**: new samples are compared against everything before them,
+  and old samples aren't reprocessed
+- **Public context is just an accession** in the samplesheet
+- Separate clusters are an answer too: **Dan_Request is not part of this outbreak**
+
+## Resources
+
+- Docs: [nw-page.github.io/bigbacter-docs](https://nw-page.github.io/bigbacter-docs/)
+- Code: [github.com/NW-PaGe/BigBacter](https://github.com/NW-PaGe/BigBacter)
+- Demo files: [github.com/waphl-bioinformatics/presentations](https://github.com/waphl-bioinformatics/presentations/tree/main/bigbacter-demo)
+
+## Questions?

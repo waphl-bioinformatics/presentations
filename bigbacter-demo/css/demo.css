@@ -1,0 +1,48 @@
+/* Demo-specific tweaks layered on top of nwpage.scss */
+
+/* Larger code blocks so commands are readable from the back of the room */
+.reveal pre code {
+  font-size: 1.45em !important;
+  line-height: 1.45;
+}
+
+/* Keep wide tables compact */
+.reveal table { font-size: 0.8em; }
+
+/* Pipeline step strip (How BigBacter works) */
+.reveal .pipeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6em 1.4em;
+  margin: 1em 0;
+}
+.reveal .pipeline .step {
+  margin: 0;
+  position: relative;
+  background: #d8f0f0;
+  border-top: 5px solid #0c5460;
+  border-radius: 6px;
+  padding: 0.6em 0.5em;
+  text-align: center;
+  font-size: 0.75em;
+  line-height: 1.35;
+}
+.reveal .pipeline .step.hl { background: #fdeee0; border-top-color: #e48430; }
+.reveal .pipeline .step:not(:nth-child(4n))::after {
+  content: "→";
+  position: absolute;
+  right: -1.3em;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #e48430;
+  font-weight: 700;
+}
+.reveal .pipeline .step:nth-child(4)::before {
+  content: "↓ continues";
+  position: absolute;
+  bottom: -1.7em;
+  left: 0; right: 0;
+  font-size: 0.8em;
+  color: #e48430;
+}
+.reveal .pipeline .step p { margin: 0; }
