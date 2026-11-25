@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1580 720" width="1580" height="720" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img">
+<title>The BigBacter database grows with every run</title>
+<rect x="60" y="350" width="1460" height="300" rx="150" fill="#E9EBF1"/>
+<text x="790.0" y="626.0" font-size="20" font-weight="700" fill="#3C3F5C" text-anchor="middle" >bigbacter_db / Corynebacterium_striatum</text>
+<circle cx="290.0" cy="170.0" r="66" fill="#ffffff" stroke="#1f2426" stroke-width="4" />
+<circle cx="275.0" cy="170" r="12" fill="#3C3F5C"/>
+<circle cx="305.0" cy="170" r="12" fill="#3C3F5C"/>
+<text x="202.0" y="166.0" font-size="30" font-weight="700" fill="#1f2426" text-anchor="end" >Run 1</text>
+<text x="202.0" y="194.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="end" >2 outbreak isolates</text>
+<line x1="290.0" y1="240.0" x2="290.0" y2="392.0" stroke="#0E8C7F" stroke-width="4" stroke-linecap="round"/><polygon points="290.0,408.0 282.0,392.0 298.0,392.0" fill="#0E8C7F"/>
+<text x="304.0" y="329.0" font-size="21" font-weight="700" fill="#0E8C7F" text-anchor="start" >push</text>
+<circle cx="290.0" cy="500.0" r="80" fill="#F3F5F5" stroke="#1f2426" stroke-width="4" />
+<path d="M267.7,467.7 V496.3 A22.3,6.8 0 0 0 312.3,496.3 V467.7 Z" fill="#3C3F5C"/><ellipse cx="290.0" cy="467.7" rx="22.3" ry="6.8" fill="#5A5E80"/><path d="M267.7,477.2 A22.3,6.8 0 0 0 312.3,477.2" fill="none" stroke="#8E91AA" stroke-width="2.5"/><path d="M267.7,486.8 A22.3,6.8 0 0 0 312.3,486.8" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<text x="290.0" y="536.0" font-size="19" font-weight="700" fill="#1f2426" text-anchor="middle" >2 samples</text>
+<text x="290.0" y="558.0" font-size="16" font-weight="400" fill="#5d6b6b" text-anchor="middle" >1 cluster</text>
+<path d="M374,470 C550,470 540,260 742,216" fill="none" stroke="#1f2426" stroke-width="3.5" stroke-dasharray="9 8" stroke-linecap="round"/>
+<line x1="728.0" y1="222.0" x2="729.3" y2="221.4" stroke="#1f2426" stroke-width="3.5" stroke-linecap="round"/><polygon points="744.0,215.0 732.5,228.7 726.1,214.1" fill="#1f2426"/>
+<text x="565.0" y="460.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="middle" >compared against</text>
+<text x="565.0" y="482.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="middle" >everything before</text>
+<circle cx="800.0" cy="170.0" r="66" fill="#ffffff" stroke="#1f2426" stroke-width="4" />
+<circle cx="770.0" cy="170" r="12" fill="#F2C98A"/>
+<circle cx="800.0" cy="170" r="12" fill="#F2C98A"/>
+<circle cx="830.0" cy="170" r="12" fill="#E07A5F"/>
+<text x="712.0" y="166.0" font-size="30" font-weight="700" fill="#1f2426" text-anchor="end" >Run 2</text>
+<text x="712.0" y="194.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="end" >2 NCBI genomes + 1 epi request</text>
+<line x1="800.0" y1="240.0" x2="800.0" y2="392.0" stroke="#0E8C7F" stroke-width="4" stroke-linecap="round"/><polygon points="800.0,408.0 792.0,392.0 808.0,392.0" fill="#0E8C7F"/>
+<text x="814.0" y="329.0" font-size="21" font-weight="700" fill="#0E8C7F" text-anchor="start" >push</text>
+<circle cx="800.0" cy="500.0" r="80" fill="#F3F5F5" stroke="#1f2426" stroke-width="4" />
+<path d="M770.5,463.1 V500.9 A29.5,9.0 0 0 0 829.5,500.9 V463.1 Z" fill="#3C3F5C"/><ellipse cx="800.0" cy="463.1" rx="29.5" ry="9.0" fill="#5A5E80"/><path d="M770.5,475.7 A29.5,9.0 0 0 0 829.5,475.7" fill="none" stroke="#8E91AA" stroke-width="2.5"/><path d="M770.5,488.3 A29.5,9.0 0 0 0 829.5,488.3" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<text x="800.0" y="536.0" font-size="19" font-weight="700" fill="#1f2426" text-anchor="middle" >5 samples</text>
+<text x="800.0" y="558.0" font-size="16" font-weight="400" fill="#5d6b6b" text-anchor="middle" >2 clusters</text>
+<path d="M884,470 C1060,470 1050,260 1252,216" fill="none" stroke="#1f2426" stroke-width="3.5" stroke-dasharray="9 8" stroke-linecap="round"/>
+<line x1="1238.0" y1="222.0" x2="1239.3" y2="221.4" stroke="#1f2426" stroke-width="3.5" stroke-linecap="round"/><polygon points="1254.0,215.0 1242.5,228.7 1236.1,214.1" fill="#1f2426"/>
+<text x="1075.0" y="460.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="middle" >compared against</text>
+<text x="1075.0" y="482.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="middle" >everything before</text>
+<circle cx="1310.0" cy="170.0" r="66" fill="#ffffff" stroke="#1f2426" stroke-width="4" />
+<circle cx="1310.0" cy="170" r="12" fill="#0E8C7F"/>
+<text x="1222.0" y="166.0" font-size="30" font-weight="700" fill="#1f2426" text-anchor="end" >Run 3</text>
+<text x="1222.0" y="194.0" font-size="18" font-weight="400" fill="#5d6b6b" text-anchor="end" >1 new isolate</text>
+<line x1="1310.0" y1="240.0" x2="1310.0" y2="392.0" stroke="#0E8C7F" stroke-width="4" stroke-linecap="round"/><polygon points="1310.0,408.0 1302.0,392.0 1318.0,392.0" fill="#0E8C7F"/>
+<text x="1324.0" y="329.0" font-size="21" font-weight="700" fill="#0E8C7F" text-anchor="start" >push</text>
+<circle cx="1310.0" cy="500.0" r="80" fill="#F3F5F5" stroke="#1f2426" stroke-width="4" />
+<path d="M1274.0,459.0 V505.0 A36.0,11.0 0 0 0 1346.0,505.0 V459.0 Z" fill="#3C3F5C"/><ellipse cx="1310.0" cy="459.0" rx="36.0" ry="11.0" fill="#5A5E80"/><path d="M1274.0,474.3 A36.0,11.0 0 0 0 1346.0,474.3" fill="none" stroke="#8E91AA" stroke-width="2.5"/><path d="M1274.0,489.7 A36.0,11.0 0 0 0 1346.0,489.7" fill="none" stroke="#8E91AA" stroke-width="2.5"/>
+<text x="1310.0" y="536.0" font-size="19" font-weight="700" fill="#1f2426" text-anchor="middle" >6 samples</text>
+<text x="1310.0" y="558.0" font-size="16" font-weight="400" fill="#5d6b6b" text-anchor="middle" >2 clusters</text>
+<circle cx="360" cy="696" r="10" fill="#3C3F5C"/>
+<text x="378.0" y="703.0" font-size="19" font-weight="400" fill="#5d6b6b" text-anchor="start" >outbreak isolates</text>
+<circle cx="600" cy="696" r="10" fill="#F2C98A"/>
+<text x="618.0" y="703.0" font-size="19" font-weight="400" fill="#5d6b6b" text-anchor="start" >NCBI context</text>
+<circle cx="840" cy="696" r="10" fill="#E07A5F"/>
+<text x="858.0" y="703.0" font-size="19" font-weight="400" fill="#5d6b6b" text-anchor="start" >epi request</text>
+<circle cx="1080" cy="696" r="10" fill="#0E8C7F"/>
+<text x="1098.0" y="703.0" font-size="19" font-weight="400" fill="#5d6b6b" text-anchor="start" >new isolate</text>
+</svg>
