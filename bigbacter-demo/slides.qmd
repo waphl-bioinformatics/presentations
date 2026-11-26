@@ -16,22 +16,9 @@ format:
     footer: 'BigBacter v2 · [nw-page.github.io/bigbacter-docs](https://nw-page.github.io/bigbacter-docs/){target="_blank"}'
 ---
 
-<!--
-PRESENTER SETUP
-- Browser (this deck) on one side, terminal on the other, `cd bigbacter-demo`.
-- Start clean: rm -r results bigbacter_db .nextflow* work/
-- Optional: pre-pull the pipeline so the first run doesn't wait on the download:
-    nextflow pull nw-page/bigbacter -r main
-- Slides tagged 💻 = switch to the terminal.
-- Backup: outputs/ holds the summary CSV and .microreact report from each of the three runs.
-  Drag a .microreact file onto https://microreact.org/upload to open it.
-- params/params.N.yml all start with `push: false`. After reviewing each run, edit the file to
-  `push: true` and re-run with -resume.
--->
+# Setting the stage
 
-# The scenario
-
-## A suspected outbreak
+## Scenario: A suspected outbreak
 
 ::: {.lead}
 Epis reach out about a suspected ***Corynebacterium striatum*** outbreak and ask the lab to use
@@ -49,104 +36,47 @@ healthcare-associated pathogen.
 :::
 :::
 
-- Two isolates from the suspected outbreak have been sequenced: **sim01** and **sim02**
-- The question: **are they genomically related?**
+## Currently using BigBacter v1.0
 
-::: {.notes}
-The isolates in this demo are simulated from a public C. striatum genome
-(sim01 = 10 SNPs, sim02 = 1 SNP, sim03 = 0 SNPs; see simulated/manifest.tsv).
+![](media/logos/bigbacter.png){.title-logo fig-alt="BigBacter logo"}
+
+::: {.lead}
+The lab already uses BigBacter v1.0 ... but _C. striatum_ has never been analyzed before. 
+
+
+**We will need to find a PopPUNK database for this species! ([available databases](https://bacpop.org/poppunk-databases/))**
 :::
 
-## Run samples through BigBacter
-<!--
-Include the bigbacter logo that is in the logos dir. Have this first slide show the SVG of how BBv1 works, where a PopPUNK database is needed. I will show the poppunk database website that does not have one - this means we have to create one now. Then go to the next slide which introduces BBv2 which now creates these databases for you using Floc.
--->
-- Our lab already runs BigBacter routinely, but we've **never analyzed *C. striatum*** before
-- A new species needs **its own BigBacter database**, so we have to establish one
-- BigBacter v1 clustered with **PopPUNK**, which needs a database built for the species
-- Check what's available: [bacpop.org/poppunk-databases](https://bacpop.org/poppunk-databases/){target="_blank"}.
-  There is **no *C. striatum* database**
+![](svg/bbv1_poppunk.svg){fig-align="center" width="92%" fig-alt="BigBacter v1: many genomes of the species are used to build a PopPUNK database before the first run; only then can BigBacter v1 assign clusters and run the SNP analysis"}
 
-. . .
+## Upgrading to BigBacter v2
 
-::: {.box .accent title="BigBacter v2"}
-- Clusters with **floc**, so no PopPUNK database is needed
-- The database is **created on the first run**, from as few as **1 sample**
+![](media/logos/bigbacter.png){.title-logo fig-alt="BigBacter logo"}
+
+::: {.lead}
+BigBacter v2 replaces PopPUNK with a new tool called, floc.
+
+**Floc builds each database automatically - no pre-configuration required!**
 :::
 
-::: {.fragment .click-overlay}
-![](svg/poppunk_vs_floc.svg){fig-alt="BigBacter v1 needs a PopPUNK database built before the first run; BigBacter v2 clusters with floc and creates its database automatically"}
-:::
+![](svg/bbv2_floc.svg){fig-align="center" width="92%" fig-alt="BigBacter v2: one or more samples of any species go into BigBacter v2, floc clusters them on the fly, and the database is created automatically on push and grows with every run"}
 
-::: {.notes}
-Third click shows the v1 vs v2 diagram over the slide.
-Optional: open the PopPUNK database page and scroll the species list.
-v1 databases aren't compatible with v2.
-:::
-
-# Run 1: the outbreak isolates
+# Run 1
 
 ## 1. Getting started with BigBacter
-<!--
-The formatting is not quite right here. Move it all to an SVG if needed. Also remove the note about not needing to clone the repo.
--->
 
-:::: {.setup-grid}
-::: {.setup-step}
-[1]{.step-num} **Install Nextflow**
-
-![](media/logos/nextflow.svg){.logo-wide fig-alt="Nextflow logo"}
-
-Version **≥ 25.04**, which needs Java 17+
-
-```bash
-curl -s https://get.nextflow.io | bash
-```
-:::
-
-::: {.setup-step}
-[2]{.step-num} **Install a container engine**
-
-::: {.logo-row}
-![](media/logos/docker.svg){fig-alt="Docker logo"}
-![](media/logos/podman.png){.logo-podman fig-alt="Podman logo"}
-![](media/logos/apptainer.svg){fig-alt="Apptainer logo"}
-![](media/logos/singularity.svg){fig-alt="Singularity logo"}
-:::
-
-Every tool runs in a container. **No Conda/Mamba**, and nothing else to install
-:::
-
-::: {.setup-step}
-[3]{.step-num} **Test the install**
-
-Runs a small bundled *E. coli* dataset
-
-```bash
-nextflow run nw-page/bigbacter \
-  -r main \
-  -profile test,docker
-```
-:::
-::::
-
-::: {.box .note .center}
-**No need to clone the repo.** Nextflow pulls `nw-page/bigbacter` from GitHub when you run it.
-:::
+![](svg/getting_started.svg){fig-align="center" width="100%" fig-alt="Three steps: 1, install Nextflow version 25.04 or later with Java 17 or later; 2, install a container engine (Docker, Podman, Apptainer or Singularity); 3, test the install with nextflow run nw-page/bigbacter -r main -profile test,docker"}
 
 ## 2. Create the samplesheet
 
-<!--
-update this to be a CSV code block. 
--->
+### Example:
+```{.csv .code-overflow-wrap filename="samplesheets/samplesheet.1.csv"}
+sample,taxa,assembly,fastq_1,fastq_2
+sim01,Corynebacterium striatum,sim01.fasta.gz,sim01_R1.fastq.gz,sim01_R2.fastq.gz
+sim02,Corynebacterium striatum,sim02.fasta.gz,sim02_R1.fastq.gz,sim02_R2.fastq.gz
+```
 
-| sample | taxa | assembly | fastq_1 | fastq_2 |
-|---|---|---|---|---|
-| sim01 | Corynebacterium striatum | …/sim01.fasta.gz | …/sim01_R1.fastq.gz | …/sim01_R2.fastq.gz |
-| sim02 | Corynebacterium striatum | …/sim02.fasta.gz | …/sim02_R1.fastq.gz | …/sim02_R2.fastq.gz |
-
-<br>
-
+### Description of fields:
 :::: {.columns}
 ::: {.column width="50%"}
 ::: {.box .note title="Required"}
@@ -162,37 +92,39 @@ update this to be a CSV code block.
 :::
 ::::
 
-## 3. Configure the run: the params file
+## 3. Create the parameter file
 
-:::: {.columns}
-::: {.column width="55%"}
+### Example
 ```{.yaml filename="params/params.1.yml"}
 input: samplesheets/samplesheet.1.csv
 outdir: results
 db: bigbacter_db/
 push: false
 ```
-:::
-::: {.column width="45%"}
+### Description of fields
 - `input`: path to samplesheet
 - `outdir`: results for this run
 - `db`: path to BigBacter database
 - `push: false`: this will be updated later!
-:::
-::::
 
 ::: {.box .accent title="Tip"}
-**Params files** (or config) are recommended for newer version of Nextflow!
+Parameter or config files are highly recommended for newer version of Nextflow!
 :::
 
 ## 4. Run BigBacter
 
+### Example
 ```bash
 nextflow run nw-page/bigbacter \
     -r main \
     -profile docker,pc \
     -params-file params/params.1.yml
 ```
+
+### Description of fields
+- `-r main`: use main branch of `nw-page/bigbacter` repo
+- `-profile docker,pc`: use the Docker engine and adjust resources for running on a PC
+- `-params-file`: use the params file we created on the previous slide
 
 ::: {.box .plain .center}
 ⏱ Should take about 3 mins to complete
@@ -211,70 +143,53 @@ Input prep is dashed: it only runs for what's missing (e.g. no assembly or no ta
 
 ## Clustering with floc
 
-<!--
-The logo is tiny and not aligned correctly. The SVG diagram has most of the clustering approach greyed out. Focus on how floc was designed as a more flexible alternative to PopPUNK - samples can be removed and only a single sample is needed to start a database. Keep it simple. Use the floc_vs_poppunk.svg as an example.
--->
+![](media/logos/floc.png){.title-logo fig-alt="floc logo"}
 
-![](media/logos/floc.png){.floc-logo fig-alt="floc logo"}
-
-:::: {.columns}
-::: {.column width="62%"}
-![](media/floc_cluster_flow_filtered.svg){width="100%" fig-alt="floc assigns new samples to existing clusters using one merged sketch per cluster, and clusters unassigned samples with DBSCAN"}
-:::
-::: {.column width="38%" .floc-text}
-- Uses **sourmash** sketches to group samples *within a species*
-- **Existing clusters:** each new sample is compared with one merged sketch per cluster
-  (hashes in ≥ 60% of members) and joins if within `0.1`
-- **Everything else** (or every sample, on the first run) is clustered with **DBSCAN**
-- Clusters are coarse bins, not outbreak calls
-:::
-::::
-
-::: {.notes}
-Diagram from the BigBacter docs (floc blog post). Defaults (v2.2.0): --clust_dist 0.1, --clust_assign_hashfreq 0.6.
-Code: https://github.com/nw-page/floc
+:::{.lead}
+Floc was designed as a **more flexible alternative to PopPUNK**. 
 :::
 
-## Core SNPs and linkage
+![](svg/floc_vs_poppunk.svg){fig-align="center" width="100%" fig-alt="PopPUNK (BigBacter v1) needs a database built from many samples before the first run, packs every sample into one file and can't remove just one; floc (BigBacter v2) is ready to run with one sample, stores one self-contained file per sample, and removes a sample by deleting its file"}
 
-<!--
-Integrate the linkage and partition definitions into the tree SVG. Discuss the soft-core genome threshold on another slide using the polycore_one_tool.svg and the core-genome-define-example.png as examples for how to structure the content. The idea that the new version uses a new tool, Polycore to call the softcore genome. Simplify this to a single SVG if possible.
--->
-
-![](svg/linkage_tree.svg){fig-align="center" width="88%" fig-alt="Tree where samples A and B are 6 SNPs apart (strong link), C is about 33 SNPs from them (intermediate link), and D is more than 100 SNPs away in a different partition"}
-
-:::: {.columns .linkage-row}
-::: {.column width="42%"}
-| Link | Default |
-|---|---|
-| **Strong** | ≤ 10 SNPs |
-| **Intermediate** | ≤ 50 SNPs |
-| **Partition** | ≤ 100 subs |
-:::
-::: {.column width="58%"}
-- One reference per cluster, **reused every run**
-- Soft-core alignment: sites in **≥ 90%** of samples
-- Samples already in the database **aren't re-mapped**
-:::
-::::
-
-::: {.notes}
-Parameters: --strong_link_threshold, --inter_link_threshold, --partition_distance, --min_core_fraction.
-These are BigBacter defaults, not outbreak definitions for C. striatum. Agree on thresholds with epis.
-:::
+- Databases are created **automatically** using a few as a **single sample**.
+- Samples can be both added **and removed**.
 
 # Run 1 results
 
-## 5. Check the results 💻
+## 5. Check the results
 
-<!--
-Include basic numbered steps for what we will do - open summary, look at microreact report
--->
+::: {.numbered-steps}
+1. **Find the run.** Each run gets a run ID (a timestamp) and its own folder
+
+   ```bash
+   ls results/
+   ```
+
+2. **Open the run summary.** Which cluster did each sample land in, and how is it linked?
+
+   ```bash
+   results/<run ID>/<run ID>-summary.csv
+   ```
+
+3. **Open the Microreact report.** Drag it onto [microreact.org/upload](https://microreact.org/upload){target="_blank"}
+
+   ```bash
+   results/<run ID>/Corynebacterium_striatum/1/report/*.microreact
+   ```
+
+4. **Decide.** Happy with the results? Push them to the database
+:::
+
 
 ## 6. Push the samples
 
-We're happy with these results. Set `push: true` and re-run with `-resume`:
+:::{.lead}
+We are happy with these results, which means we are ready to push them to our database.
 
+**We can do this by resuming the previous BigBacter run with `push` set to `true`.**
+:::
+
+### Example
 :::: {.columns .push-row}
 ::: {.column width="50%"}
 ```{.yaml filename="params/params.1.yml"}
@@ -294,9 +209,13 @@ nextflow run nw-page/bigbacter -r main \
 :::
 ::::
 
-- `-resume` reuses the cached work, so **nothing is recomputed**. The results are just written to
-  the database
-- The *C. striatum* database now exists, built from **2 samples**
+### Description of fields
+- `-resume`: reuses the cached work, so **nothing is recomputed**.
+- `push: true`: push new files to the BigBacter database
+
+::: {.box .plain .center}
+⏱ Should take < 30 seconds
+:::
 
 ## The database grows with every run
 
@@ -307,46 +226,93 @@ This is the arc of the rest of the demo: run 1 (outbreak isolates), run 2 (NCBI 
 run 3 (one new isolate).
 :::
 
-# Run 2: adding context
+# Run 2: adding contextual samples
 
-## Challenge 2: is this only local?
+## NCBI Pathogen Detection
 
-- Are our isolates related to anything **outside our lab**?
-- Find public *C. striatum* genomes to add as context, e.g. from
-  [NCBI Pathogen Detection](https://www.ncbi.nlm.nih.gov/pathogens/){target="_blank"}
-- An epi has also asked about one more genome (**Dan_Request**). Is it part of this?
+:::{.lead}
+We decide to submit one of the samples to NCBI and request it be added to the [Pathogen Detection site](https://www.ncbi.nlm.nih.gov/pathogens/).
+
+This reveals two closely related genomes from a different lab!
+
+**We want to add these samples to our BigBacter database...**
+:::
 
 ::: {.notes}
 Optional: open NCBI Pathogen Detection and show where the accessions came from.
 :::
 
-## Context samplesheet: just accessions
+## Epi request
 
+:::: {.columns}
+
+::: {.column width="50%"}
+<img src="media/dan.png" style="width: 100%; height: 560px; object-fit: cover; object-position: right;">
+:::
+
+::: {.column width="50%" .dan}
+One of the genomic epis, **Dan**, is certain he has found an additional linkage on NCBI and has requested you include it...
+
+
+
+
+...sure thing, Dan! 🙄
+:::
+
+::::
+
+## Create the samplesheet (again)
+
+### Example
 ```{.csv filename="samplesheets/samplesheet.2.csv"}
 sample,taxa,genbank
-GCA_016085355_1,Corynebacterium striatum,GCA_016085355.1
-GCA_002804085_1,Corynebacterium striatum,GCA_002804085.1
-Dan_Request,Corynebacterium striatum,GCA_015946805.1
+PD1,Corynebacterium striatum,GCA_016085355.1
+PD2,Corynebacterium striatum,GCA_002804085.1
+Dan_Sample,Corynebacterium striatum,GCA_015946805.1
 ```
+### Description of fields
+- `sample / taxa`: the same as before
+- `genbank`: GenBank accession
 
-- No files to download yourself: **BigBacter pulls the assemblies from NCBI**
-- Run 1 samples **aren't listed**. They're already in the database
+:::{.tip}
+BigBacter automatically downloads assemblies and reads from NCBI when supplied GenBank or SRA accessions!
+:::
 
-## Run 2 💻
+## Run 2
+:::{.lead}
+Kick of the new run using the new samplesheet and params file!
+:::
 
+### Example
 ```bash
 nextflow run nw-page/bigbacter -r main \
   -profile docker,pc \
   -params-file params/params.2.yml
 ```
 
-::: {.notes}
-~2 min. While it runs, recap: floc will place these against cluster 1 from the database.
+::: {.box .plain .center}
+⏱ Should take about 2 mins to complete
 :::
 
-<!--
-Move core genome slides here
--->
+# While that's running…
+
+## Core genome with polycore
+
+![](svg/polycore_core_genome.svg){fig-align="center" width="100%" fig-alt="BigBacter v1 used snp-sites then snp-dists for a strict core only; BigBacter v2 uses polycore for a strict or soft core. In an example of 10 samples by 14 sites, a strict core keeps 8 sites and a 90% soft core keeps 12"}
+
+::: {.notes}
+polycore builds the core alignment, constant sites and pairwise SNP distances in one step.
+Default --min_core_fraction 0.9: a reference site is kept if it's covered in at least 90% of samples.
+Samples already in the database aren't re-mapped: their per-sample variant files are reused.
+:::
+
+## Reading the tree: linkage
+
+![](svg/linkage_tree.svg){fig-align="center" width="100%" fig-alt="Tree where samples A and B are 6 SNPs apart (strong link, 10 SNPs or fewer), C is about 33 SNPs from them (intermediate link, 11 to 50 SNPs), and D is more than 100 substitutions away in a separate partition"}
+
+::: {.notes}
+These are BigBacter defaults, not outbreak definitions for C. striatum. Agree on thresholds with epis.
+:::
 
 ## Run 2 results
 
@@ -382,15 +348,15 @@ nextflow run nw-page/bigbacter -r main \
 
 ## One more isolate arrives
 
-<!--
-Add in story that multiple weeks have passed and you are now deep in a measles outbreak and get this sample.
--->
+::: {.lead}
+Weeks pass. The lab is deep in a **measles outbreak** when one more *C. striatum* isolate
+arrives.
+:::
 
-`samplesheets/samplesheet.3.csv`
-
-| sample | taxa | assembly | fastq_1 | fastq_2 |
-|---|---|---|---|---|
-| sim03 | Corynebacterium striatum | …/sim03.fasta.gz | …/sim03_R1.fastq.gz | …/sim03_R2.fastq.gz |
+```{.csv .code-overflow-wrap filename="samplesheets/samplesheet.3.csv"}
+sample,taxa,assembly,fastq_1,fastq_2
+sim03,Corynebacterium striatum,simulated/genomes/sim03.fasta.gz,simulated/fastq/sim03_R1.fastq.gz,simulated/fastq/sim03_R2.fastq.gz
+```
 
 - A **single sample** is fine. It's compared against everything in the database
 

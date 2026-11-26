@@ -9,13 +9,22 @@
 /* Keep wide tables compact */
 .reveal table { font-size: 0.8em; }
 
-/* ---------- Scenario slide ---------- */
+/* Big statement at the top of a slide */
 .reveal .lead {
   font-size: 1.15em;
   font-weight: 600;
   line-height: 1.35;
   margin: 0.4em 0 0.8em;
 }
+
+.reveal .dan {
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0.4em 0 0.8em;
+}
+
+/* ---------- Scenario slide ---------- */
 .reveal .organism {
   display: flex;
   align-items: center;
@@ -31,101 +40,54 @@
 .reveal .organism .organism-text { font-size: 0.85em; }
 .reveal .organism .organism-text p + p { margin-top: 0.3em; }
 
-/* ---------- Click-to-reveal overlay (covers the slide body, keeps the title) ---------- */
-.reveal .slides section .click-overlay {
+/* ---------- Logo in the top-right corner, level with the slide title ---------- */
+.reveal .slides section img.title-logo {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  height: 104px;
+  width: auto;
+  margin: 0;
+  z-index: 5;
+}
+
+/* ---------- Samplesheet: wrapped CSV ---------- */
+.reveal .code-overflow-wrap pre code,
+.reveal pre.code-overflow-wrap code {
+  white-space: pre-wrap;
+  word-break: break-all;
+  font-size: 1.4em !important;
+}
+
+/* ---------- Check the results: numbered steps ---------- */
+.reveal .numbered-steps ol {
+  counter-reset: step;
+  list-style: none;
+  margin: 0.3em 0 0;
+  padding: 0;
+}
+.reveal .numbered-steps ol > li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.1em;
+  margin-bottom: 0.7em;
+  font-size: 0.95em;
+}
+.reveal .numbered-steps ol > li::before {
+  content: counter(step);
   position: absolute;
   left: 0;
-  right: 0;
-  top: 2.4em;
-  bottom: 0;
-  background: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-.reveal .click-overlay p { margin: 0; width: 100%; }
-.reveal .click-overlay img { width: 100%; max-height: 100%; margin: 0; }
-
-/* ---------- Getting started ---------- */
-.reveal .setup-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.8em;
-  margin-bottom: 0.6em;
-}
-.reveal .setup-step {
-  background: #f3f5f5;
-  border-top: 5px solid #0c5460;
-  border-radius: 10px;
-  padding: 0.6em 0.8em;
-  font-size: 0.78em;
-  line-height: 1.35;
-}
-.reveal .setup-step p { margin: 0.3em 0; }
-.reveal .setup-step pre { margin: 0.4em 0 0; }
-.reveal .setup-step pre code { font-size: 1.6em !important; }
-.reveal .step-num {
-  display: inline-block;
-  width: 1.6em;
-  height: 1.6em;
-  line-height: 1.6em;
+  top: 0.05em;
+  width: 1.45em;
+  height: 1.45em;
+  line-height: 1.45em;
   border-radius: 50%;
-  background: #e48430;
+  background: #0E8C7F;
   color: #fff;
   text-align: center;
   font-weight: 700;
-  margin-right: 0.3em;
+  font-size: 0.95em;
 }
-.reveal .setup-step img.logo-wide { height: 52px; margin: 0.5em 0; }
-.reveal .logo-row p {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.4em;
-  margin: 0.5em 0;
-}
-.reveal .logo-row img { height: 52px; margin: 0; }
-.reveal .logo-row img.logo-podman { height: 34px; }
-
-/* ---------- Samplesheet / params ---------- */
-.reveal .file-header {
-  font-size: 0.8em;
-  color: #4b5a5a;
-  border-left: 5px solid #e48430;
-  padding-left: 0.6em;
-  margin-bottom: 0.6em;
-}
-.reveal .box ul { margin: 0; }
-
-/* ---------- Run command cards ---------- */
-.reveal .cmd-cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.7em;
-  margin: 0.6em 0 0.8em;
-}
-.reveal .cmd-card {
-  background: #f3f5f5;
-  border-top: 5px solid #0c5460;
-  border-radius: 10px;
-  padding: 0.6em 0.8em;
-  font-size: 0.78em;
-  line-height: 1.35;
-}
-.reveal .cmd-card p:first-child { margin-top: 0; }
-.reveal .cmd-card p:last-child { margin-bottom: 0; }
-
-/* ---------- floc slide ---------- */
-.reveal img.floc-logo {
-  position: absolute;
-  top: -0.2em;
-  right: 0;
-  height: 2.6em;
-  margin: 0;
-}
-.reveal .floc-text { font-size: 0.72em; }
-
-/* ---------- Linkage + push slides ---------- */
-.reveal .linkage-row { font-size: 0.85em; align-items: center; }
-.reveal .linkage-row table { margin: 0; }
+.reveal .numbered-steps ol > li > p { margin: 0; }
+.reveal .numbered-steps div.sourceCode { margin: 0.25em 0 0; }
+.reveal .numbered-steps pre code { font-size: 1.75em !important; }
